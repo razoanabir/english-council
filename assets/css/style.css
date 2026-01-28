@@ -1,0 +1,2400 @@
+/* Mobile Logic */
+@media (min-width: 769px) {
+    #mobile-page{display: none;}
+    #web-page{display: block;}
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    .english-council-homepage {
+        width: 100%;          /* safer than 100vw */
+        min-height: 100vh;    /* take full viewport height, but not excessive */
+        position: relative;
+        background-color: #fff;
+        text-align: left;
+        font-size: 1.25vw; 
+        color: #121738;
+        font-family: Lato;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .gradient-wallpapers-parent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 53.1vw; /* 1020/1920*100 */
+        font-size: 0.83vw;
+        color: #fff;
+    }
+
+    .gradient-wallpapers {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 53.1vw;
+    }
+
+    .image-112-parent {
+        position: absolute;
+        top: 1.25vw;  /* 24/1920*100 */
+        left: 12.8vw; /* 245/1920*100 */
+        width: 74.6vw; /* 1431/1920*100 */
+        height: 3.0vw; /* 58/1920*100 */
+        text-align: center;
+        font-size: 0.94vw;
+    }
+
+    .image-112-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 1000px;
+        width: 3.1vw;  /* 59/1920*100 */
+        height: 3.0vw; /* 58/1920*100 */
+        object-fit: cover;
+    }
+
+    .button-parent {
+        position: absolute;
+        top: 0.42vw; /* 8/1920*100 */
+        left: calc(50% - 13.4vw); /* 256.5/1920*100 */
+        display: flex;
+        align-items: center;
+        gap: 1.66vw; /* 32/1920*100 */
+    }
+
+    .button {
+        height: 2.2vw; /* 42/1920*100 */
+        border-radius: 5.2vw; /* 100/1920*100 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.78vw 0.83vw; /* 15px 16px */
+        box-sizing: border-box;
+    }
+
+    .home {
+        position: relative;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+
+    .button5 {
+        position: absolute;
+        top: 0.42vw;
+        left: 63.5vw; /* 1219/1920*100 */
+        border-radius: 5.2vw;
+        background-color: #fff;
+        width: 11vw;  /* 212/1920*100 */
+        height: 2.2vw; /* 42/1920*100 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.78vw 0.63vw; /* 15px 12px */
+        font-size: 0.73vw; /* 14/1920*100 */
+        color: #0c111f;
+        font-family: Inter;
+    }
+
+    .message-us-on {
+        position: relative;
+        line-height: 1.25vw; /* 24px /1920*100 */
+        flex-shrink: 0;
+    }
+
+    .cub-parent {
+        position: absolute;
+        top: 9.3vw; /* 179/1920*100 */
+        left: 73.1vw; /* 1404/1920*100 */
+        width: 14.3vw; /* 276/1920*100 */
+        display: flex;
+        align-items: center;
+        gap: 1.25vw; /* 24/1920*100 */
+        font-size: 0.77vw; /* 14.7px */
+    }
+
+    .cub-icon {
+        height: 2.2vw; /* 42.8px */
+        width: 1.98vw; /* 38px */
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .were-most-promising {
+        width: 12.5vw; /* 241px */
+        position: relative;
+        line-height: 1.25vw; /* 23.89px */
+        font-weight: 600;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+
+    .group-wrapper {
+        position: absolute;
+        top: 14.1vw; /* 271px */
+        left: 12.8vw; /* 245px */
+        display: flex;
+        align-items: center;
+    }
+
+    .eye-ball-parent {
+        height: 3.7vw; /* 70.5px */
+        width: 7.45vw; /* 143px */
+        position: relative;
+    }
+
+    .eye-ball, .eye-ball2 {
+        width: 3.7vw;
+        height: 3.7vw;
+        position: absolute;
+    }
+
+    .eye-ball {
+        top: 50%;
+        left: calc(50% + 0.05vw);
+    }
+
+    .eye-ball2 {
+        top: 50%;
+        left: calc(50% - 3.73vw);
+    }
+
+    .eye-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3.7vw;
+        height: 3.7vw;
+        object-fit: contain;
+    }
+
+    .eye-icon2 {
+        position: absolute;
+        top: -0.76vw;
+        left: -0.76vw;
+        width: 5.2vw;
+        height: 5.2vw;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .at-english-council-were-dedi-parent {
+        position: absolute;
+        top: 35.5vw; 
+        left: 12.8vw; 
+        width: 22.4vw; 
+        height: 5.4vw; 
+    }
+
+    .at-english-council {
+        position: absolute;
+        top: 0;
+        left: 3.1vw;
+        line-height: 1.35vw;
+        font-weight: 600;
+        display: inline-block;
+        width: 19.3vw;
+    }
+    .achieve-your {
+        position: absolute;
+        top: 7.4vw;      
+        left: 12.2vw;  
+        font-size: 3.65vw;
+        letter-spacing: -0.01em;
+        line-height: 6.3vw; 
+        font-family: Tropiline;
+    }
+
+    /* Subheading: Dream IELTS Score */
+    .dream-ielts-score {
+        position: absolute;
+        top: 12.7vw;   
+        left: 22.3vw;    
+        font-size: 3.65vw; 
+        letter-spacing: -0.01em;
+        line-height: 6.3vw;
+        font-family: 'Train One';
+    }
+    /* Watermark: English Council (rotated) - Fixed */
+    .english-council {
+        position: absolute;
+        /* Use top/left to place the "start" of the vertical line */
+        top: 0vh;           
+        left: 4vw;          
+        
+        font-size: 4.36vw;
+        letter-spacing: 0.18em;
+        line-height: 1; 
+        
+        font-family: Tropiline, serif;
+        color: rgba(255, 255, 255, 0.1);
+        
+        /* Ensure the container is wide enough for the text before rotating */
+        white-space: nowrap; 
+        
+        /* Rotate from the top-left corner */
+        transform: rotate(90deg);
+        transform-origin: top left;
+        
+        pointer-events: none; /* Prevents the watermark from blocking clicks */
+        z-index: 0;
+    }
+
+    .button6, .button7 {
+        font-size: 0.73vw; 
+    }
+
+    .lets-get-started, .learn-more {
+        font-size: 0.73vw; 
+        line-height: 1.25vw; 
+    }
+
+    .rectangle-parent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.93vw;
+        height: 5.1vw;
+        display: flex;
+        flex-direction: column;
+        gap: 0.16vw;
+    }
+    .rectangle-parent div {
+        width: 100%;
+        border-radius: 0.1vw;
+        background-color: #ffff;
+    }
+
+    /* Individual bar heights (Figma-style variation) */
+    .group-child   { height: 0.26vw; }
+    .group-item    { height: 0.42vw; }
+    .group-inner   { height: 0.31vw; }
+    .rectangle-div { height: 0.52vw; }
+    .group-child2  { height: 0.36vw; }
+    .group-child3  { height: 0.42vw; }
+    .group-child4  { height: 0.31vw; }
+    .group-child5  { height: 0.47vw; }
+    .group-child6  { height: 0.31vw; }
+    .group-child7  { height: 0.36vw; }
+    .group-child8  { height: 0.26vw; }
+
+    .button-group {
+        position: absolute;
+        top: 20.5vw; 
+        left: 12.5vw; 
+        display: flex;
+        align-items: center;
+        gap: 1.04vw;
+        text-align: center;
+    }
+
+    .button6 {
+        border-radius: 0.42vw;
+        background-color: #f24f5f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.63vw 0.83vw; 
+        gap: 0.42vw; 
+    }
+
+    .lets-get-started {
+        position: relative;
+        line-height: 1.25vw; 
+        font-weight: 600;
+    }
+
+    .button-child {
+        height: 1.04vw;
+        width: 0.98vw;
+        border-radius: 2.6vw; 
+        object-fit: contain;
+    }
+    .button7 {
+        border-radius: 0.42vw; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.63vw 0.83vw; 
+        font-family: Inter;
+    }
+    .learn-more {
+        position: relative;
+        line-height: 1.25vw;
+    }
+    .rectangle-group {
+        position: absolute;
+        top: 21.6vw; 
+        left: 50.5vw; 
+        width: 36.9vw; 
+        height: 23.9vw; 
+    }
+
+    .rectangle-icon {
+        position: absolute;
+        top: 0;
+        left: 22.3vw; 
+        border-radius: 0.42vw; 
+        width: 14.6vw; 
+        height: 7.6vw; 
+        object-fit: cover;
+    }
+
+    .group-child9 {
+        position: absolute;
+        top: 9.3vw;  
+        left: 0;
+        border-radius: 0.42vw; 
+        width: 36.9vw; 
+        height: 14.6vw; 
+        object-fit: cover;
+    }
+
+    .frame-parent {
+        position: absolute;
+        top: 22.6vw;
+        left: 51.3vw;
+        display: flex;
+        align-items: center;
+        gap: 1.4vw; 
+    }
+
+    .frame-icon, .frame-child, .frame-item {
+        height: 2.4vw; 
+        width: 2.4vw;
+        position: relative;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .frame-item {
+        margin-left: -0.99vw; 
+    }
+
+    .frame-group {
+        width: 15.1vw; 
+        display: flex;
+        align-items: center;
+        gap: 0.83vw; 
+    }
+
+    .ellipse-parent {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .we-satisfied-24k-parent {
+        width: 7.1vw; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-shrink: 0;
+    }
+
+    .we-satisfied-24k {
+        align-self: stretch;
+        position: relative;
+        line-height: 1.35vw;
+        font-weight: 600;
+    }
+
+    .student-around-bangladesh {
+        width: 5.5vw;
+        position: relative;
+        line-height: 1.35vw;
+        font-weight: 600;
+        display: inline-block;
+    }
+    /* header section end - responsive version */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* feature section start */ 
+    .group-parent{
+        position: absolute;
+        top: 79.4vw;        /* 1524.72 / 1920 * 100 */
+        left: 12.2vw;       /* 234 / 1920 * 100 */
+        max-height: 100%;
+        width: 75vw;        /* 1440 / 1920 * 100 */
+        flex-shrink: 0;
+    }
+
+    .group-parent {
+        position: absolute;
+        top: 83.15vw;       /* 1596.71 / 1920 * 100 */
+        left: 12.3vw;       /* 236 / 1920 * 100 */
+        display: flex;
+        align-items: center;
+        gap: 2.19vw;        /* 42 / 1920 * 100 */
+        flex-shrink: 0;
+        text-align: center;
+        font-size: 1.15vw;  /* 22 / 1920 * 100 */
+        color: #000;
+        font-family: Tropiline;
+    }
+
+    .group-parent2 {
+        height: 23.85vw;    /* 458 / 1920 * 100 */
+        width: 17.08vw;     /* 328 / 1920 * 100 */
+        position: relative;
+        filter: drop-shadow(0px -0.73vw 0px rgba(197, 197, 197, 0.25)); /* 14px */
+    }
+
+    .group-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 17.08vw;
+        height: 23.85vw;
+    }
+
+    .interactive-learning-parent {
+        position: absolute;
+        top: 14.48vw;       /* 278 / 1920 * 100 */
+        left: 2.08vw;       /* 40 / 1920 * 100 */
+        width: 12.92vw;     /* 248 / 1920 * 100 */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.83vw;        /* 16 / 1920 * 100 */
+    }
+
+    .interactive-learning {
+        align-self: stretch;
+        position: relative;
+    }
+
+    .our-corporate-program6 {
+        width: 11.77vw;     /* 226 / 1920 * 100 */
+        position: relative;
+        font-size: 0.83vw;  /* 16 / 1920 * 100 */
+        line-height: 1.25vw;/* 24 / 1920 * 100 */
+        font-family: Lato;
+        color: #464c5e;
+        display: inline-block;
+    }
+
+    .personalized-approach {
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .our-corporate-program7 {
+        width: 11.77vw;
+        position: relative;
+        font-size: 0.83vw;
+        line-height: 1.25vw;
+        font-family: Lato;
+        color: #464c5e;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+
+    .how-we-help-you-to-succeed-wrapper {
+        position: absolute;
+        top: 77.38vw;       /* 1485.71 / 1920 * 100 */
+        left: calc(50% - 25.16vw); /* 483 / 1920 * 100 */
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.52vw;    /* 10 / 1920 * 100 */
+        flex-shrink: 0;
+        font-size: 3.13vw;  /* 60 / 1920 * 100 */
+        color: #000;
+        font-family: Tropiline;
+    }
+
+    .how-we-help {
+        position: relative;
+        letter-spacing: -0.01em;
+        line-height: 3.59vw; /* 69 / 1920 * 100 */
+        text-transform: uppercase;
+        font-weight: 600;
+        z-index: 2;
+        background-color: #fff;   /* hides line behind text */
+        padding: 0 1.2vw;
+    }
+    /* line behind */
+    .line-icon {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw; 
+        top: 50%;
+        height: auto;
+        z-index: 1;
+        pointer-events: none;
+        max-width: 145%; 
+    }
+    .component-2 {
+        position: absolute;
+        top: 68.73vw;              /* 1319.56 / 1920 */
+        left: calc(50% - 3.97vw);  /* 76.16 / 1920 */
+        width: 7.30vw;             /* 140.2 / 1920 */
+        height: 7.30vw;
+        flex-shrink: 0;
+    }
+
+    .component-2-child {
+        position: absolute;
+        height: 82.95%;
+        width: 82.95%;
+        top: 8.61%;
+        right: 9.26%;
+        bottom: 8.44%;
+        left: 7.78%;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+    }
+
+    .group-icon2 {
+        position: absolute;
+        height: 77.46%;
+        width: 74.68%;
+        top: 11.26%;
+        right: 12.66%;
+        bottom: 11.28%;
+        left: 12.66%;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .component-2-item {
+        position: absolute;
+        height: 31.95%;
+        width: 29.74%;
+        top: 32.15%;
+        right: 36.02%;
+        bottom: 35.89%;
+        left: 34.24%;
+        border-radius: 2.24vw;     /* 43 / 1920 */
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .component-2-inner {
+        position: absolute;
+        height: 2.71%;
+        width: 2.71%;
+        top: 47.08%;
+        right: 81.6%;
+        bottom: 50.21%;
+        left: 15.69%;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 0.05vw solid #fff; /* 0.9px */
+        box-sizing: border-box;
+    }
+
+    .unlock-your-full-potential-wit-parent {
+        position: absolute;
+        top: 58.33vw;              /* 1120 / 1920 */
+        left: 12.19vw;             /* 234 / 1920 */
+        width: 78.68vw;            /* 1453 / 1920 */
+        height: 10.42vw;           /* 200 / 1920 */
+        flex-shrink: 0;
+        font-size: 1.88vw;         /* 36 / 1920 */
+        color: #0c111f;
+        font-family: Tropiline;
+        text-align: center;
+    }
+
+    .unlock-your-full-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        letter-spacing: -0.01em;
+        line-height: 2.60vw;       /* 50 / 1920 */
+        font-weight: 600;
+        display: inline-block;
+        width: 78.68vw;
+    }
+
+    .potential-with-english {
+        color: rgba(102, 112, 133, 0.7);
+    }
+
+    .comprehensive-ielts-program {
+        white-space: pre-wrap;
+    }
+
+    .frame-icon2 {
+        position: absolute;
+        top: 0;
+        left: 41.77vw;             /* 802 / 1920 */
+        width: 2.08vw;             /* 40 / 1920 */
+        height: 2.08vw;
+        object-fit: cover;
+    }
+
+    .english-council-homepage-inner {
+        position: absolute;
+        top: 560.50vw;             /* 10761.56 / 1920 */
+        left: 34.17vw;             /* 656 / 1920 */
+        box-shadow: 0px 0.21vw 1.61vw rgba(255, 175, 175, 0.25);
+        border-radius: 50%;
+        background: linear-gradient(180deg, #fff6f6, #fff);
+        width: 64.36vw;            /* 1235.8 / 1920 */
+        height: 62.97vw;           /* 1209 / 1920 */
+        transform: rotate(-13.4deg);
+        transform-origin: 0 0;
+        flex-shrink: 0;
+    }
+
+    .english-council-homepage-child2 {
+        position: absolute;
+        top: 563.07vw;             /* 10811.56 */
+        left: 35.68vw;             /* 685 */
+        box-shadow: 0px 0.21vw 1.61vw rgba(255, 175, 175, 0.25);
+        border-radius: 50%;
+        background: linear-gradient(180deg, #fff6f6, #fff);
+        width: 64.36vw;
+        height: 62.97vw;
+        transform: rotate(-13.4deg);
+        transform-origin: 0 0;
+        flex-shrink: 0;
+    }
+
+    .english-council-homepage-child3 {
+        position: absolute;
+        top: 565.65vw;             /* 10861.56 */
+        left: 37.19vw;             /* 714 */
+        box-shadow: 0px 0.21vw 1.61vw rgba(255, 175, 175, 0.25);
+        border-radius: 50%;
+        background: linear-gradient(180deg, #fff6f6, #fff);
+        width: 64.36vw;
+        height: 62.97vw;
+        transform: rotate(-13.4deg);
+        transform-origin: 0 0;
+        flex-shrink: 0;
+    }
+
+    .english-council-homepage-child4 {
+        position: absolute;
+        top: 568.23vw;             /* 10911.56 */
+        left: 38.70vw;             /* 743 */
+        box-shadow: 0px 0.21vw 1.61vw rgba(255, 175, 175, 0.25);
+        border-radius: 50%;
+        background: linear-gradient(180deg, #fff6f6, #fff);
+        width: 64.36vw;
+        height: 62.97vw;
+        transform: rotate(-13.4deg);
+        transform-origin: 0 0;
+        flex-shrink: 0;
+    }
+
+    .english-council-homepage-child5 {
+        position: absolute;
+        top: 568.00vw;             /* 10905.08 */
+        left: 0;
+        background: linear-gradient(179.4deg, rgba(255, 245, 245, 0), #fff);
+        width: 100vw;              /* 1923 ≈ full width */
+        height: 25.36vw;           /* 487 / 1920 */
+        flex-shrink: 0;
+    }
+
+    /* feature section ends */
+
+
+
+
+
+
+
+
+
+
+    /* course section start */
+    .frame-container {
+        position: absolute;
+        top: 114.27vw;          /* 2194 / 1920 */
+        left: -0.05vw;          /* -1 / 1920 */
+        width: 100vw;           /* 1920 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-shrink: 0;
+    }
+
+    .ellipse-group {
+        align-self: stretch;
+        height: 14.27vw;        /* 274 */
+        position: relative;
+        background-color: rgba(145, 209, 242, 0);
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .ellipse-div {
+        position: absolute;
+        top: -12.81vw;          /* -246 */
+        left: calc(50% - 70.21vw); /* 1348 */
+        border-radius: 50%;
+        background: radial-gradient(50% 50% at 50% 50%, #fadbb7, rgba(250, 219, 183, 0.2));
+        width: 140.36vw;        /* 2695 */
+        height: 86.51vw;        /* 1661 */
+        flex-shrink: 0;
+    }
+
+    .frame-div {
+        position: absolute;
+        top: 3.85vw;            /* 74 */
+        left: calc(50% - 37.5vw); /* 720 */
+        display: flex;
+        align-items: flex-start;
+        gap: 8.91vw;            /* 171 */
+        flex-shrink: 0;
+    }
+
+    .group-container {
+        height: 8.28vw;         /* 159 */
+        width: 56.88vw;         /* 1092 */
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .our-corporate-program-provides-parent {
+        height: 9.79vw;         /* 188 */
+        width: 56.88vw;         /* 1092 */
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .our-corporate-program {
+        position: absolute;
+        top: 3.75vw;            /* 72 */
+        left: 5.99vw;           /* 115 */
+        line-height: 1.98vw;    /* 38 */
+        display: inline-block;
+        width: 50.89vw;         /* 977 */
+        height: 6.04vw;         /* 116 */
+    }
+
+    .image-160-parent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 36.58vw;         /* 702.3 */
+        display: flex;
+        align-items: center;
+        gap: 1.72vw;            /* 33 */
+        font-size: 3.13vw;      /* 60 */
+        color: #000;
+        font-family: Tropiline;
+    }
+
+    .image-160-icon {
+        width: 2.6vw;           /* 50 */
+        position: relative;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .title-wrapper {
+        height: 2.55vw;
+        border-left: 0.05vw solid #000;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centers the whole title block */
+        padding: 0.52vw 1.67vw;
+    }
+
+    .title {
+        display: flex;           /* FIX: This ignores the HTML whitespace/line breaks */
+        align-items: baseline;   /* Keeps the letters perfectly aligned on the bottom */
+        position: relative;
+        letter-spacing: -0.01em;
+        line-height: 4.69vw;
+        flex-shrink: 0;
+    }
+
+    .SecondPart {
+        color: #f24f5f;
+        /* Optional: If the font itself has wide edges, add a tiny negative margin */
+        /* margin-left: -0.1vw; */ 
+    }
+
+    .button8 {
+        border-radius: 0.42vw;  /* 8 */
+        background-color: #f24f5f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.63vw 0.83vw; /* 12 16 */
+        gap: 0.42vw;            /* 8 */
+        text-align: center;
+        font-size: 0.83vw;      /* 16 */
+        color: #fff;
+    }
+
+    .image-171-icon {
+        align-self: stretch;
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .frame-parent2 {
+        position: absolute;
+        top: 168.75vw;          /* 3240 */
+        left: -0.05vw;          /* -1 */
+        width: 100vw;           /* 1920 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-shrink: 0;
+    }
+
+    .ellipse-container {
+        align-self: stretch;
+        height: 14.27vw;        /* 274 */
+        position: relative;
+        background-color: #fff0f0;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .frame-child3 {
+        position: absolute;
+        top: -12.97vw;          /* -249 */
+        left: calc(50% - 70.16vw); /* 1347 */
+        border-radius: 50%;
+        background: radial-gradient(50% 50% at 50% 50%, #aaf9ff, #d8edff);
+        width: 140.36vw;        /* 2695 */
+        height: 85.94vw;        /* 1650 */
+        flex-shrink: 0;
+    }
+
+    .image-162-parent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        gap: 1.72vw;            /* 33 */
+        font-size: 3.13vw;      /* 60 */
+        color: #000;
+        font-family: Tropiline;
+    }
+
+    .frame-parent4 {
+        position: absolute;
+        top: 223.23vw;          /* 4286 */
+        left: -0.05vw;          /* -1 */
+        width: 100vw;           /* 1920 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-shrink: 0;
+    }
+
+    .frame-child4 {
+        position: absolute;
+        top: -12.97vw;          /* -249 */
+        left: calc(50% - 70.16vw); /* 1347 */
+        border-radius: 50%;
+        background: radial-gradient(50% 50% at 50% 50%, #cfadff, #f7f3ff);
+        width: 140.36vw;        /* 2695 */
+        height: 85.94vw;        /* 1650 */
+        flex-shrink: 0;
+    }
+
+    .frame-parent5 {
+        position: absolute;
+        top: 3.85vw;            /* 74 */
+        left: calc(50% - 38.59vw); /* 741 */
+        display: flex;
+        align-items: flex-start;
+        gap: 11.09vw;           /* 213 */
+        flex-shrink: 0;
+    }
+
+    .frame-parent6 {
+        position: absolute;
+        top: 277.71vw;          /* 5332 */
+        left: -0.05vw;          /* -1 */
+        width: 100vw;           /* 1920 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-shrink: 0;
+    }
+
+    .frame-child5 {
+        position: absolute;
+        top: -12.97vw;          /* -249 */
+        left: calc(50% - 70.16vw); /* 1347 */
+        border-radius: 50%;
+        background: radial-gradient(50% 50% at 50% 50%, #adffbf, rgba(173, 255, 191, 0.4));
+        width: 140.36vw;        /* 2695 */
+        height: 85.94vw;        /* 1650 */
+        flex-shrink: 0;
+    }
+
+    .frame-parent7 {
+        position: absolute;
+        top: 3.85vw;            /* 74 */
+        left: 14.38vw;          /* 276 */
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 8.91vw;            /* 171 */
+        flex-shrink: 0;
+    }
+
+    .frame-parent8 {
+        position: absolute;
+        top: 332.19vw;          /* 6378 */
+        left: -0.05vw;          /* -1 */
+        width: 100vw;           /* 1920 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-shrink: 0;
+    }
+
+    .frame-child6 {
+        position: absolute;
+        top: -12.97vw;          /* -249 */
+        left: calc(50% - 70.16vw); /* 1347 */
+        border-radius: 50%;
+        background: radial-gradient(50% 50% at 50% 50%, #ff7d7d, rgba(255, 192, 192, 0));
+        width: 140.36vw;        /* 2695 */
+        height: 85.94vw;        /* 1650 */
+        flex-shrink: 0;
+    }
+    /* course section end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* faq section start */ 
+    .frame-parent10 {
+        position: absolute;
+        top: 552.63vw;          /* 10596.07 */
+        left: 12.48vw;          /* 239 */
+        width: 75.10vw;         /* 1442 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.08vw;            /* 40 */
+        flex-shrink: 0;
+        font-size: 1.15vw;      /* 22 */
+        color: #464c5e;
+    }
+
+    .faq-parent {
+        width: 25.42vw;         /* 488 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.41vw;            /* 27 */
+    }
+
+    .some-answer-that {
+        width: 23.44vw;         /* 450 */
+        position: relative;
+        font-size: 1.88vw;      /* 36 */
+        letter-spacing: -0.01em;
+        line-height: 2.5vw;     /* 48 */
+        display: inline-block;
+        font-family: Tropiline;
+        color: #000;
+    }
+
+    .frame-parent11 {
+        width: 75.10vw;         /* 1442 */
+        height: 24.55vw;        /* 471 */
+        position: relative;
+        font-size: 1.04vw;      /* 20 */
+        color: #121738;
+    }
+
+    .frame-parent12 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0.83vw;  /* 16 */
+        background-color: #fff;
+        border: 0.05vw solid #e5e9eb; /* 1px */
+        box-sizing: border-box;
+        width: 35.44vw;         /* 680.4 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25vw;        /* 24 */
+        gap: 0.83vw;            /* 16 */
+    }
+
+    .full-access-to-practice-tests-parent {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.04vw;            /* 20 */
+    }
+
+    .full-access-to {
+        position: relative;
+        font-weight: 600;
+    }
+
+    .plus-large-svgrepocom-icon {
+        height: 1.15vw;         /* 22 */
+        width: 1.15vw;          /* 22 */
+        position: relative;
+    }
+
+    .the-demo-gives {
+        width: 28.65vw;         /* 550 */
+        height: 4.95vw;         /* 95 */
+        position: relative;
+        font-size: 0.83vw;      /* 16 */
+        line-height: 1.46vw;    /* 28 */
+        color: #464c5e;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+
+    .frame-wrapper {
+        position: absolute;
+        top: 10.80vw;           /* 207 */
+        left: 0;
+        border-radius: 0.83vw;  /* 16 */
+        background-color: #fff;
+        border: 0.05vw solid #e5e9eb; /* 1px */
+        box-sizing: border-box;
+        width: 35.44vw;         /* 680.4 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25vw;        /* 24 */
+    }
+
+    .frame-wrapper2 {
+        position: absolute;
+        top: 0;
+        left: 39.72vw;          /* 761.62 / 1920 * 100 */
+        border-radius: 0.83vw;  /* 16 */
+        background-color: #fff;
+        border: 0.05vw solid #e5e9eb; /* 1px */
+        box-sizing: border-box;
+        width: 35.44vw;         /* 680.4 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25vw;        /* 24 */
+    }
+
+    .frame-wrapper3 {
+        position: absolute;
+        top: 15.78vw;           /* 303 */
+        left: 0;
+        border-radius: 0.83vw;
+        background-color: #fff;
+        border: 0.05vw solid #e5e9eb;
+        box-sizing: border-box;
+        width: 35.44vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25vw;
+    }
+
+    .frame-wrapper4 {
+        position: absolute;
+        top: 5vw;               /* 96 */
+        left: 39.72vw;          /* 761.62 */
+        border-radius: 0.83vw;
+        background-color: #fff;
+        border: 0.05vw solid #e5e9eb;
+        box-sizing: border-box;
+        width: 35.44vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25vw;
+    }
+
+    .frame-wrapper5 {
+        position: absolute;
+        top: 19.53vw;           /* 399 */
+        left: 0;
+        border-radius: 0.83vw;
+        background-color: #fff;
+        border: 0.05vw solid #e5e9eb;
+        box-sizing: border-box;
+        width: 35.44vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25vw;
+    }
+
+    .frame-wrapper6 {
+        position: absolute;
+        top: 10vw;              /* 192 */
+        left: 39.72vw;          /* 761.62 */
+        border-radius: 0.83vw;
+        background-color: #fff;
+        border: 0.05vw solid #e5e9eb;
+        box-sizing: border-box;
+        width: 35.44vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25vw;
+    }
+
+    .frame-wrapper7 {
+        position: absolute;
+        top: 15vw;              /* 288 */
+        left: 39.72vw;          /* 761.62 */
+        border-radius: 0.83vw;
+        background-color: #fff;
+        border: 0.05vw solid #e5e9eb;
+        box-sizing: border-box;
+        width: 35.44vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25vw;
+    }
+    /* faq section end */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* testimonial section start */ 
+    .frame-parent16 {
+        position: absolute;
+        top: 513.1vw;          /* 493.1 + 20vw shift */
+        left: 12.5vw;          /* 240px */
+        width: 74.53vw;        /* 1431px */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.04vw;           /* 20px */
+        flex-shrink: 0;
+        font-size: 1.15vw;     /* 22px */
+        color: #464c5e;
+    }
+
+    /* Testimonials text block */
+    .testimonials-parent {
+        width: 25.42vw;        /* 488px */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25vw;           /* 24px */
+    }
+
+    .testimonials {
+        align-self: stretch;
+        position: relative;
+        font-weight: 500;
+    }
+
+    .what-are-saying {
+        align-self: stretch;
+        position: relative;
+        font-size: 1.88vw;      /* 36px */
+        letter-spacing: -0.01em;
+        line-height: 2.5vw;     /* 48px */
+        font-family: Tropiline;
+        color: #000;
+    }
+
+    /* Rating frame */
+    .frame-parent17 {
+        height: 5.33vw;         /* 102px */
+        width: 13.23vw;         /* 254px */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.83vw;            /* 16px */
+        font-size: 0.83vw;      /* 16px */
+        color: #0c111f;
+    }
+
+    .frame-parent18 {
+        display: flex;
+        align-items: center;
+        gap: 0.26vw;            /* 5px */
+    }
+
+    .frame-icon3 {
+        height: 1.25vw;         /* 24px */
+        width: 1.25vw;
+        position: relative;
+    }
+
+    .average-49-rating {
+        align-self: stretch;
+        flex: 1;
+        position: relative;
+        line-height: 1.35vw;    /* 26px */
+        font-weight: 600;
+    }
+
+    /* Images */
+    .english-council-homepage-child6 {
+        position: absolute;
+        top: 522.7vw;           /* 502.7 + 20 */
+        left: 12.5vw;
+        border-radius: 0.52vw;  /* 10px */
+        width: 19.27vw;         /* 370px */
+        height: 18.13vw;        /* 348px */
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .frame-icon8 {
+        position: absolute;
+        top: 522.7vw;
+        left: 35.73vw;
+        width: 3.79vw;          /* 82px */
+        height: 3.79vw;
+        flex-shrink: 0;
+    }
+
+    .frame-parent19 {
+        position: absolute;
+        top: 528.46vw;          /* 508.46 + 20 */
+        left: 35.78vw;
+        width: 36.41vw;         /* 699px */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25vw;            /* 24px */
+        flex-shrink: 0;
+        font-size: 0.94vw;      /* 18px */
+    }
+
+    /* Text inside testimonial cards */
+    .md-masudur-rahman-parent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 0.21vw;            /* 4px */
+    }
+
+    .aerotrip {
+        align-self: stretch;
+        position: relative;
+        font-size: 0.83vw;      /* 16px */
+        font-weight: 500;
+        font-family: Inter;
+        color: #464c5e;
+    }
+
+    .i-am-so {
+        width: 33.28vw;          /* 659px */
+        position: relative;
+        font-size: 0.83vw;       /* 16px */
+        line-height: 1.41vw;     /* 27px */
+        color: #464c5e;
+        display: inline-block;
+    }
+
+    /* Pagination container */
+    .pagination-icon-parent {
+        position: absolute;
+        top: 537.21vw;
+        left: 80.45vw;
+        display: flex;
+        align-items: center;
+        /* This gap controls the space between the two arrows */
+        gap: 1.5vw; 
+        flex-shrink: 0;
+    }
+
+    /* Base style for both arrows */
+    .pagination-arrow {
+        height: 3.31vw; /* 44.9px equivalent */
+        width: 3.31vw;
+        object-fit: contain;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+    }
+
+    /* Optional: Slight hover effect for better UX */
+    .pagination-arrow:hover {
+        opacity: 0.7;
+    }
+
+    /* Bottom images */
+    .image-183-icon {
+        position: absolute;
+        top: 522.7vw;           /* 502.7 + 20 */
+        left: 51.67vw;          /* 996px */
+        width: 35.63vw;         /* 684px */
+        height: 11.72vw;        /* 225px */
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .english-council-homepage-child7 {
+        position: absolute;
+        top: 528.46vw;          /* 508.46 + 20 */
+        left: 19.22vw;          /* 369px */
+        width: 6.00vw;          /* 112px */
+        height: 6.00vw;         /* 112px */
+        flex-shrink: 0;
+    }
+
+    /* testimonial section end */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* about us start */ 
+    .group-parent9 {
+        position: absolute;
+        top: 465.41vw;        /* 8935.79px */
+        left: 0;
+        width: 100vw;          /* 1920px */
+        height: 42.86vw;       /* 823.3px */
+        flex-shrink: 0;
+        text-align: center;
+        font-size: 0.73vw;     /* 14px */
+        color: #fff;
+    }
+
+    /* Background layers */
+    .gradient-wallpapers-group {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 41.99vw;      /* 806.3px */
+    }
+
+    .gradient-wallpapers2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 41.3vw;       /* 793px */
+    }
+
+    .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    /* Main frame container */
+    .frame-parent20 {
+        position: relative;   /* Makes all children relative */
+        top: 5.21vw;          /* 100px */
+        left: 0;
+        width: 87.81vw;       /* 1685.9px */
+        height: 36.78vw;      /* 706.3px */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Years experience bubble */
+    .years-experience-wrapper {
+        position: absolute;
+        top: 23.96vw;
+        left: 15.47vw;
+        width: 12.14vw;       /* 233px */
+        height: 12.14vw;
+        border-radius: 6.07vw; 
+        background-color: rgba(217, 217, 217, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5.42vw 3.59vw;
+        box-sizing: border-box;
+        font-size: 0;
+    }
+
+    .years-experience {
+        width: 7.76vw;
+        line-height: 152.1%;
+    }
+
+    .span {
+        font-size: 1.15vw;    /* 22px */
+    }
+
+    .experience {
+        font-size: 0.94vw;    /* 18px */
+        font-weight: 500;
+    }
+
+    /* Youth programs bubbles */
+    .youth-program-wrapper, 
+    .youth-program-container, 
+    .youth-program-frame, 
+    .youth-program-wrapper2, 
+    .youth-program-wrapper3, 
+    .youth-program-wrapper4, 
+    .youth-program-wrapper5, 
+    .youth-program-wrapper6, 
+    .youth-program-wrapper7, 
+    .youth-program-wrapper8, 
+    .youth-program-wrapper9 {
+        position: absolute;
+        width: 7.66vw;        /* 147px */
+        height: 7.66vw;
+        border-radius: 3.83vw;
+        background-color: rgba(217, 217, 217, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3.18vw 0.78vw;
+        box-sizing: border-box;
+    }
+
+    /* Specific positions */
+    .youth-program-wrapper    { top: 21.09vw; left: 36.41vw; }
+    .youth-program-container  { top: 28.44vw; left: 35.05vw; }
+    .youth-program-frame      { top: 20.94vw; left: 28.75vw; }
+    .youth-program-wrapper2   { top: 20.89vw; left: 44.06vw; }
+    .youth-program-wrapper3   { top: 15.68vw; left: 49.64vw; }
+    .youth-program-wrapper4   { top: 21.77vw; left: 8.75vw; }
+    .youth-program-wrapper5   { top: 16.82vw; left: 14.58vw; }
+    .youth-program-wrapper6   { top: 28.39vw; left: 4.95vw; }
+    .youth-program-wrapper7   { top: 16.93vw; left: 22.24vw; }
+    .youth-program-wrapper8   { top: 28.44vw; left: 42.71vw; }
+    .youth-program-wrapper9   { top: 28.44vw; left: 27.39vw; }
+
+    /* Local programs bubble */
+    .local-programs-wrapper {
+        position: absolute;
+        top: 20.93vw;
+        left: 0;
+        width: 8.75vw;        /* 168px */
+        height: 8.75vw;
+        border-radius: 4.38vw;
+        background-color: rgba(217, 217, 217, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3.63vw 0.89vw;
+        box-sizing: border-box;
+    }
+
+    .local-programs {
+        line-height: 1.31vw;   /* 25.14px */
+    }
+
+    /* Text blocks */
+    .meet-with-parent {
+        position: absolute;
+        top: 0;
+        left: 12.5vw;         /* 240px */
+        width: 29.06vw;       /* 558px */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25vw;          /* 24px */
+        text-align: left;
+        font-size: 1.15vw;    /* 22px */
+        font-family: Helvetica;
+    }
+
+    .md-masudur-rahman-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.83vw;          /* 16px */
+        font-size: 1.88vw;    /* 36px */
+        font-family: Tropiline;
+    }
+
+    .md-masudur-rahman2 {
+        letter-spacing: -0.01em;
+        line-height: 2.6vw;   /* 50px */
+        font-weight: 600;
+    }
+
+    .with-over-a-decade-of-experien-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.83vw;    /* 16px */
+        font-family: Lato;
+    }
+
+    .with-over-a {
+        width: 22.55vw;       /* 433px */
+        line-height: 1.41vw;  /* 27px */
+        opacity: 0.8;
+    }
+
+    /* Right image block */
+    .frame-parent21 {
+        position: absolute;
+        top: 0.10vw;          /* 2px */
+        left: 57.29vw;        /* 1100px */
+        width: 30.52vw;       /* 585.9px */
+        height: 36.68vw;      /* 704.3px */
+        font-size: 1.56vw;    /* 30px */
+        font-family: Tropiline;
+    }
+
+    .group-child15 {
+        position: absolute;
+        top: 3.66vw;          /* 70.29px */
+        left: 0;
+        width: 26.41vw;       /* 507px */
+        height: 33.02vw;      /* 634px */
+        border-radius: 0.83vw;/* 16px */
+    }
+
+    .an-expert-dedicated {
+        position: absolute;
+        top: 0;
+        left: 0.16vw;         /* 3px */
+        line-height: 2.6vw;   /* 50px */
+        font-weight: 600;
+    }
+
+    .jahan-is-committed {
+        position: absolute;
+        top: 3.87vw;          /* 74.29px */
+        left: 30.42vw;        /* 584px */
+        width: 30.73vw;       /* 590px */
+        line-height: 2.6vw;   /* 50px */
+        font-weight: 600;
+        transform: rotate(90deg);
+        transform-origin: 0 0;
+    }
+
+    .image-169-icon {
+        position: absolute;
+        top: 6.77vw;          /* 130px */
+        left: 3.18vw;         /* 61px */
+        width: 20.1vw;        /* 386px */
+        height: 29.22vw;      /* 561px */
+        object-fit: cover;
+    }
+
+    .icon2 {
+        position: absolute;
+        top: 0.31vw;          /* 6px */
+        left: 26.93vw;        /* 517px */
+        width: 3.59vw;        /* 68.9px */
+        height: 3.59vw;
+        object-fit: contain;
+    }
+
+    /* Bottom bar */
+    .group-child16 {
+        position: absolute;
+        top: 41.31vw;         /* bottom of frame-parent20 */
+        left: 57.24vw;        /* 1099px */
+        width: 26.72vw;       /* 513px */
+        height: 1.56vw;       /* 30px */
+        background-color: #fff;
+    }
+    /* about us section end */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* program section start */ 
+    .frame-parent22 {
+        position: absolute;
+        top: 386.67vw; /* 7424 */
+        left: calc(50% - 37.55vw); /* 721 */
+        width: 75.14vw; /* 1442.7 */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.65vw; /* 70 */
+        flex-shrink: 0;
+        font-size: 1.88vw; /* 36 */
+        color: #0c111f;
+        font-family: Tropiline;
+    }
+
+    .group-parent10 {
+        align-self: stretch;
+        display: flex;
+        align-items: flex-start;
+        gap: 20.47vw; /* 393 */
+    }
+
+    /* Container Fix */
+    .where-we-help-parent {
+        height: 13.63vw; /* 261.7px */
+        width: 31.08vw;  /* 596.7px */
+        position: relative;
+        /* Removed rotate(180deg) to fix the upside-down issue */
+    }
+
+    .where-we-help {
+        position: absolute;
+        top: 0;
+        left: 0.04vw;
+        font-size: 1.25vw; /* 24px */
+        font-family: Lato, sans-serif;
+        color: #464c5e;
+        width: 17.03vw;
+    }
+
+    .helping-professionals {
+        position: absolute;
+        top: 2.5vw; /* Adjusted from 3.33vw for better spacing */
+        left: 0.05vw;
+        font-size: 2.2vw; /* Added font-size for consistency */
+        letter-spacing: -0.01em;
+        line-height: 2.60vw;
+        width: 31.03vw;
+        display: block;
+    }
+
+    /* Row with Avatars and Text */
+    .students-achieve-parent {
+        position: absolute;
+        top: 6.0vw; /* Adjusted from 7.03vw */
+        left: 0;
+        width: auto;
+        display: flex;
+        flex-direction: row-reverse; /* Reverses order so avatars overlap correctly */
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1.30vw;
+    }
+
+    .students-achieve {
+        font-size: 2.2vw;
+        letter-spacing: -0.01em;
+        line-height: 2.60vw;
+        white-space: nowrap;
+        /* Removed rotate(180deg) */
+    }
+
+    /* Avatar Grouping */
+    .ellipse-parent {
+        display: flex;
+        align-items: center;
+        flex-direction: row; /* Standard left-to-right */
+    }
+
+    .frame-child8,
+    .frame-child9,
+    .frame-child14 {
+        height: 2.90vw; /* 55.7px */
+        width: 2.90vw;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 0.15vw solid #fff; /* Added white border for the "cutout" look in images */
+        position: relative;
+        /* Removed rotate(-180deg) */
+    }
+
+    /* Negative margin for overlap */
+    .frame-child9,
+    .frame-child14 {
+        margin-left: -1.0vw; /* Adjusted for a cleaner overlap */
+    }
+
+    .their-ielts-dreams {
+        position: absolute;
+        top: 9.5vw; /* Adjusted from 11.02vw */
+        left: 0.05vw;
+        font-size: 2.2vw;
+        letter-spacing: -0.01em;
+        line-height: 2.60vw;
+        width: 31.03vw;
+    }
+    .at-english-council2 {
+        width: 23.59vw; /* 453 */
+        font-size: 0.83vw; /* 16 */
+        line-height: 1.41vw; /* 27 */
+        font-family: Lato;
+        color: #464c5e;
+    }
+
+    /* Main Parent Container */
+    .a4-poster-11-parent {
+        width: 75vw;
+        height: 28.13vw;
+        position: relative;
+        font-size: 1.15vw;
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+    }
+
+    /* Base Card Styling (Applied to all 4 cards) */
+    .a4-poster-9, .a4-poster-10, .a4-poster-11, .a4-poster-12 {
+        position: absolute;
+        border-radius: 0.42vw;
+        width: 17.19vw;
+        height: 13.44vw;
+        overflow: hidden; /* This keeps the background images inside the card */
+    }
+
+    /* Card Positioning */
+    .a4-poster-9 { top: 0; left: 0; } /* Top Left (Corporate) */
+    .a4-poster-11 { top: 0; left: 57.81vw; } /* Top Right (Government) */
+    .a4-poster-10 { top: 14.69vw; left: 0; } /* Bottom Left (Student) */
+    .a4-poster-12 { top: 14.69vw; left: 57.81vw; } /* Bottom Right (Personalized) */
+
+    /* Background Image Fix */
+    .mask-group-icon, .mask-group-icon2, .mask-group-icon3, .mask-group-icon4 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image fills the card without distortion */
+    }
+
+    /* Standardized Content Overlays */
+    .container, .container3, .container4 {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        padding: 1.67vw; /* Consistent padding for all cards */
+        box-sizing: border-box;
+    }
+
+    /* Specific Overlay Colors to match your design */
+    .container { background-color: rgba(45, 0, 18, 0.6); } /* Dark Red/Pink */
+    .container3 { background-color: rgba(32, 21, 23, 0.6); } /* Dark Brown */
+    .container4 { background-color: rgba(20, 0, 65, 0.6); } /* Dark Purple */
+
+    /* Content Layout Fix */
+    .content, .content4 {
+        display: flex;
+        flex-direction: column;
+        gap: 1.04vw;
+        width: 100%;
+    }
+
+    /* Container for the icon to create the background and border effect */
+    .icon-container {
+        width: 3.5vw;           /* Slightly increased to account for padding */
+        height: 3.5vw;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1); /* Subtle transparent white background */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Soft light border */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8vw;         /* Use padding to make the image inside look smaller */
+        box-sizing: border-box; /* Ensures padding doesn't increase total width */
+    }
+
+    /* Text Containers */
+    .text-container, .text-container4 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.63vw;
+    }
+
+    .interactive-learning {
+        font-size: 1.15vw;
+        font-weight: bold;
+    }
+
+    .description, .description4 {
+        font-size: 0.83vw;
+        line-height: 1.2;
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+    }
+
+    /* Center Visuals (Background and Logo) */
+    .bonus-16-1 {
+        position: absolute;
+        top: 0;
+        left: 19.27vw;
+        border-radius: 0.42vw;
+        width: 36.46vw;
+        height: 28.13vw;
+        object-fit: cover;
+    }
+
+    .image-1-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centers the logo perfectly */
+        border-radius: 50%;
+        width: 14.64vw;
+        height: 14.64vw;
+        object-fit: cover;
+        z-index: 5;
+    }
+
+    /* --- Row 1: Online & Offline --- */
+    .online-offline-live-class-parent {
+        position: absolute;
+        top: 436.60vw;
+        left: 12.50vw;
+        width: 75vw;
+        height: 6.82vw;
+        font-size: 2.8vw; /* Normalized to fit within container */
+        font-family: 'Train One';
+    }
+
+    .group-child17 {
+        position: absolute;
+        top: 1.05vw;
+        left: 49vw; /* Adjusted to prevent text collision */
+        border-radius: 2.34vw;
+        width: 21.82vw;
+        height: 4.69vw;
+        object-fit: cover;
+    }
+
+    /* --- Row 2: With Practical Project --- */
+    .with-practical-project-parent {
+        position: absolute;
+        top: 445.51vw; /* Kept original top */
+        left: 12.45vw;
+        width: 75.06vw;
+        height: 6.82vw;
+        font-size: 2.8vw;
+        font-family: 'Train One';
+    }
+
+    .with-practical-project {
+        position: absolute;
+        top: 0;
+        left: 31.05vw;
+        letter-spacing: -0.01em;
+        line-height: 6.81vw;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .group-child19 {
+        position: absolute;
+        top: 1.05vw;
+        left: 0;
+        border-radius: 2.34vw;
+        width: 29.58vw;
+        height: 4.69vw;
+        object-fit: cover;
+    }
+
+    /* --- Row 3: Achieve Certificate --- */
+    .achieve-certificate-parent {
+        position: absolute;
+        top: 454.42vw; /* Fixed: Adjusted from 453.37 to prevent the middle row overlap */
+        left: 12.45vw;
+        width: 75vw;
+        height: 6.82vw;
+        font-size: 2.8vw;
+        font-family: 'Train One';
+    }
+
+    .group-child18 {
+        position: absolute;
+        top: 1.10vw;
+        left: 42.92vw;
+        border-radius: 2.34vw;
+        width: 32.08vw;
+        height: 4.69vw;
+        object-fit: cover;
+    }
+
+    /* --- Global Text Handling (Shared Classes) --- */
+    .online-offline {
+        letter-spacing: -0.01em;
+        line-height: 6.81vw;
+        text-transform: uppercase;
+        white-space: nowrap; /* Ensures text stays in a single line */
+    }
+
+    /* program section end */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* footer section start */ 
+    .group-parent6 {
+        position: relative;
+        top: 593.34vw;          /* 11392.07 */
+        left: 0;
+        width: 100%;       /* Ensures the container stays within screen bounds */
+        height: 35.83vw;   /* Keep your current height */
+        background-color: #000;
+        overflow: hidden;
+        color: #f24f5f;
+        overflow: hidden;
+    }
+
+    .rectangle-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;           /* 1920 */
+        height: 36.41vw;        /* 699 */
+    }
+
+    .group-child13 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(262.39deg, #000, #000);
+        width: 100vw;           /* 1920 */
+        height: 36.41vw;        /* 699 */
+    }
+
+    .frame-parent13 {
+        position: absolute;
+        top: 2.40vw;            /* 46 */
+        left: 12.5vw;           /* 240 */
+        width: 75.05vw;         /* 1441 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5.57vw;            /* 107 */
+    }
+
+    .frame-parent14 {
+        display: flex;
+        align-items: center;
+    }
+
+    .wanna-go-next-level-in-english-parent {
+        width: 39.58vw;         /* 760 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.63vw;            /* 12 */
+    }
+
+    .lets-talk-parent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 6.68vw;      /* 128.32 */
+        color: #fff;
+        font-family: Tropiline;
+    }
+
+    .lets-talk {
+        align-self: stretch;
+        position: relative;
+        letter-spacing: -0.01em;
+        line-height: 9.19vw;    /* 176.43 */
+    }
+
+    .frame-parent15 {
+        display: flex;
+        align-items: center;
+        gap: 0.94vw;            /* 18 */
+        margin-top: -0.42vw;   /* -8 */
+        position: relative;
+        font-size: 0.83vw;     /* 16 */
+        color: #0c111f;
+        font-family: Helvetica;
+    }
+
+    .vector-smart-object-parent {
+        border-radius: 5.21vw;  /* 100 */
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.42vw 0.83vw; /* 8 16 */
+        gap: 0.42vw;            /* 8 */
+    }
+
+    .vector-smart-object {
+        height: 0.94vw;         /* 18 */
+        width: 0.53vw;          /* 10.1 */
+    }
+
+    .facebook {
+        position: relative;
+    }
+
+    .frame-child7 {
+        width: 0.94vw;          /* 18 */
+        position: relative;
+        max-height: 100%;
+    }
+
+    .group-icon3 {
+        height: 0.73vw;         /* 14 */
+        width: 0.81vw;          /* 15.5 */
+        position: relative;
+    }
+
+    .component-22 {
+        height: 7.30vw;         /* 140.2 */
+        width: 7.30vw;          /* 140.2 */
+        position: relative;
+    }
+
+    .group-parent8 {
+        align-self: stretch;
+        height: 13.65vw;        /* 262 */
+        position: relative;
+        font-size: 0.94vw;     /* 18 */
+        color: #fff;
+        font-family: Tropiline;
+    }
+
+    .contact-info-parent {
+        position: absolute;
+        top: 3.44vw;            /* 66 */
+        left: 0;
+        width: 22.71vw;         /* 436 */
+        height: 4.74vw;         /* 91 */
+    }
+
+    .contact-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: pre-wrap;
+    }
+    .email-address-englishcouncils {
+        position: absolute;
+        top: 2.03vw;           /* 39 */
+        left: 0.05vw;          /* 1 */
+        font-size: 0.73vw;     /* 14 */
+        line-height: 1.35vw;   /* 26 */
+        font-weight: 500;
+        font-family: Lato;
+        display: inline-block;
+        width: 22.66vw;        /* 435 */
+        opacity: 0.7;
+    }
+
+    .image-113-parent {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 10.60vw); /* 203.5 */
+        width: 21.20vw;        /* 407 */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.15vw;           /* 22 */
+        text-align: center;
+        font-size: 0.73vw;     /* 14 */
+        font-family: Lato;
+    }
+
+    .image-113-icon {
+        width: 4.32vw;         /* 83 */
+        position: relative;
+        border-radius: 2.06vw; /* 39.5 */
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .unlock-your-english-potential-wrapper {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .unlock-your-english {
+        width: 19.11vw;        /* 367 */
+        position: relative;
+        line-height: 1.35vw;   /* 26 */
+        display: inline-block;
+    }
+
+    .office-address-parent {
+        position: absolute;
+        top: 3.44vw;           /* 66 */
+        left: 59.53vw;         /* 1143 */
+        width: 14.58vw;        /* 280 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.09vw;           /* 21 */
+        text-align: right;
+    }
+
+    .th-floor-rs {
+        align-self: stretch;
+        position: relative;
+        font-size: 0.73vw;     /* 14 */
+        line-height: 1.35vw;   /* 26 */
+        font-weight: 500;
+        font-family: Lato;
+        opacity: 0.7;
+    }
+
+    .line-parent {
+        position: absolute;
+        top: 10.26vw;          /* 197 */
+        left: 0;
+        width: 75.05vw;        /* 1441 */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.08vw;           /* 40 */
+        font-size: 0.83vw;     /* 16 */
+        font-family: Lato;
+    }
+
+    .line-div {
+        align-self: stretch;
+        height: 0.05vw;        /* 1 */
+        position: relative;
+        border-top: 0.05vw solid rgba(255, 255, 255, 0.1);
+        box-sizing: border-box;
+    }
+
+    .copyright {
+        height: 1.30vw;        /* 25 */
+        width: 22.50vw;        /* 432 */
+        position: relative;
+    }
+
+    .iconscopyright-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.25vw;         /* 24 */
+        height: 1.25vw;        /* 24 */
+    }
+
+    .copyright-2025 {
+        position: absolute;
+        top: 0.05vw;           /* 1 */
+        left: 1.72vw;          /* 33 */
+        line-height: 1.25vw;   /* 24 */
+    }
+
+    .about-us-parent {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.76vw;           /* 53 */
+        font-size: 0.94vw;     /* 18 */
+    }
+
+    /* Update your icon positioning to be more stable */
+    .group-child14 {
+        position: absolute;
+        top: 0.69vw;
+        /* Using 'right' is safer than 'left' for elements on the right edge */
+        right: -12vw;      /* Adjust this value to show more or less of the star */
+        width: 27.80vw;
+        height: 27.80vw;
+        object-fit: contain;
+        pointer-events: none; /* Recommended: prevents the icon from interfering with clicks */
+    }
+
+    /* footer section end */ 
+}
