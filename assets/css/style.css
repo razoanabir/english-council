@@ -2,12 +2,15 @@
 @media (min-width: 769px) {
     #mobile-page{display: none;}
     #web-page{display: block;}
+    .mobile-only { display: none !important; }
     body {
         margin: 0;
         padding: 0;
         width: 100%;
         height: 100%;
         overflow-x: hidden;
+        background-color: #fff;
+        scroll-behavior: smooth;
     }
 
     .english-council-homepage {
@@ -22,6 +25,7 @@
         margin: 0;
         display: flex;
         flex-direction: column;
+        z-index: 9999999;
     }
 
 
@@ -43,74 +47,161 @@
         height: 53.1vw;
     }
 
+    /* --- ORIGINAL STATE (NORMAL HEADER NAV) --- */
     .image-112-parent {
         position: absolute;
-        top: 1.25vw;  /* 24/1920*100 */
-        left: 12.8vw; /* 245/1920*100 */
-        width: 74.6vw; /* 1431/1920*100 */
-        height: 3.0vw; /* 58/1920*100 */
+        top: 1.25vw;
+        left: 12.8vw;
+        width: 74.6vw;
+        height: 3.0vw;
         text-align: center;
         font-size: 0.94vw;
+        z-index: 9999;
+
+        transition: transform 2.8s cubic-bezier(0.15, 0.6, 0.2, 1),
+                    opacity 2.8s ease;
     }
 
+    /* --- LOGO --- */
     .image-112-icon {
         position: absolute;
         top: 0;
         left: 0;
         border-radius: 1000px;
-        width: 3.1vw;  /* 59/1920*100 */
-        height: 3.0vw; /* 58/1920*100 */
+        width: 3.1vw;
+        height: 3.0vw;
         object-fit: cover;
     }
 
+    /* --- MENU --- */
     .button-parent {
         position: absolute;
-        top: 0.42vw; /* 8/1920*100 */
-        left: calc(50% - 13.4vw); /* 256.5/1920*100 */
+        top: 0.42vw;
+        left: calc(50% - 13.4vw);
         display: flex;
         align-items: center;
-        gap: 1.66vw; /* 32/1920*100 */
+        font-size: 1.2vw;
+        gap: 1.66vw;
     }
 
     .button {
-        height: 2.2vw; /* 42/1920*100 */
-        border-radius: 5.2vw; /* 100/1920*100 */
+        height: 2.2vw;
+        border-radius: 5.2vw;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0.78vw 0.83vw; /* 15px 16px */
+        padding: 0.78vw 0.83vw;
         box-sizing: border-box;
+        text-decoration: none;
+        color: white;
     }
 
     .home {
-        position: relative;
         font-weight: 600;
-        flex-shrink: 0;
     }
 
+    /* --- CTA BUTTON --- */
     .button5 {
         position: absolute;
         top: 0.42vw;
-        left: 63.5vw; /* 1219/1920*100 */
+        left: 63.5vw;
         border-radius: 5.2vw;
         background-color: #fff;
-        width: 11vw;  /* 212/1920*100 */
-        height: 2.2vw; /* 42/1920*100 */
+        width: 12vw;  
+        height: 1.8vw; 
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0.78vw 0.63vw; /* 15px 12px */
-        font-size: 0.73vw; /* 14/1920*100 */
+        padding: 0.8vw 1.3vw; 
+        font-size: 0.9vw; 
+        font-weight: 600;
         color: #0c111f;
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        text-decoration: none;
     }
 
-    .message-us-on {
-        position: relative;
-        line-height: 1.25vw; /* 24px /1920*100 */
-        flex-shrink: 0;
+    /* --- STICKY (HIDDEN STATE) --- */
+    .image-112-parent.scrolled {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6vw;
+        padding: 0 12.8vw;
+        box-sizing: border-box;
+        background: linear-gradient(98deg, #0f0a24 0%, #29113a 100%);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        z-index: 9999;
+
+        /* Hidden start position */
+        opacity: 0;
+        transform: translateY(-100%);
+        visibility: hidden;
+
+        /* SPECIFIC TRANSITION: 1.5s for a very gradual shutter feel */
+        transition-property: transform, opacity, visibility;
+        transition-duration: 1.5s, 1.8s, 1.5s;
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+#main-nav {
+    transition: transform 1.5s ease;
+}
+
+#main-nav.scrolled {
+    position: fixed;
+    top: 0;
+    transform: translateY(-100%);
+}
+
+#main-nav.scrolled.drop {
+    transform: translateY(0);
+}
+
+    /* --- THE SHUTTER DROP (ACTIVE STATE) --- */
+    .image-112-parent.scrolled.drop {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        
+        /* Remove any delays that might cause a "snap" feel */
+        transition-delay: 0s;
+    }
+    /* --- ALIGN INSIDE STICKY --- */
+    .image-112-parent.scrolled .image-112-icon {
+        top: 1vw;
+        left: 12.8vw;
     }
 
+    .image-112-parent.scrolled .button-parent {
+        top: 1.4vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* --- ALIGN INSIDE STICKY --- */
+
+    .image-112-parent.scrolled .button-parent {
+        /* Increase this 'top' value to move them lower */
+        top: 2vw; 
+        
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute; /* Ensures it moves independently of logo/CTA */
+    }
+    .image-112-parent.scrolled .button5 {
+        top: 1.4vw;
+        right: 12.8vw;
+        left: auto;
+    }
+    /* --- ALIGN INSIDE STICKY --- */
+
+    .image-112-parent.scrolled .image-112-icon {
+        /* Increase this value to move the logo lower */
+        /* If it was 1vw, try 1.8vw or 2vw */
+        top: 1.7vw; 
+        
+        left: 12.8vw;
+    }
     .cub-parent {
         position: absolute;
         top: 9.3vw; /* 179/1920*100 */
@@ -130,9 +221,10 @@
     }
 
     .were-most-promising {
-        width: 12.5vw; /* 241px */
+        width: 13.5vw; /* 241px */
         position: relative;
         line-height: 1.25vw; /* 23.89px */
+        font-size: 0.95vw;
         font-weight: 600;
         display: inline-block;
         flex-shrink: 0;
@@ -140,7 +232,7 @@
 
     .group-wrapper {
         position: absolute;
-        top: 14.1vw; /* 271px */
+        top: 12.5vw; /* 271px */
         left: 12.8vw; /* 245px */
         display: flex;
         align-items: center;
@@ -200,6 +292,7 @@
         top: 0;
         left: 3.1vw;
         line-height: 1.35vw;
+        font-size: 0.95vw;
         font-weight: 600;
         display: inline-block;
         width: 19.3vw;
@@ -229,7 +322,7 @@
         position: absolute;
         /* Use top/left to place the "start" of the vertical line */
         top: 0vh;           
-        left: 4vw;          
+        left: 3.5vw;          
         
         font-size: 4.36vw;
         letter-spacing: 0.18em;
@@ -310,12 +403,13 @@
     .lets-get-started {
         position: relative;
         line-height: 1.25vw; 
+        font-size: 0.95vw;
         font-weight: 600;
     }
 
     .button-child {
-        height: 1.04vw;
-        width: 0.98vw;
+        height: 1vw;
+        width: 1vw;
         border-radius: 2.6vw; 
         object-fit: contain;
     }
@@ -330,6 +424,7 @@
     .learn-more {
         position: relative;
         line-height: 1.25vw;
+        font-size: 0.95vw;
     }
     .rectangle-group {
         position: absolute;
@@ -394,7 +489,8 @@
     }
 
     .we-satisfied-24k-parent {
-        width: 7.1vw; 
+        /* Increased width to accommodate larger text */
+        width: 12vw; 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -404,14 +500,20 @@
     .we-satisfied-24k {
         align-self: stretch;
         position: relative;
-        line-height: 1.35vw;
-        font-weight: 600;
+        /* Added Font Size */
+        font-size: 1.2vw; 
+        line-height: 1.6vw;
+        /* font-weight should be a numeric value like 600 or 700, 1.1vh is unusual here */
+        font-weight: 800; 
     }
 
     .student-around-bangladesh {
-        width: 5.5vw;
+        /* Increased width so text doesn't wrap too early */
+        width: 10vw;
         position: relative;
-        line-height: 1.35vw;
+        /* Added Font Size */
+        font-size: 1vw;
+        line-height: 1.3vw;
         font-weight: 600;
         display: inline-block;
     }
@@ -512,8 +614,9 @@
     .our-corporate-program6 {
         width: 11.77vw;     /* 226 / 1920 * 100 */
         position: relative;
-        font-size: 0.83vw;  /* 16 / 1920 * 100 */
+        font-size: 1.05vw;  /* 16 / 1920 * 100 */
         line-height: 1.25vw;/* 24 / 1920 * 100 */
+        text-align: center;
         font-family: Lato;
         color: #464c5e;
         display: inline-block;
@@ -755,276 +858,155 @@
 
 
 
-    /* course section start */
-    .frame-container {
+    /* --- Course Section Wrapper --- */
+    #course {
+        position: relative;
+        width: 100vw;
+        background: transparent; /* Ensures no dark background */
+    }
+
+    /* --- The Stacking Container --- */
+    .stack-container {
+        position: absolute; 
+        /* Pushes the starting point of the section further down the page */
+        top: 105vw;      
+        left: 0;
+        width: 100vw;
+        height: 100vh;      
+        perspective: 2000px;
+        transform-style: preserve-3d;
+    }
+
+    /* --- Individual Card Styling --- */
+    .card-item {
         position: absolute;
-        top: 114.27vw;          /* 2194 / 1920 */
-        left: -0.05vw;          /* -1 / 1920 */
-        width: 100vw;           /* 1920 */
+        /* Increase this to 150px or more so the layers don't hit the top of the screen */
+        top: 160px; 
+        left: 50%;
+        
+        /* Center using GSAP preferred method */
+        transform: translateX(-50%); 
+        
+        width: 90vw;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         flex-shrink: 0;
-    }
-
-    .ellipse-group {
-        align-self: stretch;
-        height: 14.27vw;        /* 274 */
-        position: relative;
-        background-color: rgba(145, 209, 242, 0);
+        
+        /* Animation settings */
+        transform-origin: 50% 0%; 
+        will-change: transform, opacity;
+        backface-visibility: hidden;
+        
+        /* Card Visuals */
+        background: #ffffff !important;
+        opacity: 1 !important;
+        -webkit-font-smoothing: antialiased;
+        border-radius: 20px;
+        
+        /* Added a top-side shadow to make the white layers clearly visible */
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.05), 0 10px 30px rgba(0,0,0,0.1);
         overflow: hidden;
-        flex-shrink: 0;
     }
 
-    .ellipse-div {
-        position: absolute;
-        top: -12.81vw;          /* -246 */
-        left: calc(50% - 70.21vw); /* 1348 */
-        border-radius: 50%;
-        background: radial-gradient(50% 50% at 50% 50%, #fadbb7, rgba(250, 219, 183, 0.2));
-        width: 140.36vw;        /* 2695 */
-        height: 86.51vw;        /* 1661 */
-        flex-shrink: 0;
-    }
-
-    .frame-div {
-        position: absolute;
-        top: 3.85vw;            /* 74 */
-        left: calc(50% - 37.5vw); /* 720 */
-        display: flex;
-        align-items: flex-start;
-        gap: 8.91vw;            /* 171 */
-        flex-shrink: 0;
-    }
-
-    .group-container {
-        height: 8.28vw;         /* 159 */
-        width: 56.88vw;         /* 1092 */
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .our-corporate-program-provides-parent {
-        height: 9.79vw;         /* 188 */
-        width: 56.88vw;         /* 1092 */
+    /* --- Internal Content Structure --- */
+    .card-content-wrapper {
+        align-self: stretch;
+        height: 14.27vw;
         position: relative;
-        flex-shrink: 0;
+        overflow: hidden;
+        background: var(--card-bg); 
     }
 
-    .our-corporate-program {
+    .ellipse-bg {
         position: absolute;
-        top: 3.75vw;            /* 72 */
-        left: 5.99vw;           /* 115 */
-        line-height: 1.98vw;    /* 38 */
-        display: inline-block;
-        width: 50.89vw;         /* 977 */
-        height: 6.04vw;         /* 116 */
+        top: -12.81vw;
+        left: calc(50% - 70.21vw);
+        border-radius: 50%;
+        width: 140.36vw;
+        height: 86.51vw;
     }
 
-    .image-160-parent {
+    .content-flex-row {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 36.58vw;         /* 702.3 */
+        top: 3.85vw;
+        left: 5%; 
+        right: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text-group {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-title-row {
         display: flex;
         align-items: center;
-        gap: 1.72vw;            /* 33 */
-        font-size: 3.13vw;      /* 60 */
+        gap: 1.72vw;
+        font-size: 3.13vw;
         color: #000;
-        font-family: Tropiline;
     }
 
-    .image-160-icon {
-        width: 2.6vw;           /* 50 */
-        position: relative;
-        max-height: 100%;
+    .slider-icon {
+        width: 2.6vw;
         object-fit: cover;
     }
 
     .title-wrapper {
-        height: 2.55vw;
-        border-left: 0.05vw solid #000;
-        box-sizing: border-box;
+        border-left: 1px solid #000;
         display: flex;
         align-items: center;
-        justify-content: center; /* Centers the whole title block */
-        padding: 0.52vw 1.67vw;
+        padding: 0.5vw 1.5vw;
     }
 
     .title {
-        display: flex;           /* FIX: This ignores the HTML whitespace/line breaks */
-        align-items: baseline;   /* Keeps the letters perfectly aligned on the bottom */
-        position: relative;
-        letter-spacing: -0.01em;
-        line-height: 4.69vw;
-        flex-shrink: 0;
+        display: flex;
+        align-items: baseline;
+        line-height: 1.2;
+        font-weight: bold;
     }
 
     .SecondPart {
         color: #f24f5f;
-        /* Optional: If the font itself has wide edges, add a tiny negative margin */
-        /* margin-left: -0.1vw; */ 
     }
 
-    .button8 {
-        border-radius: 0.42vw;  /* 8 */
+    .description {
+        line-height: 1.5;
+        font-size: 1.1vw;
+        color: #333;
+        margin-top: 0.5vw;
+        max-width: 90%;
+    }
+
+    .button-cta {
+        border-radius: 0.42vw;
         background-color: #f24f5f;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0.63vw 0.83vw; /* 12 16 */
-        gap: 0.42vw;            /* 8 */
-        text-align: center;
-        font-size: 0.83vw;      /* 16 */
+        padding: 0.8vw 1.5vw;
+        gap: 0.5vw;
         color: #fff;
+        cursor: pointer;
+        margin-top: 1vw;
+        font-size: 1vw;
     }
 
-    .image-171-icon {
-        align-self: stretch;
-        position: relative;
-        max-width: 100%;
-        overflow: hidden;
-        max-height: 100%;
+    .arrow-icon {
+        width: 0.8vw;
+    }
+
+    .main-slider-image {
+        width: 100%;
+        height: auto;
         object-fit: cover;
+        display: block;
     }
-
-    .frame-parent2 {
-        position: absolute;
-        top: 168.75vw;          /* 3240 */
-        left: -0.05vw;          /* -1 */
-        width: 100vw;           /* 1920 */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-shrink: 0;
-    }
-
-    .ellipse-container {
-        align-self: stretch;
-        height: 14.27vw;        /* 274 */
-        position: relative;
-        background-color: #fff0f0;
-        overflow: hidden;
-        flex-shrink: 0;
-    }
-
-    .frame-child3 {
-        position: absolute;
-        top: -12.97vw;          /* -249 */
-        left: calc(50% - 70.16vw); /* 1347 */
-        border-radius: 50%;
-        background: radial-gradient(50% 50% at 50% 50%, #aaf9ff, #d8edff);
-        width: 140.36vw;        /* 2695 */
-        height: 85.94vw;        /* 1650 */
-        flex-shrink: 0;
-    }
-
-    .image-162-parent {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        gap: 1.72vw;            /* 33 */
-        font-size: 3.13vw;      /* 60 */
-        color: #000;
-        font-family: Tropiline;
-    }
-
-    .frame-parent4 {
-        position: absolute;
-        top: 223.23vw;          /* 4286 */
-        left: -0.05vw;          /* -1 */
-        width: 100vw;           /* 1920 */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-shrink: 0;
-    }
-
-    .frame-child4 {
-        position: absolute;
-        top: -12.97vw;          /* -249 */
-        left: calc(50% - 70.16vw); /* 1347 */
-        border-radius: 50%;
-        background: radial-gradient(50% 50% at 50% 50%, #cfadff, #f7f3ff);
-        width: 140.36vw;        /* 2695 */
-        height: 85.94vw;        /* 1650 */
-        flex-shrink: 0;
-    }
-
-    .frame-parent5 {
-        position: absolute;
-        top: 3.85vw;            /* 74 */
-        left: calc(50% - 38.59vw); /* 741 */
-        display: flex;
-        align-items: flex-start;
-        gap: 11.09vw;           /* 213 */
-        flex-shrink: 0;
-    }
-
-    .frame-parent6 {
-        position: absolute;
-        top: 277.71vw;          /* 5332 */
-        left: -0.05vw;          /* -1 */
-        width: 100vw;           /* 1920 */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-shrink: 0;
-    }
-
-    .frame-child5 {
-        position: absolute;
-        top: -12.97vw;          /* -249 */
-        left: calc(50% - 70.16vw); /* 1347 */
-        border-radius: 50%;
-        background: radial-gradient(50% 50% at 50% 50%, #adffbf, rgba(173, 255, 191, 0.4));
-        width: 140.36vw;        /* 2695 */
-        height: 85.94vw;        /* 1650 */
-        flex-shrink: 0;
-    }
-
-    .frame-parent7 {
-        position: absolute;
-        top: 3.85vw;            /* 74 */
-        left: 14.38vw;          /* 276 */
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 8.91vw;            /* 171 */
-        flex-shrink: 0;
-    }
-
-    .frame-parent8 {
-        position: absolute;
-        top: 332.19vw;          /* 6378 */
-        left: -0.05vw;          /* -1 */
-        width: 100vw;           /* 1920 */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-shrink: 0;
-    }
-
-    .frame-child6 {
-        position: absolute;
-        top: -12.97vw;          /* -249 */
-        left: calc(50% - 70.16vw); /* 1347 */
-        border-radius: 50%;
-        background: radial-gradient(50% 50% at 50% 50%, #ff7d7d, rgba(255, 192, 192, 0));
-        width: 140.36vw;        /* 2695 */
-        height: 85.94vw;        /* 1650 */
-        flex-shrink: 0;
-    }
-    /* course section end */
-
-
-
-
-
-
-
 
 
 
@@ -1085,164 +1067,100 @@
         font-family: Tropiline;
         color: #000;
     }
-
-    .frame-parent11 {
-        width: 75.10vw;         /* 1442 */
-        height: 24.55vw;        /* 471 */
-        position: relative;
-        font-size: 1.04vw;      /* 20 */
-        color: #121738;
+    /* Layout Container */
+    .faq-container {
+        width: 75.10vw;
+        margin: 0 auto;
+        font-family: inherit;
     }
 
-    .frame-parent12 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 0.83vw;  /* 16 */
-        background-color: #fff;
-        border: 0.05vw solid #e5e9eb; /* 1px */
-        box-sizing: border-box;
-        width: 35.44vw;         /* 680.4 */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.25vw;        /* 24 */
-        gap: 0.83vw;            /* 16 */
+    .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 1.5vw; /* Spacing between items */
+        align-items: start;
     }
 
-    .full-access-to-practice-tests-parent {
-        align-self: stretch;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1.04vw;            /* 20 */
+    /* Individual Item Style */
+.faq-item {
+    background-color: #fff;
+    border: 0.05vw solid #e5e9eb;
+    border-radius: 0.83vw;
+    padding: 1.5vw; /* Slightly increased padding for better breathing room */
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    gap: 1.5vw;
+}
+
+.faq-question {
+    /* Increased from 5vw (which was likely a typo as it would be huge) 
+       to a readable, prominent size */
+    font-size: 1.25vw; 
+    font-weight: 700;
+    color: #121738;
+    line-height: 1.6vw;
+}
+
+.faq-icon-wrapper {
+    /* Increased wrapper to match larger text */
+    width: 1.5vw; 
+    height: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.faq-toggle-icon {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Slide Down Animation Logic */
+.faq-answer {
+    display: grid;
+    grid-template-rows: 0fr; /* Start hidden */
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+/* This class is usually toggled via JS to open the FAQ */
+.faq-item.active .faq-answer {
+    grid-template-rows: 1fr;
+}
+
+.answer-content {
+    min-height: 0;
+    font-size: 1.05vw; /* Increased size */
+    line-height: 1.6vw; /* Increased spacing for readability */
+    color: #464c5e;
+    padding-top: 0;
+    transition: padding 0.4s ease;
+}
+
+.faq-item.active .answer-content {
+    padding-top: 1vw; /* Adds spacing when open */
+}
+    /* Active/Open State */
+    .faq-item.active {
+        border-color: #121738; /* Optional: highlight active item */
     }
 
-    .full-access-to {
-        position: relative;
-        font-weight: 600;
+    .faq-item.active .faq-answer {
+        grid-template-rows: 1fr; /* Slide down to fit content */
     }
 
-    .plus-large-svgrepocom-icon {
-        height: 1.15vw;         /* 22 */
-        width: 1.15vw;          /* 22 */
-        position: relative;
-    }
-
-    .the-demo-gives {
-        width: 28.65vw;         /* 550 */
-        height: 4.95vw;         /* 95 */
-        position: relative;
-        font-size: 0.83vw;      /* 16 */
-        line-height: 1.46vw;    /* 28 */
-        color: #464c5e;
-        display: inline-block;
-        flex-shrink: 0;
-    }
-
-    .frame-wrapper {
-        position: absolute;
-        top: 10.80vw;           /* 207 */
-        left: 0;
-        border-radius: 0.83vw;  /* 16 */
-        background-color: #fff;
-        border: 0.05vw solid #e5e9eb; /* 1px */
-        box-sizing: border-box;
-        width: 35.44vw;         /* 680.4 */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.25vw;        /* 24 */
-    }
-
-    .frame-wrapper2 {
-        position: absolute;
-        top: 0;
-        left: 39.72vw;          /* 761.62 / 1920 * 100 */
-        border-radius: 0.83vw;  /* 16 */
-        background-color: #fff;
-        border: 0.05vw solid #e5e9eb; /* 1px */
-        box-sizing: border-box;
-        width: 35.44vw;         /* 680.4 */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.25vw;        /* 24 */
-    }
-
-    .frame-wrapper3 {
-        position: absolute;
-        top: 15.78vw;           /* 303 */
-        left: 0;
-        border-radius: 0.83vw;
-        background-color: #fff;
-        border: 0.05vw solid #e5e9eb;
-        box-sizing: border-box;
-        width: 35.44vw;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.25vw;
-    }
-
-    .frame-wrapper4 {
-        position: absolute;
-        top: 5vw;               /* 96 */
-        left: 39.72vw;          /* 761.62 */
-        border-radius: 0.83vw;
-        background-color: #fff;
-        border: 0.05vw solid #e5e9eb;
-        box-sizing: border-box;
-        width: 35.44vw;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.25vw;
-    }
-
-    .frame-wrapper5 {
-        position: absolute;
-        top: 19.53vw;           /* 399 */
-        left: 0;
-        border-radius: 0.83vw;
-        background-color: #fff;
-        border: 0.05vw solid #e5e9eb;
-        box-sizing: border-box;
-        width: 35.44vw;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.25vw;
-    }
-
-    .frame-wrapper6 {
-        position: absolute;
-        top: 10vw;              /* 192 */
-        left: 39.72vw;          /* 761.62 */
-        border-radius: 0.83vw;
-        background-color: #fff;
-        border: 0.05vw solid #e5e9eb;
-        box-sizing: border-box;
-        width: 35.44vw;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.25vw;
-    }
-
-    .frame-wrapper7 {
-        position: absolute;
-        top: 15vw;              /* 288 */
-        left: 39.72vw;          /* 761.62 */
-        border-radius: 0.83vw;
-        background-color: #fff;
-        border: 0.05vw solid #e5e9eb;
-        box-sizing: border-box;
-        width: 35.44vw;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.25vw;
+    .faq-item.active .answer-content {
+        padding-top: 0.83vw;
     }
     /* faq section end */ 
 
@@ -1302,6 +1220,7 @@
         align-self: stretch;
         position: relative;
         font-weight: 500;
+        overflow: hidden;
     }
 
     .what-are-saying {
@@ -1390,10 +1309,11 @@
         gap: 0.21vw;            /* 4px */
     }
 
+    
     .aerotrip {
         align-self: stretch;
         position: relative;
-        font-size: 0.83vw;      /* 16px */
+        font-size: 1vw;      /* 16px */
         font-weight: 500;
         font-family: Inter;
         color: #464c5e;
@@ -1402,7 +1322,8 @@
     .i-am-so {
         width: 33.28vw;          /* 659px */
         position: relative;
-        font-size: 0.83vw;       /* 16px */
+        font-size: 1.1vw;       /* 16px */
+        font-weight: 600;
         line-height: 1.41vw;     /* 27px */
         color: #464c5e;
         display: inline-block;
@@ -1416,14 +1337,14 @@
         display: flex;
         align-items: center;
         /* This gap controls the space between the two arrows */
-        gap: 1.5vw; 
+        gap: 1.6vw; 
         flex-shrink: 0;
     }
 
     /* Base style for both arrows */
     .pagination-arrow {
-        height: 3.31vw; /* 44.9px equivalent */
-        width: 3.31vw;
+        height: 2; /* 44.9px equivalent */
+        width: 2vw;
         object-fit: contain;
         cursor: pointer;
         transition: opacity 0.2s ease;
@@ -1454,10 +1375,31 @@
         flex-shrink: 0;
     }
 
+    /* We will use JS to wrap your loop items in this class */
+    .testimonial-track {
+        display: flex;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        width: 100%;
+        will-change: transform;
+    }
+
+    /* Ensure each looped item stays at full width */
+    .testimonial-item {
+        min-width: 100%; 
+        flex-shrink: 0;
+        position: relative;
+    }
     /* testimonial section end */ 
 
 
 
+
+
+
+
+
+
+    
 
 
 
@@ -1574,8 +1516,22 @@
     }
 
     .years-experience {
-        width: 7.76vw;
-        line-height: 152.1%;
+        /* Increase width so words have room to breathe */
+        width: 10vw; 
+        
+        /* Crucial: Increase line-height so the lines don't touch each other */
+        line-height: 1.3; 
+        
+        /* Center the text within the bubble */
+        text-align: center;
+        
+        /* Ensure the font size is large enough to be readable */
+        font-size: 1.1vw;
+        font-weight: 600;
+        color: #ffffff;
+        
+        /* Standardizes word wrapping for single-line data */
+        word-wrap: break-word;
     }
 
     .span {
@@ -1680,12 +1636,14 @@
         flex-direction: column;
         align-items: flex-start;
         font-size: 0.83vw;    /* 16px */
+        font-size: 1vw;
         font-family: Lato;
     }
 
     .with-over-a {
         width: 22.55vw;       /* 433px */
         line-height: 1.41vw;  /* 27px */
+        font-size: 1vw;
         opacity: 0.8;
     }
 
@@ -1726,6 +1684,7 @@
         font-weight: 600;
         transform: rotate(90deg);
         transform-origin: 0 0;
+        word-spacing: 0.7vw;
     }
 
     .image-169-icon {
@@ -1789,7 +1748,7 @@
 
 
 
-    /* program section start */ 
+    /* program section start */
     .frame-parent22 {
         position: absolute;
         top: 386.67vw; /* 7424 */
@@ -1898,7 +1857,7 @@
     }
     .at-english-council2 {
         width: 23.59vw; /* 453 */
-        font-size: 0.83vw; /* 16 */
+        font-size: 1.2vw; /* 16 */
         line-height: 1.41vw; /* 27 */
         font-family: Lato;
         color: #464c5e;
@@ -1923,7 +1882,7 @@
         overflow: hidden; /* This keeps the background images inside the card */
     }
 
-    /* Card Positioning */
+    /* Card Positioning*/
     .a4-poster-9 { top: 0; left: 0; } /* Top Left (Corporate) */
     .a4-poster-11 { top: 0; left: 57.81vw; } /* Top Right (Government) */
     .a4-poster-10 { top: 14.69vw; left: 0; } /* Bottom Left (Student) */
@@ -1993,6 +1952,8 @@
     .description, .description4 {
         font-size: 0.83vw;
         line-height: 1.2;
+        font-size: 0.9vw;
+        font-weight: 400;
         font-family: 'Lato', sans-serif;
         margin: 0;
     }
@@ -2101,7 +2062,7 @@
         white-space: nowrap; /* Ensures text stays in a single line */
     }
 
-    /* program section end */ 
+    /* program section end description*/ 
 
 
 
@@ -2212,6 +2173,9 @@
         justify-content: center;
         padding: 0.42vw 0.83vw; /* 8 16 */
         gap: 0.42vw;            /* 8 */
+        font-size: 1vw;
+        font-weight: 600;
+
     }
 
     .vector-smart-object {
@@ -2236,8 +2200,8 @@
     }
 
     .component-22 {
-        height: 7.30vw;         /* 140.2 */
-        width: 7.30vw;          /* 140.2 */
+        height: 9vw;         /* 140.2 */
+        width: 9vw;          /* 140.2 */
         position: relative;
     }
 
@@ -2263,6 +2227,7 @@
         top: 0;
         left: 0;
         white-space: pre-wrap;
+        font-size: 1.2vw;
     }
     .email-address-englishcouncils {
         position: absolute;
@@ -2275,6 +2240,8 @@
         display: inline-block;
         width: 22.66vw;        /* 435 */
         opacity: 0.7;
+        font-size: 1vw;
+
     }
 
     .image-113-parent {
@@ -2311,6 +2278,8 @@
         position: relative;
         line-height: 1.35vw;   /* 26 */
         display: inline-block;
+        font-size: 0.9vw;
+
     }
 
     .office-address-parent {
@@ -2322,6 +2291,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 1.09vw;           /* 21 */
+        font-size: 1.2vw;
         text-align: right;
     }
 
@@ -2332,6 +2302,7 @@
         line-height: 1.35vw;   /* 26 */
         font-weight: 500;
         font-family: Lato;
+        font-size: 1vw;
         opacity: 0.7;
     }
 
@@ -2356,45 +2327,51 @@
         box-sizing: border-box;
     }
 
+    /* Container to ensure horizontal centering across the page */
+    .full-access-to-practice-tests-parent {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding:  0; /* Adjust vertical spacing as needed */
+    }
+
+    .copyright-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
     .copyright {
-        height: 1.30vw;        /* 25 */
-        width: 22.50vw;        /* 432 */
-        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8vw; /* Space between icon and text */
+        /* Remove fixed width and absolute position */
     }
 
     .iconscopyright-line {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 1.25vw;         /* 24 */
-        height: 1.25vw;        /* 24 */
+        width: 1.5vw;
+        height: 1.5vw;
+        display: block;
     }
 
-    .copyright-2025 {
-        position: absolute;
-        top: 0.05vw;           /* 1 */
-        left: 1.72vw;          /* 33 */
-        line-height: 1.25vw;   /* 24 */
+    .copyright-text {
+        font-size: 1.1vw; /* Increased size for better visibility */
+        color: #ffffff;
+        line-height: 1.5vw;
+        white-space: nowrap; /* Keeps everything on one line */
     }
 
-    .about-us-parent {
-        display: flex;
-        align-items: flex-start;
-        gap: 2.76vw;           /* 53 */
-        font-size: 0.94vw;     /* 18 */
+    .copyright-text a {
+        color: rgb(242, 79, 95); /* Tarun Soft Link Color */
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 0.3vw;
     }
 
-    /* Update your icon positioning to be more stable */
-    .group-child14 {
-        position: absolute;
-        top: 0.69vw;
-        /* Using 'right' is safer than 'left' for elements on the right edge */
-        right: -12vw;      /* Adjust this value to show more or less of the star */
-        width: 27.80vw;
-        height: 27.80vw;
-        object-fit: contain;
-        pointer-events: none; /* Recommended: prevents the icon from interfering with clicks */
+    .copyright-text a:hover {
+        text-decoration: underline;
     }
-
     /* footer section end */ 
 }

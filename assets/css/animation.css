@@ -1,0 +1,55 @@
+/* web page about section animation start*/
+.youth-program-wrapper, 
+.youth-program-container, 
+.youth-program-frame, 
+.youth-program-wrapper2, 
+.youth-program-wrapper3, 
+.youth-program-wrapper4, 
+.youth-program-wrapper5, 
+.youth-program-wrapper6, 
+.youth-program-wrapper7, 
+.youth-program-wrapper8, 
+.youth-program-wrapper9,
+.local-programs-wrapper,
+.years-experience-wrapper {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.animate-fall {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+.youth-program-wrapper { transition-delay: 0.1s; }
+.youth-program-container { transition-delay: 0.2s; }
+.youth-program-frame { transition-delay: 0.3s; }
+.youth-program-wrapper2 { transition-delay: 0.4s; }
+.youth-program-wrapper3 { transition-delay: 0.15s; }
+.youth-program-wrapper4 { transition-delay: 0.5s; }
+.youth-program-wrapper5 { transition-delay: 0.25s; }
+.local-programs-wrapper { transition-delay: 0.6s; }
+.years-experience-wrapper { transition-delay: 0.7s; }
+/* web page about section animation start*/
+
+/* mobile page about section animation start*/
+.mobile-parent29 .youth-program-wrapper {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.mobile-parent29 .youth-program-wrapper:first-child {
+    transform: translateX(-150px);
+}
+.mobile-parent29 .youth-program-wrapper:last-child {
+    transform: translateX(150px);
+}
+.animate-slide {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+.mobile-parent29:nth-child(1) .youth-program-wrapper { transition-delay: 0.1s; }
+.mobile-parent29:nth-child(2) .youth-program-wrapper { transition-delay: 0.3s; }
+.mobile-parent29:nth-child(3) .youth-program-wrapper { transition-delay: 0.5s; }
+.mobile-parent29:nth-child(4) .youth-program-wrapper { transition-delay: 0.7s; }
+.mobile-parent29:nth-child(5) .youth-program-wrapper { transition-delay: 0.9s; }
+/* mobile page about section animation end*/

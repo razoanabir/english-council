@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body { margin: 0; background: #111; overflow-x: hidden; }
+
+.spacer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.stack-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* Added perspective to the container */
+    perspective: 2000px; 
+}
+
+.card {
+    position: absolute;
+    width: 80%;
+    height: 70vh;
+    top: 15vh;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    
+    /* CRITICAL: The hinge must be at the top center */
+    transform-origin: 50% 0%; 
+    /* Helps smooth out the 3D rotation */
+    will-change: transform; 
+    backface-visibility: hidden;
+}
+
+/* Colors for visual clarity */
+.red { background: #a30f0f; } /* Darker cards look better in a stack */
+.blue { background: #4b98c4; }
+.green { background: #079e14; }
+.purple { background: #13044b; }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <div class="spacer">Scroll down to see the effect...</div>
+
+    <div class="stack-container">
+    <section class="card red"><h1>Card 1</h1></section>
+    <section class="card blue"><h1>Card 2</h1></section>
+    <section class="card green"><h1>Card 3</h1></section>
+    <section class="card purple"><h1>Card 4</h1></section>
+
+    </div>
+
+    <div class="spacer">Footer Content Here</div>    
+
+    <script>
+gsap.registerPlugin(ScrollTrigger);
+
+const cards = gsap.utils.toArray(".card");
+
+// 1. PRE-SET: Initial states and Z-Index layering
+cards.forEach((card, i) => {
+    // Each subsequent card gets a higher z-index so it overlaps the previous one
+    gsap.set(card, { zIndex: i }); 
+    
+    if (i > 0) {
+        gsap.set(card, { 
+            opacity: 0, 
+            yPercent: 120, 
+            rotationX: 90 
+        });
+    }
+});
+
+const tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".stack-container",
+        start: "top top",
+        end: `+=${(cards.length + 1) * 100}%`, 
+        pin: true,
+        scrub: 1,
+        anticipatePin: 1
+    }
+});
+
+cards.forEach((card, i) => {
+    // 2. ENTRANCE: Explicitly using fromTo for every intermediate card
+    if (i > 0) {
+        tl.fromTo(card, 
+            { rotationX: 90, yPercent: 120, opacity: 0 }, 
+            {
+                rotationX: 0,
+                yPercent: 0,
+                opacity: 1,
+                duration: 1,
+                immediateRender: false, 
+                ease: "none"
+            }, 
+            i
+        );
+    }
+
+    // 3. STACKING: Pushing the stack into the background
+    if (i < cards.length - 1) {
+        tl.to(cards.slice(0, i + 1), {
+            yPercent: (index) => -8 * (i - index + 1), 
+            z: (index) => -100 * (i - index + 1), 
+            rotationX: (index) => -12 * (i - index + 1), 
+            scale: (index) => 1 - (0.05 * (index === i ? 0 : (i - index + 1))),
+            opacity: (index) => 1 - (0.15 * (i - index + 1)),
+            duration: 1,
+            ease: "none"
+        }, i); 
+    }
+});
+
+// 4. THE EXIT: All cards clear out
+tl.to(cards, {
+    yPercent: -150,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+    ease: "power2.in"
+}, cards.length);
+    </script>
+</body>
+</html>
