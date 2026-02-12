@@ -1,4 +1,4 @@
-/* web page about section animation start*/
+/*======web page about section animation start======*/
 .youth-program-wrapper, 
 .youth-program-container, 
 .youth-program-frame, 
@@ -13,26 +13,31 @@
 .local-programs-wrapper,
 .years-experience-wrapper {
     opacity: 0;
-    transform: translateY(-100px);
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    transform: translateY(-120px); 
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    will-change: transform, opacity;
 }
 
 .animate-fall {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
-.youth-program-wrapper { transition-delay: 0.1s; }
-.youth-program-container { transition-delay: 0.2s; }
-.youth-program-frame { transition-delay: 0.3s; }
-.youth-program-wrapper2 { transition-delay: 0.4s; }
-.youth-program-wrapper3 { transition-delay: 0.15s; }
-.youth-program-wrapper4 { transition-delay: 0.5s; }
-.youth-program-wrapper5 { transition-delay: 0.25s; }
-.local-programs-wrapper { transition-delay: 0.6s; }
-.years-experience-wrapper { transition-delay: 0.7s; }
-/* web page about section animation start*/
+.youth-program-wrapper      { transition-delay: 0.05s; }
+.youth-program-container    { transition-delay: 0.10s; }
+.youth-program-frame        { transition-delay: 0.15s; }
+.youth-program-wrapper2     { transition-delay: 0.20s; }
+.youth-program-wrapper3     { transition-delay: 0.25s; }
+.youth-program-wrapper4     { transition-delay: 0.30s; }
+.youth-program-wrapper5     { transition-delay: 0.35s; }
+.youth-program-wrapper6     { transition-delay: 0.40s; }
+.youth-program-wrapper7     { transition-delay: 0.45s; }
+.youth-program-wrapper8     { transition-delay: 0.50s; }
+.youth-program-wrapper9     { transition-delay: 0.55s; }
+.local-programs-wrapper     { transition-delay: 0.60s; }
+.years-experience-wrapper   { transition-delay: 0.65s; }
+/*======web page about section animation start======*/
 
-/* mobile page about section animation start*/
+/*======mobile page about section animation start======*/
 .mobile-parent29 .youth-program-wrapper {
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
@@ -52,4 +57,326 @@
 .mobile-parent29:nth-child(3) .youth-program-wrapper { transition-delay: 0.5s; }
 .mobile-parent29:nth-child(4) .youth-program-wrapper { transition-delay: 0.7s; }
 .mobile-parent29:nth-child(5) .youth-program-wrapper { transition-delay: 0.9s; }
-/* mobile page about section animation end*/
+/*======mobile page about section animation end======*/
+
+/*======web page header section animation start======*/
+@keyframes ghostlyFadeLeft {
+    0% {
+        opacity: 0;
+        filter: blur(4px);
+        /* Reduced from -100px to -25px for a very short, clean entrance */
+        transform: translateX(-25px); 
+        letter-spacing: 0.05em; /* Barely noticeable expansion */
+        transform-origin: left;
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+        letter-spacing: normal;
+    }
+}
+
+@keyframes eyeBounceSettling {
+    0% { opacity: 0; transform: translateY(50px) scaleY(1.2) scaleX(0.8); }
+    40% { transform: translateY(-20px) scaleY(0.9) scaleX(1.1); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.reveal-active {
+    opacity: 0;
+    will-change: transform, opacity, filter;
+    display: inline-block; 
+    transform-origin: left;
+}
+
+.achieve-your.reveal-active.animated {
+    animation: ghostlyFadeLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.dream-ielts-score.reveal-active.animated,
+.button-group.reveal-active.animated {
+    animation: ghostlyFadeLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.at-english-council-were-dedi-parent.reveal-active.animated {
+    animation: ghostlyFadeLeft 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.eye-ball.reveal-active.animated, 
+.eye-ball2.reveal-active.animated {
+    animation: eyeBounceSettling 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+/*======web page header section animation end======*/
+
+/*======web page footer section animation start======*/
+.wanna-go-next-level-in-english-parent {
+    perspective: 1500px; 
+}
+#wanna-go,
+.lets-talk,
+.frame-parent15,
+.component-22 {
+    display: block !important;
+    opacity: 0;
+    transform: translateY(40px) translateZ(-80px) rotateX(70deg);
+    transform-origin: center bottom;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+}
+.reveal-id, .reveal-rows {
+    animation: rollingWave 1.4s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    animation-delay: 0.1s; 
+}
+@keyframes rollingWave {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) translateZ(-80px) rotateX(70deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateZ(0) rotateX(0deg);
+    }
+}
+/*======web page footer section animation end======*/
+
+/*======web page feature section animation start======*/
+@keyframes ghostlyNudge { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(-15px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+}
+.line-1, .line-2, .line-3 {
+    opacity: 0;
+    display: block;
+    white-space: nowrap;
+    will-change: transform, opacity;
+    
+    animation: ghostlyNudge 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.line-1 { animation-delay: 0.2s; }
+.line-2 { animation-delay: 1.0s; }
+.line-3 { animation-delay: 1.8s; }
+.group-parent {
+    perspective: 2000px;
+    perspective-origin: center center;
+    overflow: visible;
+}
+
+@keyframes dimensionalDrift {
+    0% { 
+        opacity: 0; 
+        /* Deep start for the "inside-out" feel */
+        transform: scale(0) translateZ(-2000px) translateY(-100px); 
+        filter: brightness(0.5);
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1) translateZ(0) translateY(0); 
+        filter: brightness(1);
+    }
+}
+
+.group-parent2 {
+    opacity: 0;
+    /* Duration reduced to 1.1s for a punchier feel */
+    animation: dimensionalDrift 1.1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    will-change: transform, opacity;
+}
+
+/* 1 and 3 fire first */
+.group-parent2:nth-child(1),
+.group-parent2:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+/* 2 and 4 fire shortly after (delay reduced to 0.4s) */
+.group-parent2:nth-child(2),
+.group-parent2:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.group-parent2:hover {
+    transform: scale(1.02);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+/*======web page feature section animation end======*/
+
+/*======web page program section animation start======*/
+@keyframes nudge { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(-15px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+}
+@keyframes nudgeRight { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(15px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+}
+.at-english-council2 {
+    opacity: 0;
+    animation: nudgeRight 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.where-we-help,
+.helping-professionals,
+.students-achieve-parent,
+.their-ielts-dreams {
+    opacity: 0;
+    animation: nudge 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.students-achieve-parent {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 10px;
+}
+.where-we-help { animation-delay: 0.1s; }
+.helping-professionals { animation-delay: 0.6s; }
+.students-achieve-parent { animation-delay: 1.1s; }
+.their-ielts-dreams { animation-delay: 1.6s; }
+
+@keyframes nudgeLeft { 
+    0% { opacity: 0; transform: translateX(-20px); } 
+    100% { opacity: 1; transform: translateX(0); } 
+}
+
+@keyframes nudgeRight { 
+    0% { opacity: 0; transform: translateX(20px); } 
+    100% { opacity: 1; transform: translateX(0); } 
+}
+.online-offline-live-class-parent,
+.with-practical-project-parent,
+.achieve-certificate-parent {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px;
+    opacity: 0;
+}
+.online-offline-live-class-parent,
+.achieve-certificate-parent {
+    flex-direction: row-reverse !important;
+    justify-content: flex-end !important;
+    animation: nudgeLeft 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.with-practical-project-parent {
+    justify-content: flex-start !important;
+    animation: nudgeRight 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.online-offline-live-class-parent { animation-delay: 0.2s; }
+.with-practical-project-parent { animation-delay: 0.8s; }
+.achieve-certificate-parent { animation-delay: 1.4s; }
+
+/*======web page program section animation end======*/
+
+/*======web page testimonial section animation start======*/
+@keyframes ghostlyNudgeLeft { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(-30px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+}
+
+@keyframes ghostlyNudgeRight { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(30px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+}
+
+.testimonials,
+.what-are-saying,
+.frame-parent17,
+.faq-parent {
+    opacity: 0;
+    will-change: transform, opacity;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: forwards;
+}
+
+.testimonials,
+.faq-parent {
+    animation-name: ghostlyNudgeLeft;
+    animation-delay: 0.1s;
+    animation-duration: 0.8s;
+}
+
+.what-are-saying {
+    animation-name: ghostlyNudgeLeft;
+    animation-delay: 0.4s;
+    animation-duration: 1.2s;
+}
+
+.frame-parent17 {
+    animation-name: ghostlyNudgeRight;
+    animation-delay: 0.1s;
+}
+
+.some-answer-that {
+    display: block;
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: ghostlyNudgeLeft 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.5s;
+}
+
+.average-49-rating {
+    display: block;
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: ghostlyNudgeRight 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.5s;
+}
+/*======web page testimonial section animation end======*/
+
+/*======web page faq section animation start======*/
+@keyframes ghostlyNudgeLeft { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(-30px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+}
+.faq-parent {
+    opacity: 0;
+    display: block;
+    will-change: transform, opacity;
+    
+    animation: ghostlyNudgeLeft 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.2s; 
+}
+
+.some-answer-that {
+    display: block;
+    opacity: 0;
+    animation: ghostlyNudgeLeft 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.5s;
+}
+/*======web page faq section animation end======*/

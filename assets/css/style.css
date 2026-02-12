@@ -20,7 +20,7 @@
         background-color: #fff;
         text-align: left;
         font-size: 1.25vw; 
-        color: #121738;
+        color: #464c5e;
         font-family: Lato;
         margin: 0;
         display: flex;
@@ -39,51 +39,44 @@
         color: #fff;
     }
 
-    .gradient-wallpapers {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 53.1vw;
-    }
-
-    /* --- ORIGINAL STATE (NORMAL HEADER NAV) --- */
+    /* --- BASE NAV --- */
     .image-112-parent {
         position: absolute;
         top: 1.25vw;
         left: 12.8vw;
         width: 74.6vw;
-        height: 3.0vw;
+        height: 3vw;
         text-align: center;
         font-size: 0.94vw;
         z-index: 9999;
 
-        transition: transform 2.8s cubic-bezier(0.15, 0.6, 0.2, 1),
-                    opacity 2.8s ease;
+        transition: opacity 5s ease; /* slowed a bit */
     }
 
     /* --- LOGO --- */
     .image-112-icon {
         position: absolute;
-        top: 0;
+        top: 0.3vw;
         left: 0;
         border-radius: 1000px;
         width: 3.1vw;
-        height: 3.0vw;
+        height: 3vw;
         object-fit: cover;
     }
 
-    /* --- MENU --- */
+    /* --- NAV MENU --- */
     .button-parent {
         position: absolute;
-        top: 0.42vw;
-        left: calc(50% - 13.4vw);
+        top: 0.2vw;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
         align-items: center;
         font-size: 1.2vw;
         gap: 1.66vw;
     }
 
+    /* --- BUTTONS --- */
     .button {
         height: 2.2vw;
         border-radius: 5.2vw;
@@ -91,117 +84,84 @@
         align-items: center;
         justify-content: center;
         padding: 0.78vw 0.83vw;
-        box-sizing: border-box;
-        text-decoration: none;
         color: white;
+        text-decoration: none;
     }
 
     .home {
         font-weight: 600;
     }
 
-    /* --- CTA BUTTON --- */
     .button5 {
         position: absolute;
         top: 0.42vw;
-        left: 63.5vw;
+        right: -3vw;
         border-radius: 5.2vw;
         background-color: #fff;
-        width: 12vw;  
-        height: 1.8vw; 
+        width: 11.5vw;
+        height: 1vw;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0.8vw 1.3vw; 
-        font-size: 0.9vw; 
+        padding: 0.8vw 1.3vw;
+
+        font-size: 0.9vw;
         font-weight: 600;
         color: #0c111f;
+        text-transform: capitalize;
         font-family: 'Inter', sans-serif;
         cursor: pointer;
         text-decoration: none;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border: 1px solid transparent;
     }
 
-    /* --- STICKY (HIDDEN STATE) --- */
+    .button5:hover {
+        background-color: #ffff;
+        color: #0c111f;
+        border: 1px solid #ff4b5c; /* Matches the reddish accent in your logo/buttons */
+        box-shadow: 0 5px 15px rgba(241, 165, 173, 0.4);
+        transform: translateY(-2px); /* Subtle lift effect */
+    }
+
+    /* --- STICKY MODE --- */
     .image-112-parent.scrolled {
-        position: fixed !important;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 6vw;
+        height: 5.5vw;
         padding: 0 12.8vw;
         box-sizing: border-box;
         background: linear-gradient(98deg, #0f0a24 0%, #29113a 100%);
         box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        z-index: 9999;
-
-        /* Hidden start position */
         opacity: 0;
-        transform: translateY(-100%);
-        visibility: hidden;
-
-        /* SPECIFIC TRANSITION: 1.5s for a very gradual shutter feel */
-        transition-property: transform, opacity, visibility;
-        transition-duration: 1.5s, 1.8s, 1.5s;
-        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
     }
-#main-nav {
-    transition: transform 1.5s ease;
-}
 
-#main-nav.scrolled {
-    position: fixed;
-    top: 0;
-    transform: translateY(-100%);
-}
-
-#main-nav.scrolled.drop {
-    transform: translateY(0);
-}
-
-    /* --- THE SHUTTER DROP (ACTIVE STATE) --- */
-    .image-112-parent.scrolled.drop {
-        opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
-        
-        /* Remove any delays that might cause a "snap" feel */
-        transition-delay: 0s;
-    }
-    /* --- ALIGN INSIDE STICKY --- */
+    /* --- FORCE SAME INNER POSITIONS AS ORIGINAL --- */
     .image-112-parent.scrolled .image-112-icon {
+        left: 11vw;
         top: 1vw;
-        left: 12.8vw;
     }
 
     .image-112-parent.scrolled .button-parent {
-        top: 1.4vw;
-        left: 50%;
+        left: 48.5vw;
+        top: 0.6vw;
         transform: translateX(-50%);
     }
-    /* --- ALIGN INSIDE STICKY --- */
 
-    .image-112-parent.scrolled .button-parent {
-        /* Increase this 'top' value to move them lower */
-        top: 2vw; 
-        
-        left: 50%;
-        transform: translateX(-50%);
-        position: absolute; /* Ensures it moves independently of logo/CTA */
-    }
     .image-112-parent.scrolled .button5 {
-        top: 1.4vw;
-        right: 12.8vw;
-        left: auto;
+        right: 8.5vw;
+        top: 1vw;
     }
-    /* --- ALIGN INSIDE STICKY --- */
 
-    .image-112-parent.scrolled .image-112-icon {
-        /* Increase this value to move the logo lower */
-        /* If it was 1vw, try 1.8vw or 2vw */
-        top: 1.7vw; 
-        
-        left: 12.8vw;
+    /* --- SHOW STICKY --- */
+    .image-112-parent.scrolled.visible {
+        opacity: 1;
+        pointer-events: auto;
     }
+
     .cub-parent {
         position: absolute;
         top: 9.3vw; /* 179/1920*100 */
@@ -225,7 +185,7 @@
         position: relative;
         line-height: 1.25vw; /* 23.89px */
         font-size: 0.95vw;
-        font-weight: 600;
+        font-weight: 400;
         display: inline-block;
         flex-shrink: 0;
     }
@@ -289,13 +249,16 @@
 
     .at-english-council {
         position: absolute;
-        top: 0;
+        top: -0.12vw;
         left: 3.1vw;
-        line-height: 1.35vw;
-        font-size: 0.95vw;
-        font-weight: 600;
-        display: inline-block;
+        font-size: 0.85vw;
+        font-weight: 400;
         width: 19.3vw;
+        /* Key properties to match the image alignment */
+        line-height: 1.4vw; 
+        text-align: justify;
+        text-justify: inter-word; /* Ensures even spacing between words */
+        display: inline-block;
     }
     .achieve-your {
         position: absolute;
@@ -367,18 +330,18 @@
         background-color: #ffff;
     }
 
-    /* Individual bar heights (Figma-style variation) */
-    .group-child   { height: 0.26vw; }
-    .group-item    { height: 0.42vw; }
-    .group-inner   { height: 0.31vw; }
-    .rectangle-div { height: 0.52vw; }
+    /* Top bar is the tallest, bottom is the shortest */
+    .group-child   { height: 0.60vw; }
+    .group-item    { height: 0.54vw; }
+    .group-inner   { height: 0.48vw; }
+    .rectangle-div { height: 0.42vw; }
     .group-child2  { height: 0.36vw; }
-    .group-child3  { height: 0.42vw; }
-    .group-child4  { height: 0.31vw; }
-    .group-child5  { height: 0.47vw; }
-    .group-child6  { height: 0.31vw; }
-    .group-child7  { height: 0.36vw; }
-    .group-child8  { height: 0.26vw; }
+    .group-child3  { height: 0.30vw; }
+    .group-child4  { height: 0.24vw; }
+    .group-child5  { height: 0.18vw; }
+    .group-child6  { height: 0.12vw; }
+    .group-child7  { height: 0.08vw; }
+    .group-child8  { height: 0.04vw; }
 
     .button-group {
         position: absolute;
@@ -393,25 +356,42 @@
     .button6 {
         border-radius: 0.42vw;
         background-color: #f24f5f;
-        display: flex;
+        display: inline-flex; /* Changed to inline-flex to fit content */
         align-items: center;
         justify-content: center;
-        padding: 0.63vw 0.83vw; 
-        gap: 0.42vw; 
+        padding: 0.7vw 1.2vw; /* Slightly increased padding for the second image look */
+        gap: 0.6vw; 
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .lets-get-started {
         position: relative;
         line-height: 1.25vw; 
-        font-size: 0.95vw;
-        font-weight: 600;
+        font-size: 1vw; /* Slightly increased for bold clarity */
+        font-weight: 400; /* Increased to 700 for the 'thick' look in image 2 */
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
     }
 
     .button-child {
-        height: 1vw;
-        width: 1vw;
-        border-radius: 2.6vw; 
+        height: 1.1vw; /* Slightly larger to match the sharper icon in image 2 */
+        width: 1.1vw;
         object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    /* --- Hover Effect --- */
+
+    .button6:hover {
+        background-color: #d13d4b; /* Darker shade of your theme coral */
+        transform: translateY(-2px); /* Subtle lift */
+        box-shadow: 0 6px 15px rgba(242, 79, 95, 0.3); /* Themed glow */
+    }
+
+    .button6:hover .button-child {
+        transform: translate(3px, -3px); /* Makes the arrow "fly" diagonally */
     }
     .button7 {
         border-radius: 0.42vw; 
@@ -500,22 +480,20 @@
     .we-satisfied-24k {
         align-self: stretch;
         position: relative;
-        /* Added Font Size */
-        font-size: 1.2vw; 
-        line-height: 1.6vw;
-        /* font-weight should be a numeric value like 600 or 700, 1.1vh is unusual here */
-        font-weight: 800; 
+        font-size: 1vw; 
+        line-height: 1.5vw;
+        font-weight: 400; 
     }
 
     .student-around-bangladesh {
-        /* Increased width so text doesn't wrap too early */
-        width: 10vw;
+        width: min-content; 
         position: relative;
-        /* Added Font Size */
         font-size: 1vw;
-        line-height: 1.3vw;
-        font-weight: 600;
+        line-height: 1.5vw; 
+        font-weight: 400;
         display: inline-block;
+        white-space: normal; 
+        word-break: keep-all;
     }
     /* header section end - responsive version */
 
@@ -612,10 +590,10 @@
     }
 
     .our-corporate-program6 {
-        width: 11.77vw;     /* 226 / 1920 * 100 */
+        width: 14vw;     /* 226 / 1920 * 100 */
         position: relative;
-        font-size: 1.05vw;  /* 16 / 1920 * 100 */
-        line-height: 1.25vw;/* 24 / 1920 * 100 */
+        font-size: 1vw;  /* 16 / 1920 * 100 */
+        line-height: 1.4vw;/* 24 / 1920 * 100 */
         text-align: center;
         font-family: Lato;
         color: #464c5e;
@@ -739,34 +717,42 @@
         border: 0.05vw solid #fff; /* 0.9px */
         box-sizing: border-box;
     }
-
+    /* --- YOUR ORIGINAL POSITIONING (RETAINED) --- */
     .unlock-your-full-potential-wit-parent {
         position: absolute;
-        top: 58.33vw;              /* 1120 / 1920 */
-        left: 12.19vw;             /* 234 / 1920 */
-        width: 78.68vw;            /* 1453 / 1920 */
-        height: 10.42vw;           /* 200 / 1920 */
-        flex-shrink: 0;
-        font-size: 1.88vw;         /* 36 / 1920 */
+        top: 58.33vw;
+        left: 12.19vw;
+        width: 80vw;
+        height: auto; 
+        font-size: 1.88vw;
         color: #0c111f;
         font-family: Tropiline;
         text-align: center;
     }
 
     .unlock-your-full-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        letter-spacing: -0.01em;
-        line-height: 2.60vw;       /* 50 / 1920 */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Ensures all three lines stay perfectly centered */
+        line-height: 2.60vw;
         font-weight: 600;
-        display: inline-block;
-        width: 78.68vw;
     }
 
     .potential-with-english {
         color: rgba(102, 112, 133, 0.7);
     }
+
+    /* --- THE FIX: LOCK 3 LINES & ANIMATE --- */
+    .line-block {
+        display: block;
+        white-space: nowrap; /* PREVENTS the browser from creating a 4th line */
+        opacity: 0;
+        
+        /* Animation coming from the LEFT with expansion */
+        animation: tracking-in-expand-fwd-left 0.8s cubic-bezier(.215,.61,.355,1.000) both;
+    }
+
 
     .comprehensive-ielts-program {
         white-space: pre-wrap;
@@ -858,155 +844,197 @@
 
 
 
-    /* --- Course Section Wrapper --- */
-    #course {
-        position: relative;
-        width: 100vw;
-        background: transparent; /* Ensures no dark background */
-    }
+ /* --- Course Section Wrapper --- */
+#course {
+    position: relative;
+    width: 100vw;
+    background: transparent; /* Ensures no dark background */
+}
 
-    /* --- The Stacking Container --- */
-    .stack-container {
-        position: absolute; 
-        /* Pushes the starting point of the section further down the page */
-        top: 105vw;      
-        left: 0;
-        width: 100vw;
-        height: 100vh;      
-        perspective: 2000px;
-        transform-style: preserve-3d;
-    }
+/* --- The Stacking Container --- */
+.stack-container {
+    position: absolute; 
+    top: 105vw;      
+    left: 0;
+    width: 100vw;
+    height: 100vh;      
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    /* Ensure the container itself doesn't block clicks to other sections */
+    pointer-events: none; 
+}
 
-    /* --- Individual Card Styling --- */
-    .card-item {
-        position: absolute;
-        /* Increase this to 150px or more so the layers don't hit the top of the screen */
-        top: 160px; 
-        left: 50%;
-        
-        /* Center using GSAP preferred method */
-        transform: translateX(-50%); 
-        
-        width: 90vw;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-shrink: 0;
-        
-        /* Animation settings */
-        transform-origin: 50% 0%; 
-        will-change: transform, opacity;
-        backface-visibility: hidden;
-        
-        /* Card Visuals */
-        background: #ffffff !important;
-        opacity: 1 !important;
-        -webkit-font-smoothing: antialiased;
-        border-radius: 20px;
-        
-        /* Added a top-side shadow to make the white layers clearly visible */
-        box-shadow: 0 -5px 15px rgba(0,0,0,0.05), 0 10px 30px rgba(0,0,0,0.1);
-        overflow: hidden;
-    }
+/* --- Individual Card Styling --- */
+.card-item {
+    position: absolute;
+    /* Increase this to 150px or more so the layers don't hit the top of the screen */
+    top: 160px; 
+    left: 50%;
+    
+    /* Center using GSAP preferred method */
+    transform: translateX(-50%); 
+    
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    
+    /* Animation settings */
+    transform-origin: 50% 0%; 
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    pointer-events: auto; /* Re-enable clicks for the card specifically */
+    
+    /* Card Visuals */
+    background: #ffffff !important;
+    opacity: 1 !important;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 20px;
+    
+    /* Added a top-side shadow to make the white layers clearly visible */
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05), 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
 
-    /* --- Internal Content Structure --- */
-    .card-content-wrapper {
-        align-self: stretch;
-        height: 14.27vw;
-        position: relative;
-        overflow: hidden;
-        background: var(--card-bg); 
-    }
+/* --- Internal Content Structure --- */
+.card-content-wrapper {
+    align-self: stretch;
+    height: 14.27vw;
+    position: relative;
+    overflow: hidden;
+    background: var(--card-bg); 
+}
 
-    .ellipse-bg {
-        position: absolute;
-        top: -12.81vw;
-        left: calc(50% - 70.21vw);
-        border-radius: 50%;
-        width: 140.36vw;
-        height: 86.51vw;
-    }
+.ellipse-bg {
+    position: absolute;
+    top: -12.81vw;
+    left: calc(50% - 70.21vw);
+    border-radius: 50%;
+    width: 140.36vw;
+    height: 86.51vw;
+}
 
-    .content-flex-row {
-        position: absolute;
-        top: 3.85vw;
-        left: 5%; 
-        right: 5%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.content-flex-row {
+    position: absolute;
+    top: 3.85vw;
+    left: 5%; 
+    right: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .text-group {
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-    }
+.text-group {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
 
-    .image-title-row {
-        display: flex;
-        align-items: center;
-        gap: 1.72vw;
-        font-size: 3.13vw;
-        color: #000;
-    }
+.image-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1.72vw;
+    font-size: 3.13vw;
+    color: #000;
+}
 
-    .slider-icon {
-        width: 2.6vw;
-        object-fit: cover;
-    }
+.slider-icon {
+    width: 2.6vw;
+    object-fit: cover;
+}
 
-    .title-wrapper {
-        border-left: 1px solid #000;
-        display: flex;
-        align-items: center;
-        padding: 0.5vw 1.5vw;
-    }
+.title-wrapper {
+    border-left: 1px solid #000;
+    display: flex;
+    align-items: center;
+    padding: 0.5vw 1.5vw;
+}
 
-    .title {
-        display: flex;
-        align-items: baseline;
-        line-height: 1.2;
-        font-weight: bold;
-    }
+.title {
+    display: flex;
+    align-items: baseline;
+    line-height: 1.2;
+    font-weight: bold;
+}
 
-    .SecondPart {
-        color: #f24f5f;
-    }
+.SecondPart {
+    color: #f24f5f;
+}
 
-    .description {
-        line-height: 1.5;
-        font-size: 1.1vw;
-        color: #333;
-        margin-top: 0.5vw;
-        max-width: 90%;
-    }
+.course-description {
+    /* Increased font size for better readability */
+    font-size: 1.1vw; 
+    line-height: 1.5;
+    color: #333;
+    
+    /* Pushes the text from the left toward the right */
+    margin-left: 6vw; 
+    margin-top: 0.5vw;
+    
+    /* Adjust max-width to ensure it doesn't hit the right edge after shifting */
+    max-width: 100%; 
+    
+    /* Optional: helps with alignment if the container is flex */
+    display: block; 
+}
 
-    .button-cta {
-        border-radius: 0.42vw;
-        background-color: #f24f5f;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.8vw 1.5vw;
-        gap: 0.5vw;
-        color: #fff;
-        cursor: pointer;
-        margin-top: 1vw;
-        font-size: 1vw;
-    }
+.button-cta {
+    border-radius: 0.42vw;
+    background-color: #f24f5f;
+    display: inline-flex; /* Changed to inline-flex to prevent full-width stretching */
+    align-items: center;
+    justify-content: center;
+    padding: 0.8vw 1.5vw;
+    gap: 0.5vw;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1vw;
+    font-size: 1vw;
+    font-weight: 700; /* Matching the bold look of the reference image */
+    
+    /* Smooth transition for all properties */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+    outline: none;
+}
 
-    .arrow-icon {
-        width: 0.8vw;
-    }
+.arrow-icon {
+    width: 0.8vw;
+    height: auto;
+    display: block;
+    /* Transition specifically for the arrow movement */
+    transition: transform 0.3s ease;
+}
 
-    .main-slider-image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
+/* --- Hover State --- */
+
+.button-cta:hover {
+    background-color: #d13d4b; /* Deeper red to match the theme */
+    transform: translateY(-2px); /* Slight lift effect */
+    /* Add a glow that matches the button color */
+    box-shadow: 0 6px 15px rgba(242, 79, 95, 0.35);
+}
+
+/* Move the arrow diagonally up and right on hover */
+.button-cta:hover .arrow-icon {
+    transform: translate(3px, -3px);
+}
+
+/* --- Active (Click) State --- */
+
+.button-cta:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-slider-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
 
 
 
@@ -1037,7 +1065,7 @@
     /* faq section start */ 
     .frame-parent10 {
         position: absolute;
-        top: 552.63vw;          /* 10596.07 */
+        top: 590.63vw;          /* 10596.07 */
         left: 12.48vw;          /* 239 */
         width: 75.10vw;         /* 1442 */
         display: flex;
@@ -1082,78 +1110,76 @@
     }
 
     /* Individual Item Style */
-.faq-item {
-    background-color: #fff;
-    border: 0.05vw solid #e5e9eb;
-    border-radius: 0.83vw;
-    padding: 1.5vw; /* Slightly increased padding for better breathing room */
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-    height: fit-content;
-}
-
-.faq-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    gap: 1.5vw;
-}
-
-.faq-question {
-    /* Increased from 5vw (which was likely a typo as it would be huge) 
-       to a readable, prominent size */
-    font-size: 1.25vw; 
-    font-weight: 700;
-    color: #121738;
-    line-height: 1.6vw;
-}
-
-.faq-icon-wrapper {
-    /* Increased wrapper to match larger text */
-    width: 1.5vw; 
-    height: 1.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.faq-toggle-icon {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-}
-
-/* Slide Down Animation Logic */
-.faq-answer {
-    display: grid;
-    grid-template-rows: 0fr; /* Start hidden */
-    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
-}
-
-/* This class is usually toggled via JS to open the FAQ */
-.faq-item.active .faq-answer {
-    grid-template-rows: 1fr;
-}
-
-.answer-content {
-    min-height: 0;
-    font-size: 1.05vw; /* Increased size */
-    line-height: 1.6vw; /* Increased spacing for readability */
-    color: #464c5e;
-    padding-top: 0;
-    transition: padding 0.4s ease;
-}
-
-.faq-item.active .answer-content {
-    padding-top: 1vw; /* Adds spacing when open */
-}
-    /* Active/Open State */
-    .faq-item.active {
-        border-color: #121738; /* Optional: highlight active item */
+    .faq-item {
+        background-color: #fff;
+        border: 0.05vw solid #e5e9eb;
+        border-radius: 0.83vw;
+        padding: 1.5vw; /* Slightly increased padding for better breathing room */
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+        height: fit-content;
     }
+
+    .faq-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        gap: 1.5vw;
+    }
+
+    .faq-question {
+        /* Increased from 5vw (which was likely a typo as it would be huge) 
+        to a readable, prominent size */
+        font-size: 1.25vw; 
+        font-weight: 700;
+        color: #464c5e;
+        line-height: 1.6vw;
+    }
+
+    .faq-icon-wrapper {
+        /* Increased wrapper to match larger text */
+        width: 1.5vw; 
+        height: 1.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .faq-toggle-icon {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    /* Slide Down Animation Logic */
+    .faq-answer {
+        display: grid;
+        grid-template-rows: 0fr; /* Start hidden */
+        transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+    }
+
+    /* This class is usually toggled via JS to open the FAQ */
+    .faq-item.active .faq-answer {
+        grid-template-rows: 1fr;
+    }
+
+    .answer-content {
+        min-height: 0;
+        font-size: 1.05vw; /* Increased size */
+        line-height: 1.6vw; /* Increased spacing for readability */
+        color: #464c5e;
+        padding-top: 0;
+        transition: padding 0.4s ease;
+    }
+
+    .faq-item.active .answer-content {
+        padding-top: 1vw; /* Adds spacing when open */
+    }
+    /* Active/Open State */
+
 
     .faq-item.active .faq-answer {
         grid-template-rows: 1fr; /* Slide down to fit content */
@@ -1195,7 +1221,7 @@
     /* testimonial section start */ 
     .frame-parent16 {
         position: absolute;
-        top: 513.1vw;          /* 493.1 + 20vw shift */
+        top:  530.1vw;          /* 493.1 + 20vw shift */
         left: 12.5vw;          /* 240px */
         width: 74.53vw;        /* 1431px */
         display: flex;
@@ -1268,7 +1294,7 @@
     /* Images */
     .english-council-homepage-child6 {
         position: absolute;
-        top: 522.7vw;           /* 502.7 + 20 */
+        top: 495vw;           /* 502.7 + 20 */
         left: 12.5vw;
         border-radius: 0.52vw;  /* 10px */
         width: 19.27vw;         /* 370px */
@@ -1279,7 +1305,7 @@
 
     .frame-icon8 {
         position: absolute;
-        top: 522.7vw;
+        top: 495vw;
         left: 35.73vw;
         width: 3.79vw;          /* 82px */
         height: 3.79vw;
@@ -1288,7 +1314,7 @@
 
     .frame-parent19 {
         position: absolute;
-        top: 528.46vw;          /* 508.46 + 20 */
+        top: 500vw;          /* 508.46 + 20 */
         left: 35.78vw;
         width: 36.41vw;         /* 699px */
         display: flex;
@@ -1332,7 +1358,7 @@
     /* Pagination container */
     .pagination-icon-parent {
         position: absolute;
-        top: 537.21vw;
+        top: 555.21vw;
         left: 80.45vw;
         display: flex;
         align-items: center;
@@ -1358,7 +1384,7 @@
     /* Bottom images */
     .image-183-icon {
         position: absolute;
-        top: 522.7vw;           /* 502.7 + 20 */
+        top: 540.7vw;           /* 502.7 + 20 */
         left: 51.67vw;          /* 996px */
         width: 35.63vw;         /* 684px */
         height: 11.72vw;        /* 225px */
@@ -1368,7 +1394,7 @@
 
     .english-council-homepage-child7 {
         position: absolute;
-        top: 528.46vw;          /* 508.46 + 20 */
+        top: 538.46vw;          /* 508.46 + 20 */
         left: 19.22vw;          /* 369px */
         width: 6.00vw;          /* 112px */
         height: 6.00vw;         /* 112px */
@@ -1446,8 +1472,8 @@
 
     /* about us start */ 
     .group-parent9 {
-        position: absolute;
-        top: 465.41vw;        /* 8935.79px */
+        position: relative;
+        top:  490.41vw;/* 8935.79px */
         left: 0;
         width: 100vw;          /* 1920px */
         height: 42.86vw;       /* 823.3px */
@@ -1751,7 +1777,7 @@
     /* program section start */
     .frame-parent22 {
         position: absolute;
-        top: 386.67vw; /* 7424 */
+        top: 386.67vw;; /* 7424 */
         left: calc(50% - 37.55vw); /* 721 */
         width: 75.14vw; /* 1442.7 */
         display: flex;
@@ -1855,13 +1881,15 @@
         line-height: 2.60vw;
         width: 31.03vw;
     }
+
+
     .at-english-council2 {
-        width: 23.59vw; /* 453 */
-        font-size: 1.2vw; /* 16 */
-        line-height: 1.41vw; /* 27 */
+        width: 35vw; 
+        font-size: 1vw;
+        line-height: 2vw; 
         font-family: Lato;
-        color: #464c5e;
-    }
+        color: #464c5e;        
+       }
 
     /* Main Parent Container */
     .a4-poster-11-parent {
@@ -1923,20 +1951,33 @@
         width: 100%;
     }
 
-    /* Container for the icon to create the background and border effect */
-    .icon-container {
-        width: 3.5vw;           /* Slightly increased to account for padding */
+    .icon-wrapper {
+        /* 1. Sizing for the shiny ring */
+        width: 3.5vw;
         height: 3.5vw;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1); /* Subtle transparent white background */
-        border: 1px solid rgba(255, 255, 255, 0.2); /* Soft light border */
+        
+        /* 2. The Shiny Border - High opacity for that metallic/glow look */
+        border: 1.5px solid rgba(255, 255, 255, 0.85);
+        
+        /* 3. Layout - Centers the icon perfectly */
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0.8vw;         /* Use padding to make the image inside look smaller */
-        box-sizing: border-box; /* Ensures padding doesn't increase total width */
+        
+        /* 4. Background - Keeping it dark and clear */
+        background: transparent;
+        box-sizing: border-box;
+        flex-shrink: 0;
     }
 
+    .icon-wrapper img {
+        /* 5. Icon Visibility - This ensures the icon never touches the border */
+        width: 50%; /* Adjust this % to make the icon bigger or smaller inside */
+        height: 50%;
+        object-fit: contain;
+        display: block;
+    }
     /* Text Containers */
     .text-container, .text-container4 {
         display: flex;
@@ -1949,16 +1990,15 @@
         font-weight: bold;
     }
 
-    .description, .description4 {
-        font-size: 0.83vw;
-        line-height: 1.2;
-        font-size: 0.9vw;
+    .description {
         font-weight: 400;
+        color: #ffffff; 
+        line-height: 1.25;
+        font-size: 0.8vw;
         font-family: 'Lato', sans-serif;
         margin: 0;
     }
 
-    /* Center Visuals (Background and Logo) */
     .bonus-16-1 {
         position: absolute;
         top: 0;
@@ -2086,7 +2126,7 @@
     /* footer section start */ 
     .group-parent6 {
         position: relative;
-        top: 593.34vw;          /* 11392.07 */
+        top:  593.34vw;          /* 11392.07 */
         left: 0;
         width: 100%;       /* Ensures the container stays within screen bounds */
         height: 35.83vw;   /* Keep your current height */
@@ -2372,6 +2412,29 @@
 
     .copyright-text a:hover {
         text-decoration: underline;
+    }
+    .group-child14 {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: none;
+
+        position: absolute;
+
+        /* ORIGINAL-LIKE POSITION */
+        top: 0vw;          /* pull slightly upward */
+        right: -13vw;       /* push slightly outside */
+
+        width: 30vw;
+        height: 30vw;
+
+        z-index: 5;
+
+        /* ORIGINAL ROTATION EFFECT */
+        transform: rotate(5deg);
+
+        /* Smooth rendering */
+        object-fit: contain;
     }
     /* footer section end */ 
 }
