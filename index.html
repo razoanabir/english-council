@@ -82,7 +82,7 @@
 					<a href="" class="scroll-link" data-scroll="100" style="text-decoration: none; color: inherit; display: inline-block;">
 						<div class="button6">
 								<div class="lets-get-started">Let’s Get Started</div>
-							<img class="button-child" src="{{ asset('dist/images/arrow-icon.webp')}}" alt="">
+							<img class="button-child" src="assets/images/arrow-icon.webp')}}" alt="">
 						</div>
 					</a>
 
@@ -99,7 +99,7 @@
 				</div>
 
 				<div class="frame-parent">
-					<img class="frame-icon" src="assets/images/white-star-icon.webp" alt="">
+					<img class="frame-icon" src="assets/images/white-red-star.svg" alt="">
 					<div class="frame-group">
 						<div class="ellipse-parent">
 							<img class="frame-child" src="assets/images/avatar-1.webp" alt="">
@@ -489,8 +489,8 @@
           					<div class="frame-parent21">
             						<img class="group-child15" src="assets/images/about-section-image-background.webp" alt="">
             						
-            						<div class="an-expert-dedicated">An Expert Dedicated to Your Success</div>
-            						<div class="jahan-is-committed">Jahan is committed to seeing you succeed</div>
+            						<div class="an-expert-dedicated">Jahan is committed to seeing you succeed</div>
+            						<div class="jahan-is-committed">An Expert Dedicated to Your Success</div>
             						<img class="image-169-icon" src="assets/images/about-section-image.webp" alt="">
             						
             						<img class="icon2" src="assets/images/about-section-corner-icon.webp" alt="">
@@ -513,15 +513,15 @@
       			</div>
       			<div class="frame-parent17">
         				<div class="frame-parent18">
-          					<img class="frame-icon3" src="assets/images/star-icon.webp" alt="">
+          					<img class="frame-icon3" src="assets/images/red-star.svg" alt="">
           					
-          					<img class="frame-icon3" src="assets/images/star-icon.webp" alt="">
+          					<img class="frame-icon3" src="assets/images/red-star.svg" alt="">
           					
-          					<img class="frame-icon3" src="assets/images/star-icon.webp" alt="">
+          					<img class="frame-icon3" src="assets/images/red-star.svg" alt="">
           					
-          					<img class="frame-icon3" src="assets/images/star-icon.webp" alt="">
+          					<img class="frame-icon3" src="assets/images/red-star.svg" alt="">
           					
-          					<img class="frame-icon3" src="assets/images/star-icon.webp" alt="">
+          					<img class="frame-icon3" src="assets/images/red-star.svg" alt="">
           					
         				</div>
         				<div class="average-49-rating">Average 4.9 Rating point Review from Facebook</div>
@@ -553,10 +553,10 @@
 					<div class="i-am-so">I am so grateful to English Council for helping me achieve my desired IELTS score. The instructors were knowledgeable and supportive, and the course materials were comprehensive and easy to understand. I highly recommend English Council to anyone looking to improve their English language skills.</div>
 				</div>
 			</div>
-			<div class="pagination-icon-parent">
-				<img class="pagination-arrow" src="assets/images/left-side-arrow.webp" alt="Previous">
+			<div class="pagination-icon-parent" >
+				<img class="pagination-arrow" src="assets/images/left-arrow.svg" alt="Previous">
 				
-				<img class="pagination-arrow" src="assets/images/right-side-arrow.webp" alt="Next">
+				<img class="pagination-arrow" src="assets/images/right-arrow.svg" alt="Next">
 			</div>
     		<img class="image-183-icon"  src="assets/images/testimonial-section-background-icon.webp" alt="">
     		
@@ -641,32 +641,39 @@
         				<div class="frame-parent13">
           					<div class="frame-parent14">
             						<div class="wanna-go-next-level-in-english-parent">
-              							<b class="interactive-learning">Wanna Go Next Level In English?</b>
+              							<b class="interactive-learning" id="wanna-go" style="font-size: 1.5vw">Wanna Go Next Level In English?</b>
               							<div class="lets-talk-parent">
                 								<b class="lets-talk">LET’S TALK</b>
                 								<div class="frame-parent15">
+													<a href="{{ $personalInfo->facebook_link }}" style="text-decoration: none; color: inherit; display: inline-block;">
                   									<div class="vector-smart-object-parent">
                     										<img class="vector-smart-object" src="assets/images/facebook.webp" alt="">
                     										
                     										<div class="facebook">Facebook</div>
                   									</div>
+													</a>
+													<a href="{{ $personalInfo->instagram_link }}" style="text-decoration: none; color: inherit; display: inline-block;">
                   									<div class="vector-smart-object-parent">
                     										<img class="frame-child7" src="assets/images/instagram.webp" alt="">
                     										
                     										<div class="facebook">Instagram</div>
                   									</div>
+													</a>
+													<a href="{{ $personalInfo->x_link }}" style="text-decoration: none; color: inherit; display: inline-block;">
                   									<div class="vector-smart-object-parent">
                     										<img class="group-icon3" src="assets/images/x.webp" alt="">
                     										
                     										<div class="facebook">X</div>
                   									</div>
+													</a>
                 								</div>
               							</div>
             						</div>
+									<a href="https://wa.me/88{{ $personalInfo->whatsapp_number }}" style="text-decoration: none; color: inherit; display: inline-block;">
             						<div class="component-22">
-              							
               							<img class="group-icon2" src="assets/images/msg-us.webp" alt="">              							
             						</div>
+									</a>
           					</div>
           					<div class="group-parent8">
             						<div class="contact-info-parent">
@@ -784,7 +791,7 @@
               							<img class="mobile-frame-inner" src="assets/images/avatar-5.webp" alt="">
               							
             						</div>
-            						<img class="mobile-frame-mobile-icon" src="assets/images/white-star-icon.webp" alt="">
+            						<img class="mobile-frame-mobile-icon" src="assets/images/white-red-star.svg" alt="">
             						
           					</div>
           					<div class="mobile-container">

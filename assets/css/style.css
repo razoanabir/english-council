@@ -1221,7 +1221,7 @@
     /* testimonial section start */ 
     .frame-parent16 {
         position: absolute;
-        top:  530.1vw;          /* 493.1 + 20vw shift */
+        top:  540.1vw;          /* 493.1 + 20vw shift */
         left: 12.5vw;          /* 240px */
         width: 74.53vw;        /* 1431px */
         display: flex;
@@ -1294,7 +1294,7 @@
     /* Images */
     .english-council-homepage-child6 {
         position: absolute;
-        top: 495vw;           /* 502.7 + 20 */
+        top: 505vw;           /* 502.7 + 20 */
         left: 12.5vw;
         border-radius: 0.52vw;  /* 10px */
         width: 19.27vw;         /* 370px */
@@ -1305,7 +1305,7 @@
 
     .frame-icon8 {
         position: absolute;
-        top: 495vw;
+        top: 505vw;
         left: 35.73vw;
         width: 3.79vw;          /* 82px */
         height: 3.79vw;
@@ -1314,7 +1314,7 @@
 
     .frame-parent19 {
         position: absolute;
-        top: 500vw;          /* 508.46 + 20 */
+        top: 510vw;          /* 508.46 + 20 */
         left: 35.78vw;
         width: 36.41vw;         /* 699px */
         display: flex;
@@ -1358,7 +1358,7 @@
     /* Pagination container */
     .pagination-icon-parent {
         position: absolute;
-        top: 555.21vw;
+        top: 565.21vw;
         left: 80.45vw;
         display: flex;
         align-items: center;
@@ -1384,7 +1384,7 @@
     /* Bottom images */
     .image-183-icon {
         position: absolute;
-        top: 540.7vw;           /* 502.7 + 20 */
+        top: 550.7vw;           /* 502.7 + 20 */
         left: 51.67vw;          /* 996px */
         width: 35.63vw;         /* 684px */
         height: 11.72vw;        /* 225px */
@@ -1394,7 +1394,7 @@
 
     .english-council-homepage-child7 {
         position: absolute;
-        top: 538.46vw;          /* 508.46 + 20 */
+        top: 548.46vw;          /* 508.46 + 20 */
         left: 19.22vw;          /* 369px */
         width: 6.00vw;          /* 112px */
         height: 6.00vw;         /* 112px */
