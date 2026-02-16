@@ -892,9 +892,6 @@
     opacity: 1 !important;
     -webkit-font-smoothing: antialiased;
     border-radius: 20px;
-    
-    /* Added a top-side shadow to make the white layers clearly visible */
-    box-shadow: 0 -5px 15px rgba(0,0,0,0.05), 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
 }
 
@@ -1065,7 +1062,7 @@
     /* faq section start */ 
     .frame-parent10 {
         position: absolute;
-        top: 590.63vw;          /* 10596.07 */
+        top: 550.63vw;          /* 10596.07 */
         left: 12.48vw;          /* 239 */
         width: 75.10vw;         /* 1442 */
         display: flex;
@@ -1221,7 +1218,7 @@
     /* testimonial section start */ 
     .frame-parent16 {
         position: absolute;
-        top:  540.1vw;          /* 493.1 + 20vw shift */
+        top:  510.1vw;          /* 493.1 + 20vw shift */
         left: 12.5vw;          /* 240px */
         width: 74.53vw;        /* 1431px */
         display: flex;
@@ -1294,7 +1291,7 @@
     /* Images */
     .english-council-homepage-child6 {
         position: absolute;
-        top: 505vw;           /* 502.7 + 20 */
+        top: 480vw;           /* 502.7 + 20 */
         left: 12.5vw;
         border-radius: 0.52vw;  /* 10px */
         width: 19.27vw;         /* 370px */
@@ -1305,7 +1302,7 @@
 
     .frame-icon8 {
         position: absolute;
-        top: 505vw;
+        top: 480vw;
         left: 35.73vw;
         width: 3.79vw;          /* 82px */
         height: 3.79vw;
@@ -1314,7 +1311,7 @@
 
     .frame-parent19 {
         position: absolute;
-        top: 510vw;          /* 508.46 + 20 */
+        top: 485vw;          /* 508.46 + 20 */
         left: 35.78vw;
         width: 36.41vw;         /* 699px */
         display: flex;
@@ -1358,7 +1355,7 @@
     /* Pagination container */
     .pagination-icon-parent {
         position: absolute;
-        top: 565.21vw;
+        top: 535.21vw;
         left: 80.45vw;
         display: flex;
         align-items: center;
@@ -1384,7 +1381,7 @@
     /* Bottom images */
     .image-183-icon {
         position: absolute;
-        top: 550.7vw;           /* 502.7 + 20 */
+        top: 520.7vw;           /* 502.7 + 20 */
         left: 51.67vw;          /* 996px */
         width: 35.63vw;         /* 684px */
         height: 11.72vw;        /* 225px */
@@ -1394,7 +1391,7 @@
 
     .english-council-homepage-child7 {
         position: absolute;
-        top: 548.46vw;          /* 508.46 + 20 */
+        top: 518.46vw;          /* 508.46 + 20 */
         left: 19.22vw;          /* 369px */
         width: 6.00vw;          /* 112px */
         height: 6.00vw;         /* 112px */
@@ -1473,7 +1470,7 @@
     /* about us start */ 
     .group-parent9 {
         position: relative;
-        top:  490.41vw;/* 8935.79px */
+        top:  460.41vw;/* 8935.79px */
         left: 0;
         width: 100vw;          /* 1920px */
         height: 42.86vw;       /* 823.3px */
@@ -1777,7 +1774,7 @@
     /* program section start */
     .frame-parent22 {
         position: absolute;
-        top: 386.67vw;; /* 7424 */
+        top: 376.67vw;; /* 7424 */
         left: calc(50% - 37.55vw); /* 721 */
         width: 75.14vw; /* 1442.7 */
         display: flex;
@@ -1993,8 +1990,8 @@
     .description {
         font-weight: 400;
         color: #ffffff; 
-        line-height: 1.25;
-        font-size: 0.8vw;
+        line-height: 1.33;
+        font-size: 0.85vw;
         font-family: 'Lato', sans-serif;
         margin: 0;
     }
@@ -2024,7 +2021,7 @@
     /* --- Row 1: Online & Offline --- */
     .online-offline-live-class-parent {
         position: absolute;
-        top: 436.60vw;
+        top: 430vw;
         left: 12.50vw;
         width: 75vw;
         height: 6.82vw;
@@ -2035,7 +2032,7 @@
     .group-child17 {
         position: absolute;
         top: 1.05vw;
-        left: 49vw; /* Adjusted to prevent text collision */
+        left: 52vw; /* Adjusted to prevent text collision */
         border-radius: 2.34vw;
         width: 21.82vw;
         height: 4.69vw;
@@ -2045,7 +2042,7 @@
     /* --- Row 2: With Practical Project --- */
     .with-practical-project-parent {
         position: absolute;
-        top: 445.51vw; /* Kept original top */
+        top: 438vw; /* Kept original top */
         left: 12.45vw;
         width: 75.06vw;
         height: 6.82vw;
@@ -2056,8 +2053,9 @@
     .with-practical-project {
         position: absolute;
         top: 0;
-        left: 31.05vw;
+        left: 33vw;
         letter-spacing: -0.01em;
+        word-spacing: 0.2em;
         line-height: 6.81vw;
         text-transform: uppercase;
         white-space: nowrap;
@@ -2076,7 +2074,7 @@
     /* --- Row 3: Achieve Certificate --- */
     .achieve-certificate-parent {
         position: absolute;
-        top: 454.42vw; /* Fixed: Adjusted from 453.37 to prevent the middle row overlap */
+        top: 445vw; /* Fixed: Adjusted from 453.37 to prevent the middle row overlap */
         left: 12.45vw;
         width: 75vw;
         height: 6.82vw;
@@ -2087,7 +2085,7 @@
     .group-child18 {
         position: absolute;
         top: 1.10vw;
-        left: 42.92vw;
+        left: 42.5vw;
         border-radius: 2.34vw;
         width: 32.08vw;
         height: 4.69vw;
@@ -2126,7 +2124,7 @@
     /* footer section start */ 
     .group-parent6 {
         position: relative;
-        top:  593.34vw;          /* 11392.07 */
+        top:  563.34vw;          /* 11392.07 */
         left: 0;
         width: 100%;       /* Ensures the container stays within screen bounds */
         height: 35.83vw;   /* Keep your current height */

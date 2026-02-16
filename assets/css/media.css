@@ -226,11 +226,19 @@
     }
 
     .mobile-button-child {
-        height: 5.13vw; /* 20px */
-        width: 4.82vw; /* 18.8px */
+        /* Use aspect-ratio to keep it perfectly square like the reference */
+        height: 1.2em; 
+        width: auto;
+        
         position: relative;
-        border-radius: 12.79vw; /* 49.87px */
+        /* object-fit: contain can sometimes cause padding issues; cover is often cleaner for icons */
         object-fit: contain;
+        
+        /* Ensure it aligns vertically with the middle of the text */
+        vertical-align: middle;
+        
+        /* Add a small gap between the text and the icon */
+        margin-left: 8px;
     }
 
     .mobile-button2 {
@@ -621,7 +629,7 @@
         color: #0c111f;
     }
 
-    .where-we-help-parent {
+    .mobile-where-we-help-parent {
         align-self: stretch;
         display: flex;
         flex-direction: column;
@@ -629,7 +637,7 @@
         gap: 2.05vw; /* 8px */
     }
 
-    .where-we-help {
+    .mobile-where-we-help {
         width: 83.85vw; /* 327px */
         position: relative;
         font-size: 6.15vw; /* 24px */
@@ -638,7 +646,7 @@
         display: inline-block;
     }
 
-    .helping-professionals {
+    .mobile-helping-professionals {
         align-self: stretch;
         position: relative;
         letter-spacing: -0.01em;
@@ -753,16 +761,32 @@
         gap: 5.13vw; /* 20px */
     }
 
-    /* Icon Container Styling */
-    .mobile-icon-container {
-        width: 8vw; 
-        height: 8vw; 
+    .mobile-icon-wrapper {
+        /* 1. Dimensions: Large and circular like the first image */
+        width: 65px; 
+        height: 65px; 
         border-radius: 50%; 
+        
+        /* 2. Visuals: Subtle dark background and the 'ring' border */
+        background: rgba(255, 255, 255, 0.05); 
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        
+        /* 3. Alignment: Centers the icon perfectly */
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 15px;
-        background: rgba(255, 255, 255, 0.1); /* Match image appearance */
+        
+        /* Ensure it doesn't squash in flex layouts */
+        flex-shrink: 0;
+    }
+
+    .mobile-icon-wrapper img {
+        /* 4. Icon Size: Forces the icon to take up exactly 50% of the circle */
+        width: 32px;
+        height: auto;
+        object-fit: contain;
+        /* Optional: Brightens the white icon slightly to pop */
+        filter: brightness(1.2); 
     }
 
     .text-container {
@@ -928,7 +952,7 @@
         font-family: 'Train One';
     }
 
-    .online-offline-live-class-parent {
+    .mobile-online-offline-live-class-parent {
         width: 90.77vw; /* 354px */
         display: flex;
         flex-direction: column;
@@ -936,7 +960,7 @@
         gap: 3.08vw; /* 12px */
     }
 
-    .online-offline {
+    .mobile-online-offline {
         width: 74.10vw; /* 289px */
         position: relative;
         letter-spacing: -0.01em;
@@ -945,7 +969,7 @@
         display: inline-block;
     }
 
-    .frame-child13 {
+    .mobile-frame-child13 {
         align-self: stretch;
         height: 23.08vw; /* 90px */
         position: relative;
@@ -956,7 +980,7 @@
         object-fit: cover;
     }
 
-    .with-practical-project-parent {
+    .mobile-with-practical-project-parent {
         align-self: stretch;
         display: flex;
         flex-direction: column;
@@ -965,7 +989,7 @@
         text-align: right;
     }
 
-    .with-practical-project {
+    .mobile-with-practical-project {
         align-self: stretch;
         position: relative;
         letter-spacing: -0.01em;
@@ -973,7 +997,7 @@
         text-transform: uppercase;
     }
 
-    .frame-child14 {
+    .mobile-frame-child14 {
         width: 90.77vw; /* 354px */
         height: 23.08vw; /* 90px */
         position: relative;
@@ -1003,7 +1027,7 @@
 
     .mobile-parent8 {
         position: absolute;
-        top: 3839.16vw; /* 14972.72px */
+        top: 3810.16vw; /* 14972.72px */
         left: 4.62vw; /* 18px */
         width: 90.77vw; /* 354px */
         display: flex;
@@ -1016,7 +1040,7 @@
         font-family: Lato;
     }
 
-    .faq-parent {
+    .mobile-faq-parent {
         align-self: stretch;
         display: flex;
         flex-direction: column;
@@ -1024,7 +1048,7 @@
         gap: 6.92vw; /* 27px */
     }
 
-    .some-answer-that {
+    .mobile-some-answer-that {
         align-self: stretch;
         position: relative;
         font-size: 12.31vw; /* 48px */
@@ -1813,7 +1837,7 @@
 
     .mobile-walpaper-parent {
         position: absolute;
-        top: 3401.74vw;             /* 13260.72px */
+        top: 3350.74vw;             /* 13260.72px */
         left: 0px;
         width: 100vw;                /* 390px */
         height: 426.15vw;            /* 1662px */
@@ -2003,3 +2027,4 @@
 
 
 }
+mobile-parent5
