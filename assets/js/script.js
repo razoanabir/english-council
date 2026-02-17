@@ -30,43 +30,6 @@ window.addEventListener("load", handleBallAnimation);
 handleBallAnimation();
 //=============web page about section animation end=============
 
-//=============mobile page about section animation start=============
-const initMobileAnimation = () => {
-  const mobileContainer = document.querySelector(".mobile-parent28");
-
-  if (!mobileContainer) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Find all bubble wrappers inside the mobile container
-          const allBubbles = mobileContainer.querySelectorAll(
-            ".youth-program-wrapper",
-          );
-
-          allBubbles.forEach((bubble) => {
-            bubble.classList.add("animate-slide");
-          });
-
-          // Stop observing once animated
-          observer.unobserve(mobileContainer);
-        }
-      });
-    },
-    {
-      threshold: 0.2, // Trigger when 20% of the container is visible
-    },
-  );
-
-  observer.observe(mobileContainer);
-};
-window.addEventListener("load", initMobileAnimation);
-if (document.readyState === "complete") {
-  initMobileAnimation();
-}
-//=============mobile page about section animation end=============
-
 //=============web page faq section animation start=============
 document.addEventListener("DOMContentLoaded", () => {
   const faqItems = document.querySelectorAll(".faq-item");
@@ -390,19 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // 3. EXIT: All layers move UP TOGETHER as a single stack
-  tl.to(
-    cards,
-    {
-      yPercent: -70, // Moves the entire stack out of view
-      opacity: 0, // Optional: fades the stack out
-      rotationX: 0, // Ensures they stay straight while leaving
-      duration: 1.2, // Slightly longer duration for a smoother "lifting" feel
-      stagger: 0, // Set to 0 so they move at the exact same time
-      ease: "power2.inOut",
-    },
-    "+=0.1",
-  );
+
 });
 //=============web page course section animation end=============
 

@@ -37,27 +37,7 @@
 .years-experience-wrapper   { transition-delay: 0.65s; }
 /*======web page about section animation start======*/
 
-/*======mobile page about section animation start======*/
-.mobile-parent29 .youth-program-wrapper {
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-}
-.mobile-parent29 .youth-program-wrapper:first-child {
-    transform: translateX(-150px);
-}
-.mobile-parent29 .youth-program-wrapper:last-child {
-    transform: translateX(150px);
-}
-.animate-slide {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
-}
-.mobile-parent29:nth-child(1) .youth-program-wrapper { transition-delay: 0.1s; }
-.mobile-parent29:nth-child(2) .youth-program-wrapper { transition-delay: 0.3s; }
-.mobile-parent29:nth-child(3) .youth-program-wrapper { transition-delay: 0.5s; }
-.mobile-parent29:nth-child(4) .youth-program-wrapper { transition-delay: 0.7s; }
-.mobile-parent29:nth-child(5) .youth-program-wrapper { transition-delay: 0.9s; }
-/*======mobile page about section animation end======*/
+
 
 /*======web page header section animation start======*/
 @keyframes ghostlyFadeLeft {
