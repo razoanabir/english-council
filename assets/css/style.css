@@ -843,36 +843,41 @@
 
 
 
-
- /* --- Course Section Wrapper --- */
+/* --- Course Section Wrapper --- */
 #course {
     position: relative;
     width: 100vw;
-    background: transparent; /* Ensures no dark background */
+    background: transparent; 
 }
 
-/* --- The Stacking Container --- */
+/* --- The Stacking Container (Position UNCHANGED) --- */
 .stack-container {
     position: absolute; 
-    top: 105vw;      
+    top: 120vw;      /* Exactly as you had it */
     left: 0;
     width: 100vw;
-    height: 100vh;      
+    /* height: 100vh;  <-- CHANGED TO 'auto' so cards can flow downward */
+    height: auto; 
     perspective: 2000px;
     transform-style: preserve-3d;
-    /* Ensure the container itself doesn't block clicks to other sections */
     pointer-events: none; 
+    
+    /* ADDED: This makes the cards align vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw; /* Adds space between your 5 cards */
+    padding-bottom: 10vw; /* Ensures space at the very bottom */
 }
 
-/* --- Individual Card Styling --- */
+/* --- Individual Card Styling (Fixed for Vertical List) --- */
 .card-item {
-    position: absolute;
-    /* Increase this to 150px or more so the layers don't hit the top of the screen */
-    top: 160px; 
-    left: 50%;
+    /* position: absolute; <-- CHANGED to relative to stop them from piling up */
+    position: relative;
     
-    /* Center using GSAP preferred method */
-    transform: translateX(-50%); 
+    /* top: 160px; <-- REMOVED so they follow the natural vertical flow */
+    /* left: 50%;  <-- REMOVED because container flex handles centering */
+    /* transform: translateX(-50%); <-- REMOVED */
     
     width: 90vw;
     height: auto;
@@ -881,13 +886,11 @@
     align-items: flex-start;
     flex-shrink: 0;
     
-    /* Animation settings */
     transform-origin: 50% 0%; 
     will-change: transform, opacity;
     backface-visibility: hidden;
-    pointer-events: auto; /* Re-enable clicks for the card specifically */
-    
-    /* Card Visuals */
+    pointer-events: auto; 
+
     background: #ffffff !important;
     opacity: 1 !important;
     -webkit-font-smoothing: antialiased;
@@ -895,7 +898,7 @@
     overflow: hidden;
 }
 
-/* --- Internal Content Structure --- */
+/* --- Internal Content Structure (UNCHANGED) --- */
 .card-content-wrapper {
     align-self: stretch;
     height: 14.27vw;
@@ -961,26 +964,19 @@
 }
 
 .course-description {
-    /* Increased font size for better readability */
     font-size: 1.1vw; 
     line-height: 1.5;
     color: #333;
-    
-    /* Pushes the text from the left toward the right */
     margin-left: 6vw; 
     margin-top: 0.5vw;
-    
-    /* Adjust max-width to ensure it doesn't hit the right edge after shifting */
     max-width: 100%; 
-    
-    /* Optional: helps with alignment if the container is flex */
     display: block; 
 }
 
 .button-cta {
     border-radius: 0.42vw;
     background-color: #f24f5f;
-    display: inline-flex; /* Changed to inline-flex to prevent full-width stretching */
+    display: inline-flex; 
     align-items: center;
     justify-content: center;
     padding: 0.8vw 1.5vw;
@@ -989,9 +985,7 @@
     cursor: pointer;
     margin-top: 1vw;
     font-size: 1vw;
-    font-weight: 700; /* Matching the bold look of the reference image */
-    
-    /* Smooth transition for all properties */
+    font-weight: 700; 
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     border: none;
     outline: none;
@@ -1001,29 +995,18 @@
     width: 0.8vw;
     height: auto;
     display: block;
-    /* Transition specifically for the arrow movement */
     transition: transform 0.3s ease;
 }
 
 /* --- Hover State --- */
-
 .button-cta:hover {
-    background-color: #d13d4b; /* Deeper red to match the theme */
-    transform: translateY(-2px); /* Slight lift effect */
-    /* Add a glow that matches the button color */
+    background-color: #d13d4b; 
+    transform: translateY(-2px); 
     box-shadow: 0 6px 15px rgba(242, 79, 95, 0.35);
 }
 
-/* Move the arrow diagonally up and right on hover */
 .button-cta:hover .arrow-icon {
     transform: translate(3px, -3px);
-}
-
-/* --- Active (Click) State --- */
-
-.button-cta:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .main-slider-image {
@@ -1032,8 +1015,6 @@
     object-fit: cover;
     display: block;
 }
-
-
 
 
 

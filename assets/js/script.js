@@ -280,81 +280,69 @@ document.addEventListener("DOMContentLoaded", function () {
 //=============mobile page navbar section animation end=============
 
 //=============web page course section animation start=============
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
+// document.addEventListener("DOMContentLoaded", function () {
+//   gsap.registerPlugin(ScrollTrigger);
 
-  const cards = gsap.utils.toArray(".card-item");
+//   const cards = gsap.utils.toArray(".card-item");
 
-  // 1. Initial State - Removed initial rotationX: 90
-  cards.forEach((card, i) => {
-    gsap.set(card, { zIndex: i });
-    if (i > 0) {
-      gsap.set(card, {
-        opacity: 0,
-        yPercent: 120,
-        rotationX: 0, // Set to 0 to remove initial tilt
-        xPercent: -50,
-        left: "50%",
-      });
-    } else {
-      gsap.set(card, {
-        xPercent: -50,
-        left: "50%",
-        opacity: 1,
-        yPercent: 0,
-        rotationX: 0,
-      });
-    }
-  });
+//   // 1. Initial State
+//   cards.forEach((card, i) => {
+//     gsap.set(card, {
+//       zIndex: i,
+//       xPercent: -50,
+//       left: "50%",
+//     });
 
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".stack-container",
-      start: "top top",
-      end: `+=${cards.length * 70}%`,
-      pin: true,
-      pinSpacing: true,
-      scrub: 1,
-    },
-  });
+//     if (i > 0) {
+//       gsap.set(card, {
+//         opacity: 0,
+//         yPercent: 120,
+//       });
+//     }
+//   });
 
-  cards.forEach((card, i) => {
-    if (i < cards.length - 1) {
-      const nextCard = cards[i + 1];
-      const currentStack = cards.slice(0, i + 1);
+//   const tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".stack-container",
+//       start: "top top",
+//       // FIX: End is based on viewport height * number of cards
+//       // This makes the scroll feel consistent on all devices
+//       end: () => `+=${cards.length * 100}%`,
+//       pin: true,
+//       pinSpacing: true, // This adds exactly enough space to finish the animation
+//       scrub: 1,
+//       invalidateOnRefresh: true, // Recalculates if the window is resized
+//     },
+//   });
 
-      // STEP 1: Incoming card - Removed rotationX 90 to 0
-      tl.fromTo(
-        nextCard,
-        { yPercent: 120, rotationX: 0, opacity: 0 },
-        {
-          yPercent: 0,
-          rotationX: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "none",
-        },
-        i,
-      );
+//   cards.forEach((card, i) => {
+//     if (i < cards.length - 1) {
+//       const nextCard = cards[i + 1];
+//       const currentStack = cards.slice(0, i + 1);
 
-      // STEP 2: Current stack moves - Removed rotationX: -45 bending
-      tl.to(
-        currentStack,
-        {
-          rotationX: 0, // Kept flat to remove bending
-          z: (index) => -150 * (i - index + 1),
-          y: (index) => -40 * (i - index + 1),
-          scale: (index) => 1 - 0.06 * (i - index + 1),
-          duration: 1, // Combined durations since we aren't bending/straightening
-          ease: "power1.inOut",
-        },
-        i,
-      );
-    }
-  });
-
-
-});
+//       tl.to(
+//         nextCard,
+//         {
+//           yPercent: 0,
+//           opacity: 1,
+//           duration: 1,
+//           ease: "none",
+//         },
+//         i,
+//       ).to(
+//         currentStack,
+//         {
+//           z: (index) => -150 * (i - index + 1),
+//           y: (index) => -40 * (i - index + 1),
+//           scale: (index) => 1 - 0.06 * (i - index + 1),
+//           duration: 1,
+//           ease: "power1.inOut",
+//         },
+//         i,
+//       );
+//     }
+//   });
+// });
 //=============web page course section animation end=============
 
 //=============web page header section animation start=============

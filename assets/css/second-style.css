@@ -1,0 +1,174 @@
+body {font-family: 'Inter';}
+.font-inter { font-family: 'Inter'; }
+.font-train { font-family: 'Train One';}  
+.font-cinzel { font-family: 'Cinzel';}
+.font-lato { font-family: Lato;}
+.font-tropiline { font-family: 'Tropiline';}
+.button-cta {
+    display: inline-flex;
+    white-space: nowrap; 
+    align-items: center;
+    justify-content: center;
+    background-color: #f24f5f;
+    color: #fff;
+    text-decoration: none;
+    
+    /* Reduced by ~33% */
+    padding: 8px 18px;
+    border-radius: 5px;
+    gap: 8px;
+    font-size: 11px;
+    
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 3px 8px rgba(242, 79, 95, 0.2);
+}
+
+.button-cta:hover {
+    background-color: #d13d4b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(242, 79, 95, 0.4);
+}
+
+.arrow-icon {
+    width: 10px;
+    height: 10px;
+    transition: transform 0.3s ease;
+}
+
+.button-cta:hover .arrow-icon {
+    transform: translateX(3px) scale(1.1);
+}
+@media (max-width: 767px) {
+    .button-cta {
+        /* Increasing padding, font-size, and gap by 50% */
+        padding: 12px 27px; /* 8px * 1.5 and 18px * 1.5 */
+        font-size: 16.5px;   /* 11px * 1.5 */
+        gap: 12px;          /* 8px * 1.5 */
+        border-radius: 8px; /* Slightly larger radius to match the bigger scale */
+    }
+
+    .arrow-icon {
+        width: 15px;        /* 10px * 1.5 */
+        height: 15px;       /* 10px * 1.5 */
+    }
+}
+@media (min-width: 769px) {
+/* Youth and Local programs base styles - Reduced by 10% */
+.youth-program-wrapper, 
+.youth-program-container, 
+.youth-program-frame, 
+.youth-program-wrapper2, 
+.youth-program-wrapper3, 
+.youth-program-wrapper4, 
+.youth-program-wrapper5, 
+.youth-program-wrapper6, 
+.youth-program-wrapper7, 
+.youth-program-wrapper8, 
+.youth-program-wrapper9,
+.local-programs-wrapper {
+    position: absolute;
+    width: 90px;  /* Was 100px */
+    height: 90px; /* Was 100px */
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 9px; /* Was 10px */
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-size: 9px; /* Was 11px */
+    font-family: 'inter';
+}
+
+/* Years experience bubble styles - Reduced by 10% */
+.years-experience-wrapper {
+    position: absolute;
+    bottom: -36px; /* Was 40px */
+    left: 162px; /* Was 180px */
+    width: 144px; /* Was 160px */
+    height: 144px; /* Was 160px */
+    border-radius: 50%; 
+    background-color: rgba(217, 217, 217, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.years-experience {
+    width: 108px; /* Was 120px */
+    line-height: 1.3; 
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.span { font-size: 16px; } /* Was 18px */
+.experience { font-size: 12.5px; font-weight: 500; } /* Was 14px */
+
+/* FIXED PX POSITIONS - Recalculated for smaller sizes */
+
+/* LEFT CLUSTER */
+/* LEFT CLUSTER */
+.local-programs-wrapper   { bottom: 41px;   left: -24px; width: 108px; height: 108px; } 
+.youth-program-wrapper6   { bottom: -36px;  left: 35px; } 
+.youth-program-wrapper4   { bottom: 40px;   left: 83px; }
+
+/* CENTER CLUSTER */
+.youth-program-wrapper5   { bottom: 101px;   left: 150px; }
+.youth-program-wrapper7   { bottom: 97px; left: 240px; }
+.youth-program-frame      { bottom: 53px;   left: 318px; }
+
+/* RIGHT CLUSTER */
+.youth-program-wrapper    { bottom: 53px;   left: 408px; }
+.youth-program-container  { bottom: 53px;   left: 498px; } 
+.youth-program-wrapper9   { bottom: -36.5px;  left: 303px; } 
+
+.youth-program-wrapper2   { bottom: -36.5px;  left: 393px; }
+.youth-program-wrapper8   { bottom: -36.5px;  left: 483px; } 
+.youth-program-wrapper3   { bottom: 140px;   left: 511px; width: 108px; height: 108px; }
+}
+@media (max-width: 767px) {
+
+    /* 2. Turning every program wrapper into a bubble */
+    .local-programs-wrapper,
+    .youth-program-wrapper,
+    .youth-program-container,
+    .youth-program-frame,
+    .youth-program-wrapper2,
+    .youth-program-wrapper3,
+    .youth-program-wrapper4,
+    .youth-program-wrapper5,
+    .youth-program-wrapper6,
+    .youth-program-wrapper7,
+    .youth-program-wrapper8,
+    .youth-program-wrapper9 {
+        width: 150px !important;
+        height: 150px !important;
+        margin: 0 auto !important;
+        border-radius: 50% !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 10px !important;
+    }
+
+    /* 3. Adjusting the text inside the bubbles */
+    .local-programs, 
+    .youth-program {
+        font-size: 15px !important;
+        line-height: 1.2 !important;
+        display: block !important;
+        letter-spacing: -0.02em;
+        font-family: Tropline;
+    }
+}
