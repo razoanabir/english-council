@@ -134,14 +134,14 @@ const observer = new IntersectionObserver((entries) => {
             const el = entry.target;
             const delay = el.getAttribute('data-delay') || '0.2s';
             const animType = el.getAttribute('data-anim');
-            const direction = el.getAttribute('data-dir') || 'left'; // Detects left or right
+            const direction = el.getAttribute('data-dir') || 'left'; // left or right
             
             el.style.animationDelay = delay;
             
-            // 1. Trigger the specific direction nudge
+            // 1. Trigger direction (animate-ghostly-left OR animate-ghostly-right)
             el.classList.add(`animate-ghostly-${direction}`);
 
-            // 2. Trigger eye bounce if applicable
+            // 2. Trigger eye bounce
             if (animType === 'bounce') {
                 el.querySelectorAll('.pupil-bounce').forEach(pupil => {
                     pupil.style.animationDelay = delay; 

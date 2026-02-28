@@ -22,35 +22,45 @@ body {font-family: 'Inter';}
     from { transform: translateY(-100%); }
     to { transform: translateY(0); }
 }
-/* Base Animation for the Text/Container Nudge */
+/* Nudge from Left */
 @keyframes ghostlyNudgeLeft { 
     0% { opacity: 0; transform: translateX(-30px); } 
     100% { opacity: 1; transform: translateX(0); } 
 }
 
-/* The Eye Bounce Animation */
+/* Nudge from Right (ADDED) */
+@keyframes ghostlyNudgeRight { 
+    0% { opacity: 0; transform: translateX(30px); } 
+    100% { opacity: 1; transform: translateX(0); } 
+}
+
+/* Eye Bounce Animation */
 @keyframes eyeBounceSettling {
     0% { opacity: 0; transform: translateY(50px) scaleY(1.2) scaleX(0.8); }
     40% { transform: translateY(-20px) scaleY(0.9) scaleX(1.1); }
     100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Default Mobile: Fully visible, no animation */
+/* Default Mobile: Fully visible */
 .reveal-on-scroll { opacity: 1; transform: none; }
 
 @media (min-width: 768px) {
-    /* Hide on desktop until JS triggers */
     .reveal-on-scroll { 
         opacity: 0; 
         will-change: transform, opacity; 
     }
 
-    /* Transition class for the container/text */
+    /* Left Animation Class */
     .animate-ghostly-left {
         animation: ghostlyNudgeLeft 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* The specific eye bounce */
+    /* Right Animation Class (FIXED) */
+    .animate-ghostly-right {
+        animation: ghostlyNudgeRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Eye Bounce Class */
     .animate-bounce-settle {
         animation: eyeBounceSettling 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     }
