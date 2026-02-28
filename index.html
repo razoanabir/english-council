@@ -40,18 +40,17 @@
 		</div>
 
 		<header class="sticky top-0 left-0 w-full z-50 bg-transparent md:bg-transparent transition-all duration-300">
-			<div class="hidden md:block w-full">
+			<div class="hidden md:block w-full main-nav-wrapper transition-all duration-300 z-[9999]">
 				<nav class="flex items-center justify-between max-w-[1200px] mx-auto py-4 px-6">
 
-					<a href="#" class="w-8 shrink-0 ml-[7%] transition-opacity hover:opacity-90">
+					<a href="#" class="w-10 shrink-0 ml-[7%] transition-opacity hover:opacity-90">
 						<img class="w-full h-auto" src="assets/images/logo.webp" alt="Logo">
 					</a>
 
-					<div
-						class="flex items-center gap-8 text-white font-semibold text-[12px] tracking-wide whitespace-nowrap ml-[12%]">
+					<div class="flex items-center gap-8 text-white font-semibold text-[12px] tracking-wide whitespace-nowrap ml-[12%]">
 						<a href="#header" class="hover:text-red-500 transition-colors">Home</a>
 						<a href="#about-us" class="hover:text-red-500 transition-colors">About Us</a>
-						<a href="#footer" class="hover:text-red-500 transition-colors">Contact Us</a>
+						<a href="#contact" class="hover:text-red-500 transition-colors">Contact Us</a>
 						<a href="#faq" class="hover:text-red-500 transition-colors">FAQ</a>
 					</div>
 
@@ -61,7 +60,6 @@
 					</a>
 				</nav>
 			</div>
-
 			<div
 				class="fixed top-0 left-0 w-full z-50 flex md:hidden items-center justify-between bg-white px-8 py-5 border-b border-gray-100">
 				<a href="#" class="w-14">
@@ -88,7 +86,7 @@
 					<a href="#header" class="mobile-link border-b border-gray-100 w-full text-center py-6">Home</a>
 					<a href="#about-us" class="mobile-link border-b border-gray-100 w-full text-center py-6">About
 						Us</a>
-					<a href="#footer" class="mobile-link border-b border-gray-100 w-full text-center py-6">Contact
+					<a href="#contact" class="mobile-link border-b border-gray-100 w-full text-center py-6">Contact
 						Us</a>
 					<a href="#faq" class="mobile-link w-full text-center py-6">FAQ</a>
 				</div>
@@ -103,32 +101,38 @@
 
 				<div class="select-none text-center md:text-left order-1">
 					<h2
-						class="font-tropiline text-white text-3xl text-[40px] md:text-[40px] font-black tracking-tight uppercase mb-4">
+						class="font-tropiline text-white text-3xl text-[40px] md:text-[40px] font-black tracking-tight uppercase mb-4 reveal-on-scroll" data-delay="0.3s" data-dir="left">
 						Achieve Your
 					</h2>
 
-					<div class="flex flex-col md:flex-row items-center md:items-center gap-x-4 mt-1">
-						<div class="flex items-center shrink-0 md:ml-[-8px]">
-							<img class="w-[120px] h-auto md:w-[60px] md:h-auto" src="assets/images/left-eye-icon.webp"
-								alt="Left Eye">
-							<img class="w-[88px] h-auto md:w-[44px] md:h-auto ml-[-16px] md:ml-[-8px]"
-								src="assets/images/right-eye-icon.webp" alt="Right Eye">
-						</div>
-
+					<div class="flex flex-col md:flex-row items-center md:items-center gap-x-4 mt-1  reveal-on-scroll" data-delay="0.4s" data-dir="left" data-anim="bounce">
+                        <div class="flex gap-2">
+                            <div
+                                class="pupil-bounce w-20 h-20 md:w-16 md:h-16 bg-[#d1d5db] rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(0,0,0,0.2)] relative overflow-hidden">
+                                <div
+                                    class="w-10 h-10 md:w-8 md:h-8 bg-gradient-to-br from-red-500 to-red-700 rounded-full absolute bottom-1 right-1 pupil shadow-inner">
+                                </div>
+                            </div>
+                            <div
+                                class="pupil-bounce w-20 h-20 md:w-16 md:h-16 bg-[#d1d5db] rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(0,0,0,0.2)] relative overflow-hidden">
+                                <div
+                                    class="w-10 h-10 md:w-8 md:h-8 bg-gradient-to-br from-red-500 to-red-700 rounded-full absolute bottom-1 right-1 pupil shadow-inner">
+                                </div>
+                            </div>
+                        </div>
 						<h1
 							class="font-train text-[50px] md:text-[40px] text-white md:leading-none tracking-tighter uppercase text-center md:text-left md:whitespace-nowrap">
 							Dream IELTS <br class="md:hidden"> Score
 						</h1>
 					</div>
 				</div>
-
-				<div class="flex items-center justify-center md:justify-start gap-4 mt-6 md:mt-4 order-3 md:order-2">
-					<a href="#" class="button-cta">
+				<div class="flex items-center justify-center md:justify-start gap-4 mt-6 md:mt-4 order-3 md:order-2  reveal-on-scroll" data-delay="0.2s" data-dir="left">
+					<a href="#course" class="button-cta">
 						<span>Let's Get Started</span>
 						<img src="assets/images/arrow-icon.webp" class="arrow-icon" alt="">
 					</a>
 
-					<a href="#"
+					<a href="#blog"
 						class="text-white px-2 py-6 md:px-3 md:py-3 font-bold text-[10px] md:text-[10px] tracking-wide hover:text-white/80 transition-all">
 						Learn More
 					</a>
@@ -162,10 +166,9 @@
 			</div>
 
 			<div class="w-full md:w-auto flex flex-col items-start md:items-end gap-10">
-
 				<div
 					class="flex items-center justify-between md:justify-end w-full md:w-auto gap-3 bg-transparent p-0 order-1 md:order-none">
-					<img class="md:w-6 md:h-7 w-14 h-14 opacity-90 order-2 md:order-none"
+					<img class="md:w-6 md:h-7 w-14 h-14 opacity-90 order-2 md:order-none animate-float" style="animation: float 3s ease-in-out infinite;"
 						src="assets/images/cube-icon.webp" alt="">
 
 					<span
@@ -182,8 +185,8 @@
 						<div
 							class="flex items-center justify-between md:justify-end w-full md:w-auto gap-4 md:gap-3 order-1 md:order-none mt-0">
 
-							<img class="w-20 h-20 md:w-8 md:h-8 shrink-0 object-contain order-1 md:order-none"
-								src="assets/images/white-star-icon.webp" alt="Star">
+							<img class="w-20 h-20 md:w-8 md:h-8 shrink-0 object-contain order-1 md:order-none animate-spin"
+								src="assets/images/white-star-icon.webp" alt="Star" style="animation-duration: 20s;">
 
 							<div class="hidden md:flex -space-x-3 shrink-0 md:order-none">
 								<img class="w-6 h-6 md:w-5 md:h-5 rounded-full border-1 border-white object-cover shrink-0 aspect-square shadow-lg"
@@ -235,7 +238,7 @@
 	<!-- header section end -->
 
 	<!-- feature section start -->
-	<section id="feature" class="py-12 px-6 md:py-20 md:px-24 bg-white">
+	<section id="feature" class="py-12 px-6 md:py-20 md:px-16 bg-white">
 		<div class="max-w-[1200px] mx-auto">
 
 			<div class="text-center mb-32 md:mb-8 px-4">
@@ -262,8 +265,12 @@
 				<div class="hidden md:flex justify-center mt-10">
 					<a href="https://wa.me/YOUR_NUMBER" target="_blank" rel="noopener noreferrer"
 						class="transition-transform hover:scale-110">
-						<img src="assets/images/msg-us.webp" alt="Message Us on WhatsApp"
-							class="md:w-16 md:h-16 animate-bounce-slow">
+						<div class="animate-bounce-slow">
+							<img src="assets/images/msg-us.webp" 
+								alt="Message Us on WhatsApp" 
+								style="animation-duration: 15s;"
+								class="md:w-16 md:h-16 w-14 h-14 animate-spin">
+						</div>
 					</a>
 				</div>
 			</div>
@@ -353,239 +360,175 @@
 	<!-- feature section end -->
 
 	<!-- course section start -->
-	<section id="course" class="relative w-full h-auto md:h-screen overflow-visible md:overflow-hidden">
-	
-		<div class="stack-container relative flex flex-col w-full h-full mt-0 md:mt-28 md:block">
-	
-			<div
-				class="card-item font-tropiline relative md:absolute w-full md:w-[90vw] md:left-1/2 md:-translate-x-1/2 md:rounded-[20px] overflow-hidden bg-white shadow-lg md:shadow-none mb-6 md:mb-0">
-	
-				<div class="relative h-auto py-12 px-6 md:h-[15vw] md:p-10 flex flex-col justify-center"
-					style="background-color: rgb(202,202,235);">
-	
-					<div class="flex md:hidden flex-col items-center text-center z-10">
-						<img class="w-12 mb-4" src="assets/images/slider-icon-1.webp">
-						<h3 class="text-4xl font-bold tracking-tighter text-black mb-4">
-							SPO<span class="text-[#f24f5f]">KEN</span>
-						</h3>
-						<p class="text-base text-gray-700 font-['Lato'] mb-8">
-							Our corporate program provides comprehensive IELTS training designed to enhance your team's
-							communication skills.
-						</p>
-						<a href="#" class="button-cta">
-							<span>Let's Get Started</span>
-							<img src="assets/images/arrow-icon.webp" class="arrow-icon ml-2">
-						</a>
+	<section id="course" class="py-2 md:mb-20 md:px-16 px-2">
+		<div class="max-w-[1200px] mx-auto">
+			
+			<div class="mb-16 flex flex-col items-center md:items-start text-center md:text-left reveal-on-scroll">
+				<div class="text-[#4b5563] font-medium text-sm md:text-xs tracking-widest mb-2">Our Programs</div>
+				<h2 class="text-4xl md:text-2xl font-bold font-tropiline leading-tight text-black">
+					Master the IELTS with Our Expert Courses
+				</h2>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				
+				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100">
+					<div class="h-48 overflow-hidden">
+						<img src="assets/images/slider-image-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 					</div>
-	
-					<div class="hidden md:flex flex-row justify-between items-center w-full z-10 gap-4">
-						<div class="w-2/3">
-							<div class="flex items-center gap-4 mb-2">
-								<img class="w-10" src="assets/images/slider-icon-1.webp">
-								<div class="border-l border-black pl-4 py-1">
-									<h3 class="text-4xl font-bold tracking-tighter text-black">
-										SPO<span class="text-[#f24f5f]">KEN</span>
-									</h3>
-								</div>
-							</div>
-							<p class="text-sm text-gray-700 max-w-lg ml-20 font-['Lato']">
-								Our corporate program provides comprehensive IELTS training designed to enhance your team's
-								communication skills.
-							</p>
+					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
+						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
+							<img src="assets/images/slider-icon-1.webp" class="w-full h-auto">
 						</div>
-						<a href="#" class="button-cta w-auto flex justify-center">
-							<span>Let's Get Started</span>
-							<img src="assets/images/arrow-icon.webp" class="arrow-icon ml-2">
-						</a>
+						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">SPO<span class="text-[#f24f5f]">KEN</span></h3>
+						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Enhance your team's verbal communication skills with professional corporate training.</p>
+						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
+							<span class="font-bold text-xl text-black">$299</span>
+							<button onclick="openCourseModal('Spoken', 'Complete verbal mastery...', 'assets/images/slider-image-1.webp')" 
+									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
+						</div>
 					</div>
 				</div>
-	
-				<img class="w-full h-64 md:h-auto object-cover" src="assets/images/slider-image-1.webp">
-			</div>
-	
-			<div
-				class="card-item font-tropiline relative md:absolute w-full md:w-[90vw] md:left-1/2 md:-translate-x-1/2 md:rounded-[20px] overflow-hidden bg-white shadow-lg md:shadow-none mb-6 md:mb-0">
-	
-				<div class="relative h-auto py-12 px-6 md:h-[15vw] md:p-10 flex flex-col justify-center"
-					style="background-color: rgb(235, 233, 202);">
-	
-					<div class="flex md:hidden flex-col items-center text-center z-10">
-						<img class="w-12 mb-4" src="assets/images/slider-icon-1.webp">
-						<h3 class="text-4xl font-bold tracking-tighter text-black mb-4">
-							PHONE<span class="text-[#f24f5f]">TICS</span>
-						</h3>
-						<p class="text-base text-gray-700 font-['Lato'] mb-8">
-							Our corporate program provides comprehensive IELTS training designed to enhance your team's
-							communication skills.
-						</p>
-						<a href="#" class="button-cta">
-							<span>Let's Get Started</span>
-							<img src="assets/images/arrow-icon.webp" class="arrow-icon ml-2">
-						</a>
+
+				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100">
+					<div class="h-48 overflow-hidden">
+						<img src="assets/images/slider-image-5.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 					</div>
-	
-					<div class="hidden md:flex flex-row justify-between items-center w-full z-10 gap-4">
-						<div class="w-2/3">
-							<div class="flex items-center gap-4 mb-2">
-								<img class="w-10" src="assets/images/slider-icon-1.webp">
-								<div class="border-l border-black pl-4 py-1">
-									<h3 class="text-4xl font-bold tracking-tighter text-black">
-										PHONE<span class="text-[#f24f5f]">TICS</span>
-									</h3>
-								</div>
-							</div>
-							<p class="text-sm text-gray-700 max-w-lg ml-20 font-['Lato']">
-								Our corporate program provides comprehensive IELTS training designed to enhance your team's
-								communication skills.
-							</p>
+					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
+						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
+							<img src="assets/images/slider-icon-1.webp" class="w-full h-auto">
 						</div>
-						<a href="#" class="button-cta w-auto flex justify-center">
-							<span>Let's Get Started</span>
-							<img src="assets/images/arrow-icon.webp" class="arrow-icon ml-2">
-						</a>
+						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">PHONETIC<span class="text-[#f24f5f]">S</span></h3>
+						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Perfect your pronunciation and accent to sound like a native professional.</p>
+						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
+							<span class="font-bold text-xl text-black">$199</span>
+							<button onclick="openCourseModal('Phonetics', 'Accent training...', 'assets/images/slider-image-5.webp')" 
+									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
+						</div>
 					</div>
 				</div>
-	
-				<img class="w-full h-64 md:h-auto object-cover" src="assets/images/slider-image-5.webp">
-			</div>
-	
-			<div
-				class="card-item font-tropiline relative md:absolute w-full md:w-[90vw] md:left-1/2 md:-translate-x-1/2 md:rounded-[20px] overflow-hidden bg-white shadow-lg md:shadow-none mb-10 md:mb-0">
-				<div class="relative h-auto py-12 px-6 md:h-[15vw] md:p-10 flex flex-col justify-center"
-					style="background-color: rgb(184, 234, 238);">
-					<div class="flex md:hidden flex-col items-center text-center z-10">
-						<img class="w-12 mb-4" src="assets/images/slider-icon-4.webp">
-						<h3 class="text-4xl font-bold tracking-tighter text-black mb-4">
-							LISTE<span class="text-[#f24f5f]">NING</span>
-						</h3>
-						<p class="text-base text-gray-700 font-['Lato'] mb-8">
-							Our corporate program provides comprehensive IELTS training designed to enhance your team's
-							communication skills.
-						</p>
-						<a href="#" class="button-cta">
-							<span>Let's Get Started</span>
-							<img src="assets/images/arrow-icon.webp" class="arrow-icon ml-2">
-						</a>
+
+				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100">
+					<div class="h-48 overflow-hidden">
+						<img src="assets/images/slider-image-2.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 					</div>
-					<div class="hidden md:flex flex-row justify-between items-center w-full z-10 gap-4">
-						<div class="w-2/3">
-							<div class="flex items-center gap-4 mb-2">
-								<img class="w-10" src="assets/images/slider-icon-4.webp">
-								<div class="border-l border-black pl-4 py-1">
-									<h3 class="text-4xl font-bold tracking-tighter text-black">
-										LISTE<span class="text-[#f24f5f]">NING</span>
-									</h3>
-								</div>
-							</div>
-							<p class="text-sm text-gray-700 max-w-lg ml-20 font-['Lato']">
-								Our corporate program provides comprehensive IELTS training designed to enhance your team's
-								communication skills.
-							</p>
+					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
+						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
+							<img src="assets/images/slider-icon-4.webp" class="w-full h-auto">
 						</div>
-						<a href="#" class="button-cta w-auto flex justify-center">
-							<span>Let's Get Started</span>
-							<img src="assets/images/arrow-icon.webp" class="arrow-icon ml-2">
-						</a>
+						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">LISTE<span class="text-[#f24f5f]">NING</span></h3>
+						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Develop active listening techniques to catch every detail in the IELTS test.</p>
+						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
+							<span class="font-bold text-xl text-black">$249</span>
+							<button onclick="openCourseModal('Listening', 'Listening skills...', 'assets/images/slider-image-2.webp')" 
+									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
+						</div>
 					</div>
 				</div>
-				<img class="w-full h-64 md:h-auto object-cover" src="assets/images/slider-image-2.webp">
-			</div>
-	
-			<div
-				class="card-item font-tropiline relative md:absolute w-full md:w-[90vw] md:left-1/2 md:-translate-x-1/2 md:rounded-[20px] overflow-hidden bg-white shadow-lg md:shadow-none mb-10 md:mb-0">
-				<div class="relative h-auto py-12 px-6 md:h-[15vw] md:p-10 flex flex-col justify-center"
-					style="background-color: rgb(241, 191, 191);">
-					<div class="flex md:hidden flex-col items-center text-center z-10">
-						<img class="w-12 mb-4" src="assets/images/slider-icon-3.webp">
-						<h3 class="text-4xl font-bold tracking-tighter text-black mb-4">
-							REA<span class="text-[#f24f5f]">DING</span>
-						</h3>
-						<p class="text-base text-gray-700 font-['Lato'] mb-8">
-							Our corporate program provides comprehensive IELTS training designed to enhance your team's
-							communication skills.
-						</p>
-						<a href="#" class="button-cta">
-							<span>Let's Get Started</span>
-							<img src="assets/images/arrow-icon.webp" class="arrow-icon ml-2">
-						</a>
+
+				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100">
+					<div class="h-48 overflow-hidden">
+						<img src="assets/images/slider-image-3.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 					</div>
-					<div class="hidden md:flex flex-row justify-between items-center w-full z-10 gap-4">
-						<div class="w-2/3">
-							<div class="flex items-center gap-4 mb-2">
-								<img class="w-10" src="assets/images/slider-icon-3.webp">
-								<div class="border-l border-black pl-4 py-1">
-									<h3 class="text-4xl font-bold tracking-tighter text-black">
-										REA<span class="text-[#f24f5f]">DING</span>
-									</h3>
-								</div>
-							</div>
-							<p class="text-sm text-gray-700 max-w-lg ml-20 font-['Lato']">
-								Our corporate program provides comprehensive IELTS training designed to enhance your team's
-								communication skills.
-							</p>
+					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
+						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
+							<img src="assets/images/slider-icon-3.webp" class="w-full h-auto">
 						</div>
-						<a href="#" class="button-cta w-auto flex justify-center">
-							<span>Let's Get Started</span>
-							<img src="assets/images/arrow-icon.webp" class="arrow-icon ml-2">
-						</a>
+						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">REA<span class="text-[#f24f5f]">DING</span></h3>
+						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Master speed reading and comprehension strategies for complex academic texts.</p>
+						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
+							<span class="font-bold text-xl text-black">$249</span>
+							<button onclick="openCourseModal('Reading', 'Reading strategies...', 'assets/images/slider-image-3.webp')" 
+									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
+						</div>
 					</div>
 				</div>
-				<img class="w-full h-64 md:h-auto object-cover" src="assets/images/slider-image-3.webp">
-			</div>
-	
-			<div
-				class="card-item font-tropiline relative md:absolute w-full md:w-[90vw] md:left-1/2 md:-translate-x-1/2 md:rounded-[20px] overflow-hidden bg-white shadow-lg md:shadow-none mb-10 md:mb-0">
-				<div class="relative h-auto py-12 px-6 md:h-[15vw] md:p-10 flex flex-col justify-center"
-					style="background-color: rgb(193, 245, 191);">
-					<div class="flex md:hidden flex-col items-center text-center z-10">
-						<img class="w-12 mb-4" src="assets/images/slider-icon-2.webp">
-						<h3 class="text-4xl font-bold tracking-tighter text-black mb-4">
-							WRI<span class="text-[#f24f5f]">TING</span>
-						</h3>
-						<p class="text-base text-gray-700 font-['Lato'] mb-8">
-							Our corporate program provides comprehensive IELTS training designed to enhance your team's
-							communication skills.
-						</p>
-						<a href="#" class="button-cta">
-							<span>Let's Get Started</span>
-							<img src="assets/images/arrow-icon.webp" class="arrow-icon ml-2">
-						</a>
+
+				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100">
+					<div class="h-48 overflow-hidden">
+						<img src="assets/images/slider-image-4.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 					</div>
-					<div class="hidden md:flex flex-row justify-between items-center w-full z-10 gap-4">
-						<div class="w-2/3">
-							<div class="flex items-center gap-4 mb-2">
-								<img class="w-10" src="assets/images/slider-icon-2.webp">
-								<div class="border-l border-black pl-4 py-1">
-									<h3 class="text-4xl font-bold tracking-tighter text-black">
-										WRI<span class="text-[#f24f5f]">TING</span>
-									</h3>
-								</div>
-							</div>
-							<p class="text-sm text-gray-700 max-w-lg ml-20 font-['Lato']">
-								Our corporate program provides comprehensive IELTS training designed to enhance your team's
-								communication skills.
-							</p>
+					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
+						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
+							<img src="assets/images/slider-icon-2.webp" class="w-full h-auto">
 						</div>
-						<a href="#" class="button-cta w-auto flex justify-center">
-							<span>Let's Get Started</span>
-							<img src="assets/images/arrow-icon.webp" class="arrow-icon ml-2">
-						</a>
+						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">WRI<span class="text-[#f24f5f]">TING</span></h3>
+						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Structure your essays and reports with clarity, coherence, and precision.</p>
+						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
+							<span class="font-bold text-xl text-black">$349</span>
+							<button onclick="openCourseModal('Writing', 'Writing feedback...', 'assets/images/slider-image-4.webp')" 
+									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
+						</div>
 					</div>
 				</div>
-				<img class="w-full h-64 md:h-auto object-cover" src="assets/images/slider-image-4.webp">
+
+				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100">
+					<div class="h-48 overflow-hidden">
+						<img src="assets/images/slider-image-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+					</div>
+					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
+						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
+							<img src="assets/images/slider-icon-4.webp" class="w-full h-auto">
+						</div>
+						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">MOCK <span class="text-[#f24f5f]">TEST</span></h3>
+						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Experience a real-time exam environment with personalized expert feedback.</p>
+						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
+							<span class="font-bold text-xl text-black">$99</span>
+							<button onclick="openCourseModal('Mock Test', 'Exam simulation...', 'assets/images/slider-image-1.webp')" 
+									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
+						</div>
+					</div>
+				</div>
+
 			</div>
-	
 		</div>
+		<script>
+		function openCourseModal(title, desc, imgSrc) {
+				document.getElementById('modalTitle').innerText = title;
+				document.getElementById('modalDesc').innerText = desc;
+				document.getElementById('modalImg').src = imgSrc;
+				document.getElementById('courseModal').classList.remove('hidden');
+				document.body.style.overflow = 'hidden'; // Stop scrolling
+			}
+
+			function closeCourseModal() {
+				document.getElementById('courseModal').classList.add('hidden');
+				document.body.style.overflow = 'auto'; // Re-enable scrolling
+			}
+
+			// Close on background click
+			window.onclick = function(event) {
+				let modal = document.getElementById('courseModal');
+				if (event.target == modal) closeCourseModal();
+			}
+		</script>
 	</section>
+
+	<div id="courseModal" class="fixed inset-0 z-[10000] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+		<div class="bg-white w-full max-w-2xl rounded-[30px] overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-300">
+			<div class="relative h-64">
+				<img id="modalImg" src="" class="w-full h-full object-cover">
+				<button onclick="closeCourseModal()" class="absolute top-4 right-4 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">✕</button>
+			</div>
+			<div class="p-10">
+				<h3 id="modalTitle" class="text-4xl font-bold font-tropiline mb-4">Course Name</h3>
+				<p id="modalDesc" class="text-gray-600 font-['Lato'] leading-relaxed mb-8">Detailed information will appear here.</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="https://wa.me/yourlink" class="flex-1 bg-[#f24f5f] text-white text-center py-4 rounded-full font-bold hover:bg-[#d94452] transition-colors">Enroll Now</a>
+					<button onclick="closeCourseModal()" class="flex-1 border border-black text-black py-4 rounded-full font-bold hover:bg-black hover:text-white transition-all">Close Details</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- course section end -->
 
 	<!-- program section start -->
-	<section id="program" class="py-4 px-4 md:px-20 bg-white md:mt-[-50px] mt-0">
+	<section id="program" class="py-4 px-4 md:px-16 bg-white md:mb-16">
 		<div class="max-w-7xl mx-auto">
 
 			<div
 				class="flex flex-col md:flex-row md:justify-between items-center md:items-start mb-10 gap-6 text-center md:text-left">
-				<div class="w-full">
+				<div class="w-full reveal-on-scroll" data-delay="0.4s" data-dir="left">
 					<span class="text-gray-500 tracking-widest text-xl md:text-xs font-inter block">Where We Help</span>
 
 					<h2 class="text-4xl md:text-2xl font-bold mt-2 leading-tight font-tropiline">
@@ -611,7 +554,7 @@
 					</h2>
 				</div>
 
-				<p class="text-gray-500 text-sm md:text-xs max-w-xs mx-auto md:mx-0 pt-0 md:pt-4">
+				<p class="text-gray-500 text-sm md:text-xs max-w-xs mx-auto md:mx-0 pt-0 md:pt-4 reveal-on-scroll" data-delay="0.4s" data-dir="right">
 					At English Council, we empower professionals and students to conquer the IELTS. Our tailored courses
 					and expert instructors ensure you achieve your desired score and unlock global opportunities.
 				</p>
@@ -708,19 +651,19 @@
 			</div>
 
 			<div class="mt-20 space-y-6">
-				<div class="flex md:items-center items-left gap-4 flex-wrap justify-center">
+				<div class="flex md:items-center items-left gap-4 flex-wrap justify-center reveal-on-scroll" data-delay="0.4s" data-dir="left">
 					<span class="font-outline font-train text-5xl leading-tight md:text-[35px] uppercase">Online &
 						Offline Live Class</span>
 					<img class="h-20 md:h-10 w-full md:w-60 object-cover rounded-full"
 						src="assets/images/Rectangle-1.webp" alt="">
 				</div>
-				<div class="flex md:items-center text-right gap-4 flex-wrap justify-center flex-row-reverse">
+				<div class="flex md:items-center text-right gap-4 flex-wrap justify-center flex-row-reverse reveal-on-scroll" data-delay="0.4s" data-dir="right">
 					<span class="font-outline font-train text-5xl leading-tight md:text-[35px] uppercase">With Practical
 						Project</span>
 					<img class="h-20 md:h-10 w-full md:w-80 object-cover rounded-full"
 						src="assets/images/Rectangle-3.webp" alt="">
 				</div>
-				<div class="flex md:items-center items-left gap-4 flex-wrap justify-center">
+				<div class="flex md:items-center items-left gap-4 flex-wrap justify-center reveal-on-scroll" data-delay="0.4s" data-dir="left">
 					<span class="font-outline font-train text-5xl leading-tight md:text-[35px] uppercase">& <br
 							class="md:hidden"> Achieve Certificate</span>
 					<img class="h-20 md:h-10 w-full md:w-[350px] object-cover rounded-full"
@@ -804,17 +747,159 @@
 	</section>
 	<!-- about section end -->
 
+	<!-- blogs section start -->
+	<section id="blog" class="py-4 md:mt-10 md:px-16 bg-white px-4">
+		<div class="max-w-[1200px] mx-auto">
+			
+			<div class="mb-16 flex flex-col items-center md:items-start text-center md:text-left reveal-on-scroll" data-delay="0.4s" data-dir="left">
+				<div class="text-[#4b5563] font-medium text-sm md:text-xs tracking-widest mb-2">Our Programs</div>
+				<h2 class="text-4xl md:text-2xl font-bold font-tropiline leading-tight text-black">
+					Master the IELTS with Our Expert Courses
+				</h2>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				
+				<article class="group cursor-pointer" 
+					onclick="openBlogModal(
+						'How to Score Band 8.0 in Speaking Without Panic', 
+						'Preparation', 
+						'March 15, 2026', 
+						'Scoring a Band 8.0 requires more than just good grammar; it requires confidence and natural flow. <br><br> First, focus on your intonation. Examiners look for a rhythm that sounds like a native speaker, not a rehearsed script. Second, use complex sentence structures naturally. Instead of simple answers, try to expand using connectors like \'furthermore\' or \'in contrast\'. <br><br> Finally, don\'t fear the silence. A small pause to think is better than using filler words like \'um\' or \'ah\'.', 
+						'assets/images/slider-image-1.webp'
+					)">
+					<div class="relative rounded-[20px] overflow-hidden mb-5 shadow-sm group-hover:shadow-xl transition-all duration-500">
+						<div class="h-44 overflow-hidden relative">
+							<img src="assets/images/slider-image-1.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+							<span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-gray-100">Preparation</span>
+						</div>
+					</div>
+					<div class="px-2">
+						<div class="flex items-center gap-3 mb-3">
+							<span class="text-[11px] font-bold text-[#f24f5f] uppercase tracking-tighter">March 15, 2026</span>
+							<span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+							<span class="text-[11px] text-gray-400 font-medium">5 Min Read</span>
+						</div>
+						<h3 class="text-xl font-bold font-tropiline mb-3 group-hover:text-[#f24f5f] transition-colors leading-snug">How to Score Band 8.0 in Speaking Without Panic</h3>
+						<p class="text-gray-500 text-xs font-['Lato'] leading-relaxed line-clamp-2 mb-4">Mastering the art of natural conversation is the key. Learn the 3 phrases that impress every examiner...</p>
+						<button class="text-black font-bold text-[11px] uppercase tracking-widest border-b border-black/10 group-hover:border-[#f24f5f] pb-1 transition-all">Read Article +</button>
+					</div>
+				</article>
+
+				<article class="group cursor-pointer" 
+					onclick="openBlogModal(
+						'Avoid These 5 Common Mistakes in Writing Task 2', 
+						'Writing', 
+						'March 12, 2026', 
+						'Writing Task 2 is often the most difficult part of the IELTS. Here are the 5 mistakes to avoid: <br><br> 1. Not answering all parts of the prompt. <br> 2. Overusing complex vocabulary incorrectly. <br> 3. Lack of clear paragraphing. <br> 4. Poor time management. <br> 5. Not checking for repetitive errors. <br><br> Focus on clarity and coherence to ensure your message gets across to the examiner effectively.', 
+						'assets/images/slider-image-4.webp'
+					)">
+					<div class="relative rounded-[20px] overflow-hidden mb-5 shadow-sm group-hover:shadow-xl transition-all duration-500">
+						<div class="h-44 overflow-hidden relative">
+							<img src="assets/images/slider-image-4.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+							<span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-gray-100">Writing</span>
+						</div>
+					</div>
+					<div class="px-2">
+						<div class="flex items-center gap-3 mb-3">
+							<span class="text-[11px] font-bold text-[#f24f5f] uppercase tracking-tighter">March 12, 2026</span>
+							<span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+							<span class="text-[11px] text-gray-400 font-medium">8 Min Read</span>
+						</div>
+						<h3 class="text-xl font-bold font-tropiline mb-3 group-hover:text-[#f24f5f] transition-colors leading-snug">Avoid These 5 Common Mistakes in Writing Task 2</h3>
+						<p class="text-gray-500 text-xs font-['Lato'] leading-relaxed line-clamp-2 mb-4">Most students fail not because of vocabulary, but because of structure. We break down the perfect essay...</p>
+						<button class="text-black font-bold text-[11px] uppercase tracking-widest border-b border-black/10 group-hover:border-[#f24f5f] pb-1 transition-all">Read Article +</button>
+					</div>
+				</article>
+
+				<article class="group cursor-pointer" 
+					onclick="openBlogModal(
+						'The Skimming Secret: Read Faster, Understand More', 
+						'Reading', 
+						'March 08, 2026', 
+						'Time is your biggest enemy in the IELTS Reading section. Skimming is the skill of reading a text quickly to get the general idea. <br><br> To skim effectively, read the title, the first paragraph, and the first sentence of every subsequent paragraph. This gives you a mental map of the information. <br><br> Combine this with scanning—looking for keywords like dates, names, and capital letters—to find specific answers in seconds.', 
+						'assets/images/slider-image-3.webp'
+					)">
+					<div class="relative rounded-[20px] overflow-hidden mb-5 shadow-sm group-hover:shadow-xl transition-all duration-500">
+						<div class="h-44 overflow-hidden relative">
+							<img src="assets/images/slider-image-3.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+							<span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-gray-100">Reading</span>
+						</div>
+					</div>
+					<div class="px-2">
+						<div class="flex items-center gap-3 mb-3">
+							<span class="text-[11px] font-bold text-[#f24f5f] uppercase tracking-tighter">March 08, 2026</span>
+							<span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+							<span class="text-[11px] text-gray-400 font-medium">4 Min Read</span>
+						</div>
+						<h3 class="text-xl font-bold font-tropiline mb-3 group-hover:text-[#f24f5f] transition-colors leading-snug">The Skimming Secret: Read Faster, Understand More</h3>
+						<p class="text-gray-500 text-xs font-['Lato'] leading-relaxed line-clamp-2 mb-4">You don't have time to read every word. Learn how to hunt for answers like a pro in the Reading section.</p>
+						<button class="text-black font-bold text-[11px] uppercase tracking-widest border-b border-black/10 group-hover:border-[#f24f5f] pb-1 transition-all">Read Article +</button>
+					</div>
+				</article>
+
+				
+
+			</div>
+		</div>
+	</section>
+
+	<div id="blogModal" class="fixed inset-0 z-[99999] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+		<div class="bg-white w-full max-w-2xl rounded-[30px] overflow-hidden shadow-2xl flex flex-col max-h-[85vh]">
+			<div class="relative h-56 flex-shrink-0">
+				<img id="blogModalImg" src="" class="w-full h-full object-cover">
+				<button onclick="closeBlogModal()" class="absolute top-4 right-4 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">✕</button>
+			</div>
+			
+			<div class="p-8 md:p-10 overflow-y-auto">
+				<div class="flex items-center gap-3 mb-4">
+					<span id="blogModalCat" class="bg-[#f24f5f]/10 text-[#f24f5f] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Category</span>
+					<span id="blogModalDate" class="text-gray-400 text-[11px] font-medium">Date</span>
+				</div>
+				<h3 id="blogModalTitle" class="text-3xl font-bold font-tropiline mb-6 text-black leading-tight">Title</h3>
+				<div id="blogModalContent" class="text-gray-600 font-['Lato'] text-sm leading-[1.8] space-y-4">
+					</div>
+			</div>
+
+	<div class="p-6 border-t border-gray-100 flex justify-end">
+				<button onclick="closeBlogModal()" 
+						class="px-8 py-3 bg-black text-white rounded-full font-bold text-[11px] uppercase tracking-[2px] hover:bg-[#f24f5f] transition-all duration-300 shadow-md active:scale-95">
+					Close Article
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function openBlogModal(title, category, date, content, imgSrc) {
+			document.getElementById('blogModalTitle').innerHTML = title;
+			document.getElementById('blogModalCat').innerHTML = category;
+			document.getElementById('blogModalDate').innerHTML = date;
+			document.getElementById('blogModalContent').innerHTML = content;
+			document.getElementById('blogModalImg').src = imgSrc;
+
+			document.getElementById('blogModal').classList.remove('hidden');
+			document.body.style.overflow = 'hidden'; // Stop scrolling background
+		}
+
+		function closeBlogModal() {
+			document.getElementById('blogModal').classList.add('hidden');
+			document.body.style.overflow = 'auto'; // Enable scrolling
+		}
+	</script>
+	<!-- blogs section end -->
+
 	<!-- testimonial section start -->
-	<section id="testimonial" class="relative py-16 px-6 md:px-20 overflow-hidden">
+	<section id="testimonial" class="relative py-16 px-6 md:px-16 overflow-hidden">
 		<div class="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-12 items-center text-center md:text-left">
-			<div class="testimonials-parent">
+			<div class="testimonials-parent mb-12 flex flex-col items-center md:items-start text-center md:text-left reveal-on-scroll" data-delay="0.4s" data-dir="left">
 				<div class="text-[#4b5563] font-medium text-sm tracking-widest mb-2">Testimonials</div>
 				<h2 class="text-5xl md:text-2xl font-bold font-tropiline leading-tight">
 					What our students are saying
 				</h2>
 			</div>
 
-			<div class="flex flex-col items-center md:items-end gap-2">
+			<div class="flex flex-col items-center md:items-end gap-2 reveal-on-scroll" data-delay="0.4s" data-dir="right">
 				<div class="flex gap-1">
 					<img class="w-4 h-4" src="assets/images/red-star.svg" alt="star">
 					<img class="w-4 h-4" src="assets/images/red-star.svg" alt="star">
@@ -898,11 +983,10 @@
 	<!-- testimonial section end -->
 
 	<!-- faq section start -->
-	<section id="faq" class="bg-white w-full py-20 lg:py-28 px-10 lg:px-16 overflow-hidden relative z-20">
+	<section id="faq" class="bg-white w-full px-10 md:px-16 py-10 md:mb-10 overflow-hidden relative z-20">
 		<div class="max-w-[1400px] mx-auto flex flex-col gap-10 lg:gap-14">
 
-			<!-- Top Header -->
-			<div class="w-full flex flex-col gap-2 items-center md:items-start text-center md:text-left">
+			<div class="w-full flex flex-col gap-2 items-center md:items-start text-center md:text-left reveal-on-scroll" data-delay="0.4s" data-dir="left">
 				<p class="text-[#4b5563] font-medium text-sm md:text-xs tracking-widest">FAQ</p>
 				<h2 class="text-5xl md:text-2xl font-bold font-tropiline leading-tight tracking-tight">
 					Some Answer That You Have In Mind
@@ -1031,6 +1115,95 @@
 	</section>
 	<!-- faq section end -->
 
+	<!-- contact section start -->
+	<section id="contact" class="py-20 md:px-16 px-6">
+		<div class="max-w-[1200px] mx-auto">
+	
+			<div class="w-full flex flex-col gap-2 items-center md:items-start text-center md:text-left reveal-on-scroll" data-delay="0.4s" data-dir="left">
+				<p class="text-[#4b5563] font-medium text-sm md:text-xs tracking-widest">Contact Us</p>
+				<h2 class="text-5xl md:text-2xl font-bold font-tropiline leading-tight tracking-tight">
+					Connect With Our IELTS Experts
+				</h2>
+			</div>
+	
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-10">	
+				<div class="bg-white p-8 md:p-10 rounded-[30px] shadow-sm border border-gray-100">
+					<form action="#" method="POST" class="space-y-4">
+	
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+							<div class="relative mb-3">
+								<input type="text" id="student_name" placeholder=" "
+									class="block w-full px-6 pt-6 pb-2 text-sm text-black bg-gray-50 border border-gray-100 rounded-2xl appearance-none focus:outline-none focus:ring-0 focus:border-[#f24f5f] peer transition-all">
+								<label for="student_name"
+									class="absolute text-[11px] font-bold text-gray-400 duration-300 transform -translate-y-3 scale-75 top-4 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-[#f24f5f] uppercase tracking-widest">
+									Student Name
+								</label>
+							</div>
+	
+							<div class="relative mb-3">
+								<input type="email" id="email" placeholder=" "
+									class="block w-full px-6 pt-6 pb-2 text-sm text-black bg-gray-50 border border-gray-100 rounded-2xl appearance-none focus:outline-none focus:ring-0 focus:border-[#f24f5f] peer transition-all">
+								<label for="email"
+									class="absolute text-[11px] font-bold text-gray-400 duration-300 transform -translate-y-3 scale-75 top-4 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-[#f24f5f] uppercase tracking-widest">
+									Email Address
+								</label>
+							</div>
+						</div>
+	
+						<div class="relative mb-3">
+							<input type="tel" id="mobile_number" placeholder=" "
+								class="block w-full px-6 pt-6 pb-2 text-sm text-black bg-gray-50 border border-gray-100 rounded-2xl appearance-none focus:outline-none focus:ring-0 focus:border-[#f24f5f] peer transition-all">
+							<label for="mobile_number"
+								class="absolute text-[11px] font-bold text-gray-400 duration-300 transform -translate-y-3 scale-75 top-4 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-[#f24f5f] uppercase tracking-widest">
+								Mobile Number
+							</label>
+						</div>
+	
+						<div class="relative mb-3">
+							<textarea id="message" rows="4" placeholder=" "
+								class="block w-full px-6 pt-8 pb-2 text-sm text-black bg-gray-50 border border-gray-100 rounded-2xl appearance-none focus:outline-none focus:ring-0 focus:border-[#f24f5f] peer transition-all resize-none"></textarea>
+							<label for="message"
+								class="absolute text-[11px] font-bold text-gray-400 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-[#f24f5f] uppercase tracking-widest">
+								Your Message
+							</label>
+						</div>
+	
+						<div class="pt-2">
+							<button type="submit"
+								class="w-full md:w-auto px-10 py-4 bg-black text-white rounded-full font-bold text-[11px] uppercase tracking-[2px] hover:bg-[#f24f5f] transition-all duration-300 shadow-lg active:scale-95">
+								Send Message →
+							</button>
+						</div>
+					</form>
+				</div>
+	
+				<div class="h-full min-h-[400px] flex flex-col gap-8">
+					<div class="flex-grow rounded-[30px] overflow-hidden shadow-sm border border-white p-2 bg-white">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093643!2d144.95373531531615!3d-37.81627977975124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1a32f9b1b0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1611568205214!5m2!1sen!2sus"
+							class="w-full h-full rounded-[22px] min-h-[300px]" style="border:0;" allowfullscreen=""
+							loading="lazy">
+						</iframe>
+					</div>
+	
+					<div class="grid grid-cols-2 gap-4">
+						<div class="bg-white p-6 rounded-[24px] border border-gray-100">
+							<div class="text-[#f24f5f] font-bold text-[10px] uppercase tracking-widest mb-1">Call Us</div>
+							<div class="text-black font-bold text-sm">+1 (234) 567-890</div>
+						</div>
+						<div class="bg-white p-6 rounded-[24px] border border-gray-100">
+							<div class="text-[#f24f5f] font-bold text-[10px] uppercase tracking-widest mb-1">Email Us</div>
+							<div class="text-black font-bold text-sm">hello@ieltsmaster.com</div>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</section>
+	<!-- contact section end -->
+
+
 	<!-- footer section start -->
 	<footer id="footer" class="bg-black font-tropiline text-white py-12 px-2 md:py-4 md:px-14 overflow-hidden relative">    
 		<div class="max-w-7xl mx-auto relative z-10 px-2 md:px-0"> <div class="flex flex-col md:flex-row justify-between items-center md:items-start pb-12 relative md:mt-2">
@@ -1046,8 +1219,13 @@
 						</h2>
 						
 						<a href="https://wa.me/8801618600044" target="_blank" 
-						class="hidden md:block hover:rotate-12 hover:scale-105 transition-transform">
-							<img class="w-20 h-20" src="assets/images/msg-us.webp" alt="Message Us">
+							class="hidden md:block hover:scale-105 transition-transform">
+							<div class="animate-bounce-slow">
+								<img src="assets/images/msg-us.webp" 
+									alt="Message Us" 
+									style="animation-duration: 20s;"
+									class="w-20 h-20 animate-spin">
+							</div>
 						</a>
 					</div>
 
@@ -1070,7 +1248,7 @@
 
 				<img class="absolute -z-10 opacity-90 pointer-events-none 
 							left-[-175px] top-[300px] w-48 -scale-x-100  w-96 h-96
-							md:left-auto md:right-[-200px] md:top-[-20px] md:w-80 md:scale-x-100" 
+							md:left-auto md:right-[-200px] md:top-[-40px] md:w-80 md:scale-x-100" 
 					src="assets/images/footer-section-background-icon.webp" alt="">
 			</div>
 
@@ -1101,14 +1279,14 @@
 
 			<div class="flex font-inter flex-col md:flex-row justify-between items-center gap-6 pt-0 md:pt-4 md:border-t md:border-gray-800">
 				<div class="w-full md:w-auto flex justify-center md:justify-end gap-6 text-white text-[14px] md:text-sm order-1 md:order-2 pb-6 border-b border-gray-800 md:border-none md:pb-0">
-					<a href="#" class="hover:text-rose-500 transition-colors">About Us</a>
-					<a href="#" class="hover:text-rose-500 transition-colors">Contact Us</a>
-					<a href="#" class="hover:text-rose-500 transition-colors">Privacy & Policy</a>
+					<a href="#about" class="hover:text-rose-500 transition-colors">About Us</a>
+					<a href="#contact" class="hover:text-rose-500 transition-colors">Contact Us</a>
+					<a href="#blog" class="hover:text-rose-500 transition-colors">Blog Post</a>
 				</div>
 
 				<div class="flex items-center justify-center md:justify-start text-white text-sm md:text-sm order-2 md:order-1">
 					<p class="text-center md:text-left leading-relaxed">
-						<i class="fa-brands fa-copyright text-base"></i>
+						<i class="fa-regular fa-copyright text-base"></i>
 						Copyright 2025 . Englishcouncil.com . All Right Reserved. 
 						<span class="block md:inline mt-1 md:mt-0">
 							Developed by <a href="https://tarunsoft.com/" target="_blank" class="text-[#FF3B3B] hover:underline font-medium">Tarun Soft</a>
@@ -1119,8 +1297,6 @@
 		</div>
 	</footer>
 	<!-- footer section end -->
-
-
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

@@ -16,64 +16,7 @@ links.forEach((link) => link.addEventListener("click", closeMenu));
 
 
 ///////////////////////////////////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger);
 
-    const cards = gsap.utils.toArray(".card-item");
-
-    // Only run the stacking effect on Desktop (md breakpoint and up)
-    ScrollTrigger.matchMedia({
-        "(min-width: 768px)": function() {
-            cards.forEach((card, i) => {
-                gsap.set(card, {
-                    zIndex: i,
-                    xPercent: -50,
-                    left: "50%",
-                    opacity: i === 0 ? 1 : 0,
-                    yPercent: i === 0 ? 0 : 120,
-                    position: "absolute" // Ensure absolute only on desktop
-                });
-            });
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#course",
-                    start: "top top",
-                    end: () => `+=${(cards.length - 1) * window.innerHeight}`,
-                    pin: true,
-                    pinSpacing: true,
-                    scrub: 1,
-                    invalidateOnRefresh: true
-                }
-            });
-
-            cards.forEach((card, i) => {
-                if (i < cards.length - 1) {
-                    const nextCard = cards[i + 1];
-                    const currentStack = cards.slice(0, i + 1);
-
-                    tl.fromTo(nextCard,
-                        { yPercent: 120, opacity: 1 },
-                        { yPercent: 0, opacity: 1, duration: 1, ease: "none" },
-                        i
-                    );
-
-                    tl.to(currentStack, {
-                        z: (index) => -150 * (i - index + 1),
-                        y: (index) => -40 * (i - index + 1),
-                        scale: (index) => 1 - 0.06 * (i - index + 1),
-                        duration: 1,
-                        ease: "power1.inOut"
-                    }, i);
-                }
-            });
-        },
-        // On Mobile, kill any existing triggers or styles if window is resized
-        "(max-width: 767px)": function() {
-            gsap.set(cards, { clearProps: "all" });
-        }
-    });
-});
 // FAQ Accordion Logic
 document.querySelectorAll('.faq-item').forEach(item => {
     const btn = item.querySelector('.faq-button');
@@ -156,4 +99,82 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     startAutoSlide();
+});
+
+document.addEventListener('mousemove', (e) => {
+    const pupils = document.querySelectorAll('.pupil');
+    pupils.forEach(pupil => {
+        // Get the center of the eye
+        const rect = pupil.parentElement.getBoundingClientRect();
+        const eyeX = rect.left + rect.width / 2;
+        const eyeY = rect.top + rect.height / 2;
+        
+        // Calculate angle between mouse and eye center
+        const angle = Math.atan2(e.clientY - eyeY, e.clientX - eyeX);
+        const distance = 6; // How far the pupil moves from center
+        
+        const x = Math.cos(angle) * distance;
+        const y = Math.sin(angle) * distance;
+        
+        pupil.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+	window.addEventListener('scroll', function() {
+    const nav = document.querySelector('.main-nav-wrapper');
+    if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && window.innerWidth >= 768) {
+            const el = entry.target;
+            const delay = el.getAttribute('data-delay') || '0.2s';
+            const animType = el.getAttribute('data-anim');
+            const direction = el.getAttribute('data-dir') || 'left'; // Detects left or right
+            
+            el.style.animationDelay = delay;
+            
+            // 1. Trigger the specific direction nudge
+            el.classList.add(`animate-ghostly-${direction}`);
+
+            // 2. Trigger eye bounce if applicable
+            if (animType === 'bounce') {
+                el.querySelectorAll('.pupil-bounce').forEach(pupil => {
+                    pupil.style.animationDelay = delay; 
+                    pupil.classList.add('animate-bounce-settle');
+                });
+            }
+            
+            observer.unobserve(el);
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevents the #hash from being added to the URL
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Smooth scroll to the section
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+            // If it's a mobile link, close the sidebar after clicking
+            if (this.classList.contains('mobile-link')) {
+                const sidebar = document.getElementById('mobile-sidebar');
+                sidebar.classList.add('translate-x-full');
+            }
+        }
+    });
 });
