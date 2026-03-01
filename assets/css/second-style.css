@@ -65,6 +65,101 @@ body {font-family: 'Inter';}
         animation: eyeBounceSettling 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     }
 }
+/* Animation for individual items */
+@keyframes fadeUpBox {
+    0% { 
+        opacity: 0; 
+        transform: translateY(40px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Base state for desktop */
+@media (min-width: 768px) {
+    .reveal-grid-items .stagger-item {
+        opacity: 0;
+        will-change: transform, opacity;
+    }
+
+    .animate-item {
+        animation: fadeUpBox 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+}
+
+/* Mobile: No animation, always visible */
+@media (max-width: 767px) {
+    .reveal-grid-items .stagger-item {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/*====== About Section Bubble Animation ======*/
+@media (min-width: 768px) {
+    /* Initial State: Hidden and shifted up */
+    .local-programs-wrapper,
+    .youth-program-wrapper,
+    .youth-program-container,
+    .youth-program-frame,
+    .youth-program-wrapper2,
+    .youth-program-wrapper3,
+    .youth-program-wrapper4,
+    .youth-program-wrapper5,
+    .youth-program-wrapper6,
+    .youth-program-wrapper7,
+    .youth-program-wrapper8,
+    .youth-program-wrapper9,
+    .years-experience-wrapper {
+        opacity: 0;
+        transform: translateY(-150px) scale(0.8);
+        transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        will-change: transform, opacity;
+    }
+
+    /* Active State: Dropped into place */
+    .animate-bubbles-active .local-programs-wrapper,
+    .animate-bubbles-active .youth-program-wrapper,
+    .animate-bubbles-active .youth-program-container,
+    .animate-bubbles-active .youth-program-frame,
+    .animate-bubbles-active .youth-program-wrapper2,
+    .animate-bubbles-active .youth-program-wrapper3,
+    .animate-bubbles-active .youth-program-wrapper4,
+    .animate-bubbles-active .youth-program-wrapper5,
+    .animate-bubbles-active .youth-program-wrapper6,
+    .animate-bubbles-active .youth-program-wrapper7,
+    .animate-bubbles-active .youth-program-wrapper8,
+    .animate-bubbles-active .youth-program-wrapper9,
+    .animate-bubbles-active .years-experience-wrapper {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    /* Staggered Delays for a natural drop effect */
+    .years-experience-wrapper { transition-delay: 0.1s; }
+    .local-programs-wrapper   { transition-delay: 0.2s; }
+    .youth-program-wrapper    { transition-delay: 0.25s; }
+    .youth-program-container  { transition-delay: 0.3s; }
+    .youth-program-frame      { transition-delay: 0.35s; }
+    .youth-program-wrapper2   { transition-delay: 0.4s; }
+    .youth-program-wrapper3   { transition-delay: 0.45s; }
+    .youth-program-wrapper4   { transition-delay: 0.5s; }
+    .youth-program-wrapper5   { transition-delay: 0.55s; }
+    .youth-program-wrapper6   { transition-delay: 0.6s; }
+    .youth-program-wrapper7   { transition-delay: 0.65s; }
+    .youth-program-wrapper8   { transition-delay: 0.7s; }
+    .youth-program-wrapper9   { transition-delay: 0.75s; }
+}
+
+/* Mobile fallback: Ensure they are visible if user is on phone */
+@media (max-width: 767px) {
+    .local-programs-wrapper, [class*="youth-program"], .years-experience-wrapper {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
 .button-cta {
     display: inline-flex;
     white-space: nowrap; 

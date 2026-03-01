@@ -178,3 +178,52 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+const gridObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // Only trigger on desktop and when visible
+        if (entry.isIntersecting && window.innerWidth >= 768) {
+            const container = entry.target;
+            const items = container.querySelectorAll('.stagger-item');
+            
+            items.forEach((item, index) => {
+                // Add a staggered delay (0.1s, 0.2s, 0.3s...)
+                item.style.animationDelay = `${index * 0.1}s`;
+                item.classList.add('animate-item');
+            });
+            
+            // Stop observing once the animation has triggered
+            gridObserver.unobserve(container);
+        }
+    });
+}, { threshold: 0.1 }); // Trigger when 10% of the grid is visible
+
+// Start observing all grids
+document.querySelectorAll('.reveal-grid-items').forEach(grid => {
+    gridObserver.observe(grid);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select the parent container of the bubbles
+    const bubbleContainer = document.querySelector('.relative.min-h-\\[300px\\]');
+    
+    if (bubbleContainer && window.innerWidth >= 768) {
+        const observerOptions = {
+            root: null,
+            threshold: 0.3 // Trigger when 30% of the section is visible
+        };
+
+        const bubbleObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add class to parent to trigger children animations
+                    entry.target.classList.add('animate-bubbles-active');
+                    // Stop observing once animation has triggered
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        bubbleObserver.observe(bubbleContainer);
+    }
+});
