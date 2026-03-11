@@ -1,1311 +1,1556 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>English Council</title>
 	<link rel="icon" type="image/png" href="assets/images/web-icon.webp">
-	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Train+One&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	<link rel="stylesheet" href="assets/css/second-style.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Train+One&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/media.css">
+	<link rel="stylesheet" href="assets/css/animation.css">
+
 </head>
 
-<body class="font-body">
-	<!-- header section start -->
-	<section id="header" class="relative w-full  overflow-hidden">
+<body>
+	<div id="web-page" class="english-council-homepage">
+		<!-- header section start -->
+		<section id="header">
+			<div class="gradient-wallpapers-parent">
+				<div class="gradient-wallpapers">
+					<img class="icon" src="assets/images/header-section-background.webp" alt="">
+					<img class="icon-mobile" src="assets/images/header-section-background-image-mobile.webp" alt=""
+						style="display: none;">
+				</div>
 
-		<div class="absolute inset-0 z-0 pointer-events-none">
-			<img class="hidden md:block w-full h-full object-cover md:object-top "
-				src="assets/images/header-section-background.webp" alt="">
-
-			<img class="block md:hidden w-full h-full object-cover "
-				src="assets/images/header-section-background-image-mobile.webp" alt="">
-
-			<div
-				class="hidden font-cinzel md:flex absolute left-0 top-0 h-full flex-col justify-center pointer-events-none select-none z-0">
-				<h1
-					class="md:text-[43px] font-black text-white/[0.07] uppercase leading-[0.6] tracking-[0.2em] [writing-mode:vertical-rl] translate-x">
-					ENGLISH
-				</h1>
-
-				<h1
-					class=" md:text-[43px] font-black text-white/[0.07] uppercase leading-[0.6] tracking-[0.2em] [writing-mode:vertical-rl] translate-x mt-4">
-					COUNCIL
-				</h1>
-			</div>
-		</div>
-
-		<header class="sticky top-0 left-0 w-full z-50 bg-transparent md:bg-transparent transition-all duration-300">
-			<div class="hidden md:block w-full main-nav-wrapper transition-all duration-300 z-[9999]">
-				<nav class="flex items-center justify-between max-w-[1200px] mx-auto py-4 px-6">
-
-					<a href="#" class="w-10 shrink-0 ml-[7%] transition-opacity hover:opacity-90">
-						<img class="w-full h-auto" src="assets/images/logo.webp" alt="Logo">
+				<div class="image-112-parent" id="main-nav">
+					<a href="#footer" class="logo-link">
+						<img class="image-112-icon" src="assets/images/logo.webp" alt="English Council Logo">
 					</a>
 
-					<div class="flex items-center gap-8 text-white font-semibold text-[12px] tracking-wide whitespace-nowrap ml-[12%]">
-						<a href="#header" class="hover:text-red-500 transition-colors">Home</a>
-						<a href="#about-us" class="hover:text-red-500 transition-colors">About Us</a>
-						<a href="#contact" class="hover:text-red-500 transition-colors">Contact Us</a>
-						<a href="#faq" class="hover:text-red-500 transition-colors">FAQ</a>
+					<div class="button-parent">
+						<a href="#header" class="button nav-link">
+							<div class="home">Home</div>
+						</a>
+						<a href="#about-us" class="button nav-link">
+							<div class="home">About Us</div>
+						</a>
+						<a href="#footer" class="button nav-link">
+							<div class="home">Contact Us</div>
+						</a>
+						<a href="#faq" class="button nav-link">
+							<div class="home">FAQ</div>
+						</a>
 					</div>
 
-					<a href="https://wa.me/..."
-						class="bg-white text-black px-4 py-2 mr-[7%] rounded-full font-bold md:text-[9px] tracking-wider shadow-sm hover:bg-gray-100 transition-all active:scale-95 whitespace-nowrap">
-						Message Us On Whatsapp
-					</a>
-				</nav>
-			</div>
-			<div
-				class="fixed top-0 left-0 w-full z-50 flex md:hidden items-center justify-between bg-white px-8 py-5 border-b border-gray-100">
-				<a href="#" class="w-14">
-					<img class="w-full" src="assets/images/logo.webp" alt="Logo">
-				</a>
-
-				<button id="mobile-menu-open" class="p-3">
-					<img src="assets/images/nav-icon.svg" alt="Menu" class="w-10 h-auto">
-				</button>
-			</div>
-
-			<div class="pt-[90px] md:pt-0"></div>
-		</header>
-
-		<div id="mobile-sidebar"
-			class="fixed inset-0 z-[100] bg-white translate-x-full transition-transform duration-300 ease-in-out md:hidden">
-			<div class="flex flex-col h-full">
-				<div class="flex justify-end p-6">
-					<button id="mobile-menu-close"
-						class="text-gray-400 text-2xl hover:text-black transition-colors">✕</button>
-				</div>
-
-				<div class="flex flex-col items-center gap-0 text-[#0a1128] font-bold text-2xl px-6">
-					<a href="#header" class="mobile-link border-b border-gray-100 w-full text-center py-6">Home</a>
-					<a href="#about-us" class="mobile-link border-b border-gray-100 w-full text-center py-6">About
-						Us</a>
-					<a href="#contact" class="mobile-link border-b border-gray-100 w-full text-center py-6">Contact
-						Us</a>
-					<a href="#faq" class="mobile-link w-full text-center py-6">FAQ</a>
-				</div>
-			</div>
-		</div>
-
-
-
-		<div
-			class="relative z-20 px-6 md:px-24 py-10 flex flex-col md:flex-row justify-between items-start gap-12  mt-10 md:mt-0">
-			<div class="w-full md:w-1/2 flex flex-col items-center md:items-start gap-6 md:gap-0">
-
-				<div class="select-none text-center md:text-left order-1">
-					<h2
-						class="font-tropiline text-white text-3xl text-[40px] md:text-[40px] font-black tracking-tight uppercase mb-4 reveal-on-scroll" data-delay="0.3s" data-dir="left">
-						Achieve Your
-					</h2>
-
-					<div class="flex flex-col md:flex-row items-center md:items-center gap-x-4 mt-1  reveal-on-scroll" data-delay="0.4s" data-dir="left" data-anim="bounce">
-                        <div class="flex gap-2">
-                            <div
-                                class="pupil-bounce w-20 h-20 md:w-16 md:h-16 bg-[#d1d5db] rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(0,0,0,0.2)] relative overflow-hidden">
-                                <div
-                                    class="w-10 h-10 md:w-8 md:h-8 bg-gradient-to-br from-red-500 to-red-700 rounded-full absolute bottom-1 right-1 pupil shadow-inner">
-                                </div>
-                            </div>
-                            <div
-                                class="pupil-bounce w-20 h-20 md:w-16 md:h-16 bg-[#d1d5db] rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(0,0,0,0.2)] relative overflow-hidden">
-                                <div
-                                    class="w-10 h-10 md:w-8 md:h-8 bg-gradient-to-br from-red-500 to-red-700 rounded-full absolute bottom-1 right-1 pupil shadow-inner">
-                                </div>
-                            </div>
-                        </div>
-						<h1
-							class="font-train text-[50px] md:text-[40px] text-white md:leading-none tracking-tighter uppercase text-center md:text-left md:whitespace-nowrap">
-							Dream IELTS <br class="md:hidden"> Score
-						</h1>
+					<div class="mobile-menu-toggle" style="display: none;">
+						<img src="assets/images/logo.webp" alt="Menu">
 					</div>
-				</div>
-				<div class="flex items-center justify-center md:justify-start gap-4 mt-6 md:mt-4 order-3 md:order-2  reveal-on-scroll" data-delay="0.2s" data-dir="left">
-					<a href="#course" class="button-cta">
-						<span>Let's Get Started</span>
-						<img src="assets/images/arrow-icon.webp" class="arrow-icon" alt="">
-					</a>
 
-					<a href="#blog"
-						class="text-white px-2 py-6 md:px-3 md:py-3 font-bold text-[10px] md:text-[10px] tracking-wide hover:text-white/80 transition-all">
-						Learn More
+					<a href="https://wa.me/yourphonenumber" target="_blank" class="button5">
+						<div class="message-us-on">Message Us On Whatsapp</div>
 					</a>
 				</div>
 
-				<div class="max-w-md mt-0 md:mt-32 order-2 md:order-3">
-					<div class="flex flex-col md:flex-row gap-4 items-center md:items-start">
-						<div class="hidden md:flex flex-col gap-[3px] mt-1 shrink-0">
-							<span class="w-5 h-[4px] bg-white opacity-100"></span>
-							<span class="w-5 h-[3px] bg-white opacity-100"></span>
-							<span class="w-5 h-[2.5px] bg-white opacity-100"></span>
-							<span class="w-5 h-[2.5px] bg-white opacity-90"></span>
-							<span class="w-5 h-[2.2px] bg-white opacity-80"></span>
-							<span class="w-5 h-[2px] bg-white opacity-70"></span>
-							<span class="w-5 h-[1.8px] bg-white opacity-60"></span>
-							<span class="w-5 h-[1.5px] bg-white opacity-50"></span>
-							<span class="w-5 h-[1.2px] bg-white opacity-40"></span>
-							<span class="w-5 h-[1px] bg-white opacity-30"></span>
-							<span class="w-5 h-[0.8px] bg-white opacity-20"></span>
-							<span class="w-5 h-[0.5px] bg-white opacity-10"></span>
-							<span class="w-5 h-[0.5px] bg-white opacity-5"></span>
+
+				<div class="cub-parent">
+					<img class="cub-icon" src="assets/images/cube-icon.webp" alt="">
+					<div class="were-most-promising">We’re Most Promising Coaching Centre In Bangladesh</div>
+				</div>
+
+				<div class="group-wrapper">
+					<div class="eye-ball-parent">
+						<div class="eye-ball">
+							<img class="eye-icon" src="assets/images/right-eye-icon.webp" alt="">
 						</div>
+						<div class="eye-ball2">
+							<img class="eye-icon2" src="assets/images/left-eye-icon.webp" alt="">
+						</div>
+					</div>
+				</div>
 
-						<p
-							class="text-white/70 text-[20px] md:text-[10px] font-normal leading-relaxed text-center md:text-justify max-w-[90%] md:max-w-[60%]">
-							At English Council, we're dedicated to helping you achieve your desired IELTS band score.
-							Our expert instructors and personalized approach ensure your success.
-						</p>
+				<div class="at-english-council-were-dedi-parent">
+					<div class="at-english-council">At English Council, we're dedicated to helping you achieve your
+						desired IELTS band score. Our expert instructors and personalized approach ensure your success.
+					</div>
+					<div class="rectangle-parent">
+						<div class="group-child"></div>
+						<div class="group-item"></div>
+						<div class="group-inner"></div>
+						<div class="rectangle-div"></div>
+						<div class="group-child2"></div>
+						<div class="group-child3"></div>
+						<div class="group-child4"></div>
+						<div class="group-child5"></div>
+						<div class="group-child6"></div>
+						<div class="group-child7"></div>
+						<div class="group-child8"></div>
+					</div>
+				</div>
+
+				<div class="button-group">
+					<a href="" class="scroll-link" data-scroll="100"
+						style="text-decoration: none; color: inherit; display: inline-block;">
+						<div class="button6">
+							<div class="lets-get-started">Let’s Get Started</div>
+							<img class="button-child" src="assets/images/arrow-icon.webp" alt="">
+						</div>
+					</a>
+
+					<a href="" class="scroll-link" data-scroll="100"
+						style="text-decoration: none; color: inherit; display: inline-block;">
+						<div class="button7">
+							<div class="learn-more">Learn More</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="rectangle-group">
+					<img class="rectangle-icon" src="assets/images/header-section-image-2.webp" alt="">
+					<img class="group-child9" src="assets/images/header-section-image-1.webp" alt="">
+				</div>
+
+				<div class="frame-parent">
+					<img class="frame-icon" src="assets/images/white-star-icon.webp" alt="">
+					<div class="frame-group">
+						<div class="ellipse-parent">
+							<img class="frame-child" src="assets/images/avatar-1.webp" alt="">
+							<img class="frame-item" src="assets/images/avatar-2.webp" alt="">
+							<img class="frame-item" src="assets/images/avatar-3.webp" alt="">
+							<img class="frame-item" src="assets/images/avatar-4.webp" alt="">
+							<img class="frame-item" src="assets/images/avatar-5.webp" alt="">
+						</div>
+						<div class="we-satisfied-24k-parent">
+							<div class="we-satisfied-24k">We Satisfied 24k+</div>
+							<div class="student-around-bangladesh">Student<br>Around<br>Bangladesh</div>
+						</div>
+					</div>
+				</div>
+
+				<b class="achieve-your">ACHIEVE YOUR</b>
+				<div class="dream-ielts-score">DREAM IELTS SCORE</div>
+			</div>
+			<b class="english-council">ENGLISH COUNCIL</b>
+		</section>
+		<!-- header section end -->
+
+		<!-- feature section start -->
+		<section id="feature">
+			<div class="group-parent">
+				<div class="group-parent2">
+					<img class="group-icon" src="assets/images/feature-icon-1.webp" alt="">
+
+					<div class="interactive-learning-parent">
+						<b class="interactive-learning">Interactive Learning</b>
+						<div class="our-corporate-program6">Our corporate program offers IELTS training to boost your
+							team's communication skills and global opportunities.</div>
+					</div>
+				</div>
+				<div class="group-parent2">
+					<img class="group-icon" src="assets/images/feature-icon-2.webp" alt="">
+
+					<div class="interactive-learning-parent">
+						<b class="personalized-approach">Personalized Approach</b>
+						<div class="our-corporate-program6">Our corporate program offers IELTS training to boost your
+							team's communication skills and global opportunities.</div>
+					</div>
+				</div>
+				<div class="group-parent2">
+					<img class="group-icon" src="assets/images/feature-icon-3.webp" alt="">
+
+					<div class="interactive-learning-parent">
+						<b class="interactive-learning">Practical Application</b>
+						<div class="our-corporate-program6">Our corporate program offers IELTS training to boost your
+							team's communication skills and global opportunities.</div>
+					</div>
+				</div>
+				<div class="group-parent2">
+					<img class="group-icon" src="assets/images/feature-icon-4.webp" alt="">
+
+					<div class="interactive-learning-parent">
+						<b class="interactive-learning">Continuous Feedback</b>
+						<div class="our-corporate-program6">Our corporate program offers IELTS training to boost your
+							team's communication skills and global opportunities.</div>
 					</div>
 				</div>
 			</div>
+			<div class="how-we-help-you-to-succeed-wrapper">
+				<div class="how-we-help">How We Help You TO Succeed</div>
+				<img class="line-icon" src="assets/images/line-icon.webp" alt="">
 
-			<div class="w-full md:w-auto flex flex-col items-start md:items-end gap-10">
-				<div
-					class="flex items-center justify-between md:justify-end w-full md:w-auto gap-3 bg-transparent p-0 order-1 md:order-none">
-					<img class="md:w-6 md:h-7 w-14 h-14 opacity-90 order-2 md:order-none animate-float" style="animation: float 3s ease-in-out infinite;"
-						src="assets/images/cube-icon.webp" alt="">
+			</div>
+			<div class="component-2">
 
-					<span
-						class="text-white text-[18px] md:text-[8px] font-bold tracking-[0.15em] leading-[1.6] order-1 md:order-none">
-						We’re Most Promising Coaching <br> Centre In Bangladesh
+				<img class="group-icon2" src="assets/images/msg-us.webp" alt="">
+
+			</div>
+			<div class="unlock-your-full-potential-wit-parent">
+				<div class="unlock-your-full-container">
+					<span class="line-block line-1">
+						<span>Unlock your full </span>
+						<span class="potential-with-english">potential with English Council's</span>
+						<span> comprehensive IELTS program. Our expert</span>
+					</span>
+
+					<span class="line-block line-2">
+						<span class="comprehensive-ielts-program">instructors provide personalized guidance and
+							continuous support to help you achieve your desired </span>
+					</span>
+
+					<span class="line-block line-3">
+						<span class="potential-with-english">band score. Join us and embark on a journey</span>
+						<span> towards academic and professional </span>
+						<span class="potential-with-english">success.</span>
 					</span>
 				</div>
+			</div>
+		</section>
+		<!-- feature section end -->
 
-				<div
-					class="flex flex-col items-start md:items-end gap-6 mb-4 md:mt-20 order-2 md:order-none w-full md:w-auto">
-
-					<div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 w-full md:w-auto">
-
-						<div
-							class="flex items-center justify-between md:justify-end w-full md:w-auto gap-4 md:gap-3 order-1 md:order-none mt-0">
-
-							<img class="w-20 h-20 md:w-8 md:h-8 shrink-0 object-contain order-1 md:order-none animate-spin"
-								src="assets/images/white-star-icon.webp" alt="Star" style="animation-duration: 20s;">
-
-							<div class="hidden md:flex -space-x-3 shrink-0 md:order-none">
-								<img class="w-6 h-6 md:w-5 md:h-5 rounded-full border-1 border-white object-cover shrink-0 aspect-square shadow-lg"
-									src="assets/images/avatar-1.webp" alt="">
-								<img class="w-6 h-6 md:w-5 md:h-5 rounded-full border-1 border-white object-cover shrink-0 aspect-square shadow-lg"
-									src="assets/images/avatar-2.webp" alt="">
-								<img class="w-6 h-6 md:w-5 md:h-5 rounded-full border-1 border-white object-cover shrink-0 aspect-square shadow-lg"
-									src="assets/images/avatar-3.webp" alt="">
-								<img class="w-6 h-6 md:w-5 md:h-5 rounded-full border-1 border-white object-cover shrink-0 aspect-square shadow-lg"
-									src="assets/images/avatar-4.webp" alt="">
-								<img class="w-6 h-6 md:w-5 md:h-5 rounded-full border-1 border-white object-cover shrink-0 aspect-square shadow-lg"
-									src="assets/images/avatar-5.webp" alt="">
-							</div>
-
-							<div
-								class="text-[16px] md:text-[8px] uppercase font-bold text-white leading-[1.5] md:leading-[1.6] tracking-wide whitespace-nowrap text-right md:text-left order-2 md:order-none">
-
-								<div class="hidden md:block">
-									<span class="block">We Satisfied 24k+</span>
-									<span class="block">Student </span>
-									<span class="block">Around</span>
-									<span class="block">Bangladesh</span>
+		<!-- course section start -->
+		<section id="course">
+			<div class="stack-container">
+				<div class="card-item" style="--card-bg: rgb(202, 202, 235);">
+					<div class="card-content-wrapper">
+						<div class="ellipse-bg"></div>
+						<div class="content-flex-row">
+							<div class="text-group">
+								<div class="image-title-row">
+									<img class="slider-icon" src="assets/images/slider-icon-1.webp" alt="">
+									<div class="title-wrapper">
+										<b class="title"><span>SPO</span><span class="SecondPart">KEN</span></b>
+									</div>
 								</div>
+								<div class="course-description">Our corporate program provides comprehensive IELTS
+									training designed to enhance your team's communication skills and open up global
+									opportunities.</div>
+							</div>
+							<div class="button-cta">
+								<div class="lets-get-started">Let’s Get Started</div>
+								<img class="arrow-icon" src="assets/images/arrow-icon.webp" alt="">
+							</div>
+						</div>
+					</div>
+					<img class="main-slider-image" src="assets/images/slider-image-1.webp" alt="">
+				</div>
 
-								<div class="block md:hidden">
-									<span>We Satisfied</span><br>
-									<span>24k+</span><br>
-									<span>Student Around Bangladesh</span>
+				<div class="card-item" style="--card-bg: rgb(192, 236, 192);">
+					<div class="card-content-wrapper">
+						<div class="ellipse-bg"></div>
+						<div class="content-flex-row">
+							<div class="text-group">
+								<div class="image-title-row">
+									<img class="slider-icon" src="assets/images/slider-icon-2.webp" alt="">
+									<div class="title-wrapper">
+										<b class="title"><span>REA</span><span class="SecondPart">DING</span></b>
+									</div>
 								</div>
-
+								<div class="course-description">Our corporate program provides comprehensive IELTS
+									training designed to enhance your team's communication skills and open up global
+									opportunities.</div>
 							</div>
-						</div>
-
-						<img src="assets/images/header-section-image-2.webp"
-							class="w-full h-48 md:w-[145px] md:h-20 object-cover rounded order-2 md:order-none mt-4 transition-all duration-300 hover:brightness-110 hover:contrast-110"
-							alt="">
-					</div>
-
-					<div class="w-full flex justify-center md:justify-end  md:order-none">
-						<img src="assets/images/header-section-image-1.webp"
-							class="w-full max-w-full md:max-w-[600px] h-48 md:h-[150px] object-cover rounded transition-all duration-300 hover:brightness-110 hover:contrast-110"
-							alt="">
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</section>
-	<!-- header section end -->
-
-	<!-- feature section start -->
-	<section id="feature" class="py-12 px-6 md:py-20 md:px-16 bg-white">
-		<div class="max-w-[1200px] mx-auto">
-
-			<div class="text-center mb-32 md:mb-8 px-4">
-				<h2
-					class="font-body font-tropiline text-[#0a1128] text-[35px] md:text-[18px] leading-relaxed max-w-5xl mx-auto font-bold md:font-bold">
-
-					<span class="md:block">
-						Unlock your full <span class="text-[#adb5bd]">potential with English Council's</span>
-						comprehensive IELTS program. Our expert
-					</span>
-
-					<span class="md:block">
-						instructors provide personalized guidance and continuous support to help you achieve your
-						desired
-					</span>
-
-					<span class="md:block">
-						<span class="text-[#adb5bd]">band score. Join us and embark on a journey</span>
-						towards academic and professional <span class="text-[#adb5bd]">success.</span>
-					</span>
-
-				</h2>
-
-				<div class="hidden md:flex justify-center mt-10">
-					<a href="https://wa.me/YOUR_NUMBER" target="_blank" rel="noopener noreferrer"
-						class="transition-transform hover:scale-110">
-						<div class="animate-bounce-slow">
-							<img src="assets/images/msg-us.webp" 
-								alt="Message Us on WhatsApp" 
-								style="animation-duration: 15s;"
-								class="md:w-16 md:h-16 w-14 h-14 animate-spin">
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="relative flex items-center justify-center mb-20 md:mb-8 px-4 h-20">
-
-				<div class="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none">
-					<img src="assets/images/line-icon.webp" alt="" class="w-full h-auto object-contain">
-				</div>
-
-				<h3
-					class="relative z-10 bg-white px-4 font-tropiline text-[50px] md:text-[30px] font-bold tracking-[0.05em] text-black uppercase text-center leading-none">
-					How We <br class="md:hidden">Help You<br class="md:hidden"> TO <br class="md:hidden">Succeed
-				</h3>
-
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-4 font-tropiline reveal-grid-items">
-
-				<div class="flex flex-col items-center text-center stagger-item">
-					<div class="relative w-full aspect-[4/5] flex flex-col items-center justify-end pb-4 md:pb-4">
-						<img class="absolute inset-0 w-full h-full object-cover md:object-contain z-0"
-							src="assets/images/feature-icon-1.webp" alt="Interactive Learning">
-
-						<div class="relative z-10 px-5">
-							<b class="block text-[25px] md:text-[13px] mb-4 md:mb-2 tracking-tight text-black leading-tight">
-								Interactive Learning
-							</b>
-							<div class="text-gray-600 text-[20px] md:text-[9px] md:font-bold leading-tight md:leading-relaxed">
-								Our corporate program offers IELTS training to boost your team's communication skills and global opportunities.
+							<div class="button-cta">
+								<div class="lets-get-started">Let’s Get Started</div>
+								<img class="arrow-icon" src="assets/images/arrow-icon.webp" alt="">
 							</div>
 						</div>
 					</div>
+					<img class="main-slider-image" src="assets/images/slider-image-2.webp" alt="">
 				</div>
 
-				<div class="flex flex-col items-center text-center stagger-item">
-					<div class="relative w-full aspect-[4/5] flex flex-col items-center justify-end pb-4 md:pb-4">
-						<img class="absolute inset-0 w-full h-full object-cover md:object-contain z-0"
-							src="assets/images/feature-icon-2.webp" alt="Personalized Approach">
-
-						<div class="relative z-10 px-5">
-							<b class="block text-[25px] md:text-[13px] mb-4 md:mb-2 tracking-tight text-black leading-tight">
-								Personalized Approach
-							</b>
-							<div class="text-gray-600 text-[20px] md:text-[9px] md:font-bold leading-tight md:leading-relaxed">
-								Our corporate program offers IELTS training to boost your team's communication skills and global opportunities.
+				<div class="card-item" style="--card-bg: rgb(233, 170, 170);">
+					<div class="card-content-wrapper">
+						<div class="ellipse-bg"></div>
+						<div class="content-flex-row">
+							<div class="text-group">
+								<div class="image-title-row">
+									<img class="slider-icon" src="assets/images/slider-icon-3.webp" alt="">
+									<div class="title-wrapper">
+										<b class="title"><span>WRI</span><span class="SecondPart">TING</span></b>
+									</div>
+								</div>
+								<div class="course-description">Our corporate program provides comprehensive IELTS
+									training designed to enhance your team's communication skills and open up global
+									opportunities.</div>
+							</div>
+							<div class="button-cta">
+								<div class="lets-get-started">Let’s Get Started</div>
+								<img class="arrow-icon" src="assets/images/arrow-icon.webp" alt="">
 							</div>
 						</div>
 					</div>
+					<img class="main-slider-image" src="assets/images/slider-image-4.webp" alt="">
 				</div>
 
-				<div class="flex flex-col items-center text-center stagger-item">
-					<div class="relative w-full aspect-[4/5] flex flex-col items-center justify-end pb-4 md:pb-4">
-						<img class="absolute inset-0 w-full h-full object-cover md:object-contain z-0"
-							src="assets/images/feature-icon-3.webp" alt="Practical Application">
-
-						<div class="relative z-10 px-5">
-							<b class="block text-[25px] md:text-[13px] mb-4 md:mb-2 tracking-tight text-black leading-tight">
-								Practical Application
-							</b>
-							<div class="text-gray-600 text-[20px] md:text-[9px] md:font-bold leading-tight md:leading-relaxed">
-								Our corporate program offers IELTS training to boost your team's communication skills and global opportunities.
+				<div class="card-item" style="--card-bg: rgb(238, 212, 157);">
+					<div class="card-content-wrapper">
+						<div class="ellipse-bg"></div>
+						<div class="content-flex-row">
+							<div class="text-group">
+								<div class="image-title-row">
+									<img class="slider-icon" src="assets/images/slider-icon-3.webp" alt="">
+									<div class="title-wrapper">
+										<b class="title"><span>WRI</span><span class="SecondPart">TING</span></b>
+									</div>
+								</div>
+								<div class="course-description">Our corporate program provides comprehensive IELTS
+									training designed to enhance your team's communication skills and open up global
+									opportunities.</div>
+							</div>
+							<div class="button-cta">
+								<div class="lets-get-started">Let’s Get Started</div>
+								<img class="arrow-icon" src="assets/images/arrow-icon.webp" alt="">
 							</div>
 						</div>
 					</div>
+					<img class="main-slider-image" src="assets/images/slider-image-4.webp" alt="">
 				</div>
 
-				<div class="flex flex-col items-center text-center stagger-item">
-					<div class="relative w-full aspect-[4/5] flex flex-col items-center justify-end pb-4 md:pb-4">
-						<img class="absolute inset-0 w-full h-full object-cover md:object-contain z-0"
-							src="assets/images/feature-icon-4.webp" alt="Continuous Feedback">
-
-						<div class="relative z-10 px-5">
-							<b class="block text-[25px] md:text-[13px] mb-4 md:mb-2 tracking-tight text-black leading-tight">
-								Continuous Feedback
-							</b>
-							<div class="text-gray-600 text-[20px] md:text-[9px] md:font-bold leading-tight md:leading-relaxed">
-								Our corporate program offers IELTS training to boost your team's communication skills and global opportunities.
+				<div class="card-item" style="--card-bg: rgb(202, 195, 243);">
+					<div class="card-content-wrapper">
+						<div class="ellipse-bg"></div>
+						<div class="content-flex-row">
+							<div class="text-group">
+								<div class="image-title-row">
+									<img class="slider-icon" src="assets/images/slider-icon-3.webp" alt="">
+									<div class="title-wrapper">
+										<b class="title"><span>WRI</span><span class="SecondPart">TING</span></b>
+									</div>
+								</div>
+								<div class="course-description">Our corporate program provides comprehensive IELTS
+									training designed to enhance your team's communication skills and open up global
+									opportunities.</div>
+							</div>
+							<div class="button-cta">
+								<div class="lets-get-started">Let’s Get Started</div>
+								<img class="arrow-icon" src="assets/images/arrow-icon.webp" alt="">
 							</div>
 						</div>
 					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-	<!-- feature section end -->
-
-	<!-- course section start -->
-	<section id="course" class="py-2 md:mb-20 md:px-16 px-2">
-		<div class="max-w-[1200px] mx-auto">
-			
-			<div class="mb-16 flex flex-col items-center md:items-start text-center md:text-left reveal-on-scroll">
-				<div class="text-[#4b5563] font-medium text-sm md:text-xs tracking-widest mb-2">Our Programs</div>
-				<h2 class="text-4xl md:text-2xl font-bold font-tropiline leading-tight text-black">
-					Master the IELTS with Our Expert Courses
-				</h2>
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal-grid-items">
-				
-				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100 stagger-item">
-					<div class="h-48 overflow-hidden">
-						<img src="assets/images/slider-image-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-					</div>
-					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
-						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
-							<img src="assets/images/slider-icon-1.webp" class="w-full h-auto">
-						</div>
-						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">SPO<span class="text-[#f24f5f]">KEN</span></h3>
-						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Enhance your team's verbal communication skills with professional corporate training.</p>
-						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
-							<span class="font-bold text-xl text-black">$299</span>
-							<button onclick="openCourseModal('Spoken', 'Complete verbal mastery...', 'assets/images/slider-image-1.webp')" 
-									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100 stagger-item">
-					<div class="h-48 overflow-hidden">
-						<img src="assets/images/slider-image-5.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-					</div>
-					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
-						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
-							<img src="assets/images/slider-icon-1.webp" class="w-full h-auto">
-						</div>
-						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">PHONETIC<span class="text-[#f24f5f]">S</span></h3>
-						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Perfect your pronunciation and accent to sound like a native professional.</p>
-						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
-							<span class="font-bold text-xl text-black">$199</span>
-							<button onclick="openCourseModal('Phonetics', 'Accent training...', 'assets/images/slider-image-5.webp')" 
-									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100 stagger-item">
-					<div class="h-48 overflow-hidden">
-						<img src="assets/images/slider-image-2.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-					</div>
-					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
-						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
-							<img src="assets/images/slider-icon-4.webp" class="w-full h-auto">
-						</div>
-						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">LISTE<span class="text-[#f24f5f]">NING</span></h3>
-						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Develop active listening techniques to catch every detail in the IELTS test.</p>
-						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
-							<span class="font-bold text-xl text-black">$249</span>
-							<button onclick="openCourseModal('Listening', 'Listening skills...', 'assets/images/slider-image-2.webp')" 
-									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100 stagger-item">
-					<div class="h-48 overflow-hidden">
-						<img src="assets/images/slider-image-3.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-					</div>
-					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
-						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
-							<img src="assets/images/slider-icon-3.webp" class="w-full h-auto">
-						</div>
-						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">REA<span class="text-[#f24f5f]">DING</span></h3>
-						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Master speed reading and comprehension strategies for complex academic texts.</p>
-						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
-							<span class="font-bold text-xl text-black">$249</span>
-							<button onclick="openCourseModal('Reading', 'Reading strategies...', 'assets/images/slider-image-3.webp')" 
-									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100 stagger-item">
-					<div class="h-48 overflow-hidden">
-						<img src="assets/images/slider-image-4.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-					</div>
-					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
-						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
-							<img src="assets/images/slider-icon-2.webp" class="w-full h-auto">
-						</div>
-						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">WRI<span class="text-[#f24f5f]">TING</span></h3>
-						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Structure your essays and reports with clarity, coherence, and precision.</p>
-						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
-							<span class="font-bold text-xl text-black">$349</span>
-							<button onclick="openCourseModal('Writing', 'Writing feedback...', 'assets/images/slider-image-4.webp')" 
-									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="relative rounded-[24px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100 stagger-item">
-					<div class="h-48 overflow-hidden">
-						<img src="assets/images/slider-image-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-					</div>
-					<div class="p-6 pt-10 relative bg-[#fcfcfc]">
-						<div class="absolute -top-10 right-6 w-16 h-16 bg-[#fff5f6] rounded-[18px] shadow-md flex items-center justify-center p-4 border-4 border-white">
-							<img src="assets/images/slider-icon-4.webp" class="w-full h-auto">
-						</div>
-						<h3 class="text-xl font-bold font-tropiline mb-2 uppercase tracking-tighter">MOCK <span class="text-[#f24f5f]">TEST</span></h3>
-						<p class="text-gray-500 text-xs mb-6 font-['Lato'] leading-relaxed line-clamp-2">Experience a real-time exam environment with personalized expert feedback.</p>
-						<div class="flex items-center justify-between border-t border-gray-200/60 pt-4">
-							<span class="font-bold text-xl text-black">$99</span>
-							<button onclick="openCourseModal('Mock Test', 'Exam simulation...', 'assets/images/slider-image-1.webp')" 
-									class="text-[#f24f5f] font-bold text-xs tracking-widest uppercase hover:text-black transition-colors">Learn More →</button>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-		<script>
-		function openCourseModal(title, desc, imgSrc) {
-				document.getElementById('modalTitle').innerText = title;
-				document.getElementById('modalDesc').innerText = desc;
-				document.getElementById('modalImg').src = imgSrc;
-				document.getElementById('courseModal').classList.remove('hidden');
-				document.body.style.overflow = 'hidden'; // Stop scrolling
-			}
-
-			function closeCourseModal() {
-				document.getElementById('courseModal').classList.add('hidden');
-				document.body.style.overflow = 'auto'; // Re-enable scrolling
-			}
-
-			// Close on background click
-			window.onclick = function(event) {
-				let modal = document.getElementById('courseModal');
-				if (event.target == modal) closeCourseModal();
-			}
-		</script>
-	</section>
-
-	<div id="courseModal" class="fixed inset-0 z-[10000] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-		<div class="bg-white w-full max-w-2xl rounded-[30px] overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-300">
-			<div class="relative h-64">
-				<img id="modalImg" src="" class="w-full h-full object-cover">
-				<button onclick="closeCourseModal()" class="absolute top-4 right-4 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">✕</button>
-			</div>
-			<div class="p-10">
-				<h3 id="modalTitle" class="text-4xl font-bold font-tropiline mb-4">Course Name</h3>
-				<p id="modalDesc" class="text-gray-600 font-['Lato'] leading-relaxed mb-8">Detailed information will appear here.</p>
-				<div class="flex flex-col sm:flex-row gap-4">
-					<a href="https://wa.me/yourlink" class="flex-1 bg-[#f24f5f] text-white text-center py-4 rounded-full font-bold hover:bg-[#d94452] transition-colors">Enroll Now</a>
-					<button onclick="closeCourseModal()" class="flex-1 border border-black text-black py-4 rounded-full font-bold hover:bg-black hover:text-white transition-all">Close Details</button>
+					<img class="main-slider-image" src="assets/images/slider-image-4.webp" alt="">
 				</div>
 			</div>
-		</div>
-	</div>
-	<!-- course section end -->
+		</section>
+		<!-- course section start -->
 
-	<!-- program section start -->
-	<section id="program" class="py-4 px-4 md:px-16 bg-white md:mb-16">
-		<div class="max-w-7xl mx-auto">
+		<!-- program section start -->
+		<section id="program">
+			<div class="frame-parent22">
+				<div class="group-parent10">
+					<div class="where-we-help-parent">
+						<div class="where-we-help">Where We Help</div>
+						<b class="helping-professionals">Helping Professionals</b>
+						<div class="students-achieve-parent">
+							<b class="students-achieve">& Students Achieve</b>
+							<div class="ellipse-parent">
+								<img class="frame-child8" src="assets/images/avatar-1.webp" alt="">
 
-			<div
-				class="flex flex-col md:flex-row md:justify-between items-center md:items-start mb-10 gap-6 text-center md:text-left">
-				<div class="w-full reveal-on-scroll" data-delay="0.4s" data-dir="left">
-					<span class="text-gray-500 tracking-widest text-xl md:text-xs font-inter block">Where We Help</span>
+								<img class="frame-child9" src="assets/images/avatar-2.webp" alt="">
 
-					<h2 class="text-4xl md:text-2xl font-bold mt-2 leading-tight font-tropiline">
-						Helping Professionals <br class="hidden md:block">
+								<img class="frame-child9" src="assets/images/avatar-3.webp" alt="">
 
-						<span
-							class="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start gap-3 my-2 md:my-0">
-							<div class="flex -space-x-2">
-								<img class="w-14 h-14 md:w-10 md:h-10  rounded-full border-2 border-white"
-									src="assets/images/avatar-1.webp" alt="">
-								<img class="w-14 h-14 md:w-10 md:h-10  rounded-full border-2 border-white"
-									src="assets/images/avatar-2.webp" alt="">
-								<img class="w-14 h-14 md:w-10 md:h-10  rounded-full border-2 border-white"
-									src="assets/images/avatar-3.webp" alt="">
-								<img class="w-14 h-14 md:w-10 md:h-10  rounded-full border-2 border-white"
-									src="assets/images/avatar-4.webp" alt="">
-								<img class="w-14 h-14 md:w-10 md:h-10  rounded-full border-2 border-white"
-									src="assets/images/avatar-5.webp" alt="">
+								<img class="frame-child9" src="assets/images/avatar-4.webp" alt="">
+
+								<img class="frame-child9" src="assets/images/avatar-5.webp" alt="">
+
+								<img class="frame-child9" src="assets/images/avatar-3.webp" alt="">
+
+								<img class="frame-child14" src="assets/images/avatar-1.webp" alt="">
+
+								<img class="frame-child14" src="assets/images/avatar-2.webp" alt="">
+
 							</div>
-							<span>& Students Achieve</span>
-						</span>
-						Their IELTS Dreams
-					</h2>
+						</div>
+						<b class="their-ielts-dreams">Their IELTS Dreams</b>
+					</div>
+					<div class="at-english-council2">At English Council, we empower professionals and students to
+						conquer the IELTS. Our tailored courses and expert instructors ensure you achieve your desired
+						score and unlock global opportunities.</div>
 				</div>
+				<div class="a4-poster-11-parent">
+					<div class="a4-poster-11">
+						<img class="mask-group-icon" src="assets/images/dream-section-background-4.webp" alt="">
 
-				<p class="text-gray-500 text-sm md:text-xs max-w-xs mx-auto md:mx-0 pt-0 md:pt-4 reveal-on-scroll" data-delay="0.4s" data-dir="right">
-					At English Council, we empower professionals and students to conquer the IELTS. Our tailored courses
-					and expert instructors ensure you achieve your desired score and unlock global opportunities.
-				</p>
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
-
-				<div class="md:col-span-1 flex flex-col gap-6 order-1">
-					<div
-						class="relative overflow-hidden rounded-[15px] md:rounded-[10px] h-[400px] md:h-[180px] shadow-md bg-zinc-900 group">
-						<img class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-110"
-							src="assets/images/dream-section-background-2.webp" alt="">
-						<div
-							class="relative font-tropiline p-8 md:p-4 h-full flex flex-col justify-start text-white text-left">
-							<div
-								class="mb-4 flex items-center justify-center w-20 h-20 md:w-10 md:h-10 rounded-full border border-white/60">
-								<img class="w-10 md:w-4" src="assets/images/dream-icon-1.svg" alt="">
+						<div class="container">
+							<div class="content">
+								<div class="icon-wrapper">
+									<img src="assets/images/dream-icon-3.webp" alt="">
+								</div>
+								<div class="text-container">
+									<b class="interactive-learning">Government</b>
+									<div class="description">Our program delivers customized IELTS training, boosting
+										your team's communication skills and expanding global prospects.</div>
+								</div>
 							</div>
-							<h3 class="font-bold text-[40px] md:text-[15px]">Corporate</h3>
-							<p class="text-[20px] md:text-[10px] mt-2 opacity-80 leading-relaxed">Our program delivers
-								customized IELTS training, boosting your team's communication skills and expanding
-								global prospects.</p>
 						</div>
 					</div>
+					<div class="a4-poster-9">
+						<img class="mask-group-icon2" src="assets/images/dream-section-background-2.webp" alt="">
 
-					<div
-						class="relative overflow-hidden rounded-[15px] md:rounded-[10px] h-[400px] md:h-[180px] shadow-md bg-zinc-900 group">
-						<img class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-110"
-							src="assets/images/dream-section-background-3.webp" alt="">
-						<div
-							class="relative font-tropiline p-8 md:p-4 h-full flex flex-col justify-start text-white text-left">
-							<div
-								class="mb-4 flex items-center justify-center w-20 h-20 md:w-10 md:h-10 rounded-full border border-white/60">
-								<img class="w-10 md:w-4" src="assets/images/dream-icon-2.webp" alt="">
+						<div class="container">
+							<div class="content">
+								<div class="icon-wrapper">
+									<img src="assets/images/dream-icon-1.svg" alt="">
+								</div>
+								<div class="text-container">
+									<b class="interactive-learning">Corporate</b>
+									<div class="description">Our program delivers customized IELTS training, boosting
+										your team's communication skills and expanding global prospects.</div>
+								</div>
 							</div>
-							<h3 class="font-bold text-[40px] md:text-[15px]">Student</h3>
-							<p class="text-[20px] md:text-[10px] mt-2 opacity-80 leading-relaxed">Our program delivers
-								customized IELTS training, boosting your team's communication skills and expanding
-								global prospects.</p>
 						</div>
 					</div>
-				</div>
+					<img class="bonus-16-1" src="assets/images/dream-part-background.webp" alt="">
 
-				<div
-					class="md:col-span-2 order-2 relative overflow-hidden rounded-[15px] md:rounded-[10px] h-[400px] md:h-[385px] flex items-center justify-center shadow-lg group">
-					<img class="absolute inset-0 w-full h-full object-cover"
-						src="assets/images/dream-part-background.webp" alt="Background">
+					<div class="a4-poster-12">
+						<img class="mask-group-icon3" src="assets/images/dream-section-background-1.webp" alt="">
 
-					<div class="absolute inset-0 bg-black/20"></div>
-
-					<div class="relative z-20 flex flex-col items-center">
-						<div class="absolute inset-0 bg-red-600/30 blur-[100px] rounded-full"></div>
-
-						<img class="relative w-48 md:w-72 md:w-28 h-44 object-contain transition-transform duration-700 group-hover:scale-105"
-							src="assets/images/logo.webp" alt="English Council Logo">
-					</div>
-				</div>
-
-				<div class="md:col-span-1 flex flex-col gap-6 order-3">
-					<div
-						class="relative overflow-hidden rounded-[15px] md:rounded-[10px] h-[400px] md:h-[180px] shadow-lg bg-zinc-900 group">
-						<img class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-110"
-							src="assets/images/dream-section-background-4.webp" alt="">
-						<div
-							class="relative font-tropiline p-8 md:p-4 h-full flex flex-col justify-start text-white text-left">
-							<div
-								class="mb-4 flex items-center justify-center w-20 h-20 md:w-10 md:h-10 rounded-full border border-white/60">
-								<img class="w-10 md:w-4" src="assets/images/dream-icon-3.webp" alt="">
+						<div class="container3">
+							<div class="content">
+								<div class="icon-wrapper">
+									<img src="assets/images/dream-icon-4.webp" alt="">
+								</div>
+								<div class="text-container">
+									<b class="interactive-learning">Personalized</b>
+									<div class="description">Our program delivers customized IELTS training, boosting
+										your team's communication skills and expanding global prospects.</div>
+								</div>
 							</div>
-							<h3 class="font-bold text-[40px] md:text-[15px]">Government</h3>
-							<p class="text-[20px] md:text-[10px] mt-2 opacity-80 leading-relaxed">Our program delivers
-								customized IELTS training, boosting your team's communication skills and expanding
-								global prospects.</p>
 						</div>
 					</div>
+					<div class="a4-poster-10">
+						<img class="mask-group-icon4" src="assets/images/dream-section-background-3.webp" alt="">
 
-					<div
-						class="relative overflow-hidden rounded-[15px] md:rounded-[10px] h-[400px] md:h-[180px] shadow-lg bg-zinc-900 group">
-						<img class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-110"
-							src="assets/images/dream-section-background-1.webp" alt="">
-						<div
-							class="relative font-tropiline p-8 md:p-4 h-full flex flex-col justify-start text-white text-left">
-							<div
-								class="mb-4 flex items-center justify-center w-20 h-20 md:w-10 md:h-10 rounded-full border border-white/60">
-								<img class="w-10 md:w-4" src="assets/images/dream-icon-4.webp" alt="">
+						<div class="container4">
+							<div class="content4">
+								<div class="icon-wrapper">
+									<img src="assets/images/dream-icon-2.webp" alt="">
+								</div>
+								<div class="text-container4">
+									<b class="interactive-learning">Student</b>
+									<div class="description">Our course provides focused IELTS training, improving
+										communication skills and unlocking global opportunities for students.</div>
+								</div>
 							</div>
-							<h3 class="font-bold text-[40px] md:text-[15px]">Personalized</h3>
-							<p class="text-[20px] md:text-[10px] mt-2 opacity-80 leading-relaxed">Our program delivers
-								customized IELTS training, boosting your team's communication skills and expanding
-								global prospects.</p>
 						</div>
 					</div>
+					<img class="image-1-icon" src="assets/images/logo.webp" alt="">
+
 				</div>
 			</div>
+			<div class="online-offline-live-class-parent">
+				<div class="online-offline">Online & OFFLINE LIVE CLASS</div>
+				<img class="group-child17" src="assets/images/Rectangle-1.webp" alt="">
 
-			<div class="mt-20 space-y-6">
-				<div class="flex md:items-center items-left gap-4 flex-wrap justify-center reveal-on-scroll" data-delay="0.4s" data-dir="left">
-					<span class="font-outline font-train text-5xl leading-tight md:text-[35px] uppercase">Online &
-						Offline Live Class</span>
-					<img class="h-20 md:h-10 w-full md:w-60 object-cover rounded-full"
-						src="assets/images/Rectangle-1.webp" alt="">
-				</div>
-				<div class="flex md:items-center text-right gap-4 flex-wrap justify-center flex-row-reverse reveal-on-scroll" data-delay="0.4s" data-dir="right">
-					<span class="font-outline font-train text-5xl leading-tight md:text-[35px] uppercase">With Practical
-						Project</span>
-					<img class="h-20 md:h-10 w-full md:w-80 object-cover rounded-full"
-						src="assets/images/Rectangle-3.webp" alt="">
-				</div>
-				<div class="flex md:items-center items-left gap-4 flex-wrap justify-center reveal-on-scroll" data-delay="0.4s" data-dir="left">
-					<span class="font-outline font-train text-5xl leading-tight md:text-[35px] uppercase">& <br
-							class="md:hidden"> Achieve Certificate</span>
-					<img class="h-20 md:h-10 w-full md:w-[350px] object-cover rounded-full"
-						src="assets/images/Rectangle-2.webp" alt="">
-				</div>
 			</div>
-		</div>
-	</section>
-	<!-- program section end -->
+			<div class="achieve-certificate-parent">
+				<div class="online-offline">& AchIeve Certificate</div>
+				<img class="group-child18" src="assets/images/Rectangle-2.webp" alt="">
 
-	<!-- about section start -->
-	<section id="about-us" class="relative w-full overflow-hidden text-white font-['Lato'] flex items-start pt-12 pb-0">
+			</div>
+			<div class="with-practical-project-parent">
+				<div class="with-practical-project">WITH PRACTICAL PROJECT</div>
+				<img class="group-child19" src="assets/images/Rectangle-3.webp" alt="">
 
-		<picture class="absolute inset-0 z-0">
-			<source srcset="assets/images/about-section-background.webp" media="(min-width: 768px)">
-			<img src="assets/images/about-section-background-image-mobile.webp" class="w-full h-full object-cover" alt="bg">
-		</picture>
+			</div>
+		</section>
+		<!-- program section end -->
 
-		<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
-			<div class="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-0 items-stretch">
+		<!-- about us section start -->
+		<section id="about-us">
+			<div class="group-parent9">
+				<div class="gradient-wallpapers-group">
+					<div class="gradient-wallpapers2">
+						<img class="icon" src="assets/images//about-section-background.webp" alt="">
 
-				<div class="flex flex-col relative justify-center">
-					<div class="scale-90 font-tropiline origin-center md:origin-left mb-8 md:mb-0 z-20 text-center md:text-left md:ml-10 reveal-on-scroll" data-delay="0.4s" data-dir="left">
-						<span class="text-xl md:text-sm tracking-widest opacity-70">Meet with</span>
-						<h2 class="text-5xl md:text-2xl font-bold">MD Masudur Rahman</h2>
-						<p class="mt-2 text-xl md:text-sm mx-auto md:mx-0 max-w-sm opacity-80 leading-relaxed">
-							With over a decade of experience, Mr. Rahman's passion lies in guiding students towards IELTS success and unlocking their global potential.
-						</p>
 					</div>
-
-					<div class="relative min-h-[300px] md:h-[320px] w-full mt-4 md:mt-[-70px]">
-						
-						<div class="years-experience-wrapper hidden md:flex">
+					<div class="frame-parent20">
+						<div class="years-experience-wrapper">
 							<div class="years-experience">
-								<b><span>20+ Years</span></b>
+								<b>
+									<span>20+ Years</span>
+									<span class="span"> </span>
+								</b>
 								<span class="experience">Experience</span>
 							</div>
 						</div>
+						<div class="youth-program-wrapper">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="youth-program-container">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="youth-program-frame">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="youth-program-wrapper2">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="youth-program-wrapper3">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="youth-program-wrapper4">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="youth-program-wrapper5">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="local-programs-wrapper">
+							<b class="local-programs">Local Programs</b>
+						</div>
+						<div class="youth-program-wrapper6">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="youth-program-wrapper7">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="youth-program-wrapper8">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="youth-program-wrapper9">
+							<b class="youth-program">Youth Program</b>
+						</div>
+						<div class="meet-with-parent">
+							<div class="interactive-learning">Meet with</div>
+							<div class="md-masudur-rahman-group">
+								<div class="md-masudur-rahman2">MD Masudur Rahman</div>
+								<div class="with-over-a-decade-of-experien-wrapper">
+									<div class="with-over-a">With over a decade of experience, Mr. Rahman's passion lies
+										in guiding students towards IELTS success and unlocking their global potential.
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="frame-parent21">
+							<img class="group-child15" src="assets/images/about-section-image-background.webp" alt="">
 
-						<div class="grid grid-cols-2 gap-4 md:block px-4 md:px-0">
-							<div class="local-programs-wrapper relative md:absolute"><b class="local-programs">Local Programs</b></div>
-							<div class="youth-program-wrapper relative md:absolute"><b class="youth-program">Youth Program</b></div>
-							<div class="youth-program-container relative md:absolute"><b class="youth-program">Youth Program</b></div>
-							<div class="youth-program-frame relative md:absolute"><b class="youth-program">Youth Program</b></div>
-							<div class="youth-program-wrapper2 relative md:absolute"><b class="youth-program">Youth Program</b></div>
-							<div class="youth-program-wrapper3 relative md:absolute"><b class="youth-program">Youth Program</b></div>
-							<div class="youth-program-wrapper4 relative md:absolute"><b class="youth-program">Youth Program</b></div>
-							<div class="youth-program-wrapper5 relative md:absolute"><b class="youth-program">Youth Program</b></div>
-							<div class="youth-program-wrapper6 relative md:absolute"><b class="youth-program">Youth Program</b></div>
-							<div class="youth-program-wrapper7 relative md:absolute"><b class="youth-program">Youth Program</b></div>
-							<div class="youth-program-wrapper8 relative md:absolute"><b class="youth-program">Youth Program</b></div>
-							<div class="youth-program-wrapper9 relative md:absolute"><b class="youth-program">Youth Program</b></div>
+							<div class="an-expert-dedicated">An Expert Dedicated to Your Success</div>
+							<div class="jahan-is-committed">Jahan is committed to seeing you succeed</div>
+							<img class="image-169-icon" src="assets/images/about-section-image.webp" alt="">
+
+							<img class="icon2" src="assets/images/about-section-corner-icon.webp" alt="">
+
 						</div>
 					</div>
 				</div>
+				<div class="group-child16">
+				</div>
+			</div>
+		</section>
+		<!-- about us section end -->
 
-				<div class="relative flex justify-center md:justify-start items-end mt-10 md:mt-0">
-					<div class="relative w-[280px] h-[380px] md:w-[320px] md:h-[450px] flex items-end justify-center md:ml-[80px]">
-						
-						<div class="absolute top-0 md:top-2 left-0 md:left-8 w-full md:w-auto text-center md:text-left z-20">
-							<p class="text-[13.5px] md:text-[15px] font-bold text-white">An Expert Dedicated to Your Success</p>
+		<!-- testimonial section start -->
+		<section id="testimonial">
+			<div class="frame-parent16">
+				<div class="testimonials-parent">
+					<div class="testimonials">Testimonials</div>
+					<b class="what-are-saying">What are Saying Our Student</b>
+				</div>
+				<div class="frame-parent17">
+					<div class="frame-parent18">
+						<img class="frame-icon3" src="assets/images/red-star.svg" alt="">
+
+						<img class="frame-icon3" src="assets/images/red-star.svg" alt="">
+
+						<img class="frame-icon3" src="assets/images/red-star.svg" alt="">
+
+						<img class="frame-icon3" src="assets/images/red-star.svg" alt="">
+
+						<img class="frame-icon3" src="assets/images/red-star.svg" alt="">
+
+					</div>
+					<div class="average-49-rating">Average 4.9 Rating point Review from Facebook</div>
+				</div>
+			</div>
+			<div class="testimonial-item">
+				<img class="english-council-homepage-child6" src="assets/images/testimonial-img.webp" alt="">
+
+				<img class="frame-icon8" src="assets/images/quotation.webp" alt="">
+
+				<div class="frame-parent19">
+					<div class="md-masudur-rahman-parent">
+						<b class="interactive-learning">MD Masudur Rahman</b>
+						<div class="aerotrip">Aerotrip</div>
+					</div>
+					<div class="i-am-so">I am so grateful to English Council for helping me achieve my desired IELTS
+						score. The instructors were knowledgeable and supportive, and the course materials were
+						comprehensive and easy to understand. I highly recommend English Council to anyone looking to
+						improve their English language skills.</div>
+				</div>
+			</div>
+			<div class="testimonial-item">
+				<img class="english-council-homepage-child6" src="assets/images/testimonial-img.webp" alt="">
+
+				<img class="frame-icon8" src="assets/images/quotation.webp" alt="">
+
+				<div class="frame-parent19">
+					<div class="md-masudur-rahman-parent">
+						<b class="interactive-learning">MD Masudur Rahman</b>
+						<div class="aerotrip">Aerotrip</div>
+					</div>
+					<div class="i-am-so">I am so grateful to English Council for helping me achieve my desired IELTS
+						score. The instructors were knowledgeable and supportive, and the course materials were
+						comprehensive and easy to understand. I highly recommend English Council to anyone looking to
+						improve their English language skills.</div>
+				</div>
+			</div>
+			<div class="pagination-icon-parent">
+				<img class="pagination-arrow" src="assets/images/left-arrow.svg" alt="Previous">
+
+				<img class="pagination-arrow" src="assets/images/right-arrow.svg" alt="Next">
+			</div>
+			<img class="image-183-icon" src="assets/images/testimonial-section-background-icon.webp" alt="">
+
+		</section>
+		<!-- testimonial section end -->
+
+		<!-- faq section start -->
+		<section id="faq">
+			<div class="frame-parent10">
+				<div class="faq-parent">
+					<div class="interactive-learning">FAQ</div>
+					<b class="some-answer-that">Some Answer That You Have In Mind</b>
+				</div>
+				<div class="faq-container">
+					<div class="faq-grid">
+
+						<div class="faq-item">
+							<div class="faq-header">
+								<div class="faq-question">Full access to practice tests, lessons, and expert feedback.
+								</div>
+								<div class="faq-icon-wrapper">
+									<img class="faq-toggle-icon" src="assets/images/plus-icon.webp" alt="toggle">
+								</div>
+							</div>
+							<div class="faq-answer">
+								<div class="answer-content">
+									The demo gives you full access to all Standard plan features for 14 days, so you can
+									test the platform with your own workflows.
+								</div>
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<div class="faq-question">Full access to practice tests, lessons, and expert feedback.
+								</div>
+								<div class="faq-icon-wrapper">
+									<img class="faq-toggle-icon" src="assets/images/plus-icon.webp" alt="toggle">
+								</div>
+							</div>
+							<div class="faq-answer">
+								<div class="answer-content">
+									The demo gives you full access to all Standard plan features for 14 days, so you can
+									test the platform with your own workflows.
+								</div>
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<div class="faq-question">Full access to practice tests, lessons, and expert feedback.
+								</div>
+								<div class="faq-icon-wrapper">
+									<img class="faq-toggle-icon" src="assets/images/plus-icon.webp" alt="toggle">
+								</div>
+							</div>
+							<div class="faq-answer">
+								<div class="answer-content">
+									The demo gives you full access to all Standard plan features for 14 days, so you can
+									test the platform with your own workflows.
+								</div>
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<div class="faq-question">Full access to practice tests, lessons, and expert feedback.
+								</div>
+								<div class="faq-icon-wrapper">
+									<img class="faq-toggle-icon" src="assets/images/plus-icon.webp" alt="toggle">
+								</div>
+							</div>
+							<div class="faq-answer">
+								<div class="answer-content">
+									The demo gives you full access to all Standard plan features for 14 days, so you can
+									test the platform with your own workflows.
+								</div>
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<div class="faq-question">Full access to practice tests, lessons, and expert feedback.
+								</div>
+								<div class="faq-icon-wrapper">
+									<img class="faq-toggle-icon" src="assets/images/plus-icon.webp" alt="toggle">
+								</div>
+							</div>
+							<div class="faq-answer">
+								<div class="answer-content">
+									The demo gives you full access to all Standard plan features for 14 days, so you can
+									test the platform with your own workflows.
+								</div>
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<div class="faq-question">Full access to practice tests, lessons, and expert feedback.
+								</div>
+								<div class="faq-icon-wrapper">
+									<img class="faq-toggle-icon" src="assets/images/plus-icon.webp" alt="toggle">
+								</div>
+							</div>
+							<div class="faq-answer">
+								<div class="answer-content">
+									The demo gives you full access to all Standard plan features for 14 days, so you can
+									test the platform with your own workflows.
+								</div>
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<div class="faq-question">Full access to practice tests, lessons, and expert feedback.
+								</div>
+								<div class="faq-icon-wrapper">
+									<img class="faq-toggle-icon" src="assets/images/plus-icon.webp" alt="toggle">
+								</div>
+							</div>
+							<div class="faq-answer">
+								<div class="answer-content">
+									The demo gives you full access to all Standard plan features for 14 days, so you can
+									test the platform with your own workflows.
+								</div>
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<div class="faq-question">Full access to practice tests, lessons, and expert feedback.
+								</div>
+								<div class="faq-icon-wrapper">
+									<img class="faq-toggle-icon" src="assets/images/plus-icon.webp" alt="toggle">
+								</div>
+							</div>
+							<div class="faq-answer">
+								<div class="answer-content">
+									The demo gives you full access to all Standard plan features for 14 days, so you can
+									test the platform with your own workflows.
+								</div>
+							</div>
 						</div>
 
-						<img src="assets/images/about-section-image-background.webp" id="glass-frame" class="absolute inset-x-0 bottom-0 mx-auto w-full md:w-[95%] h-[92%] object-fill -z-10" alt="Glass Background">
-						
-						<div class="relative w-[80%] h-[82%] overflow-hidden rounded-t-[20px]">
-							<img src="assets/images/about-section-image.webp" class="w-full h-full object-cover object-top" alt="MD Masudur Rahman">
-						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- course section end -->
 
-						<div class="absolute -right-[18px] bottom-[200px] translate-x-1/2 rotate-90 origin-center flex items-center gap-[20px] whitespace-nowrap md:right-[-10px] md:bottom-[225px]">
-							<img src="assets/images/about-section-corner-icon.webp" class="-rotate-90 w-12 h-12 md:w-10 md:h-10" alt="Corner Icon">
-							<p class="text-[12px] md:text-[13.5px] tracking-[1px] md:tracking-[2px] font-bold text-white uppercase">
-								Jahan is committed to seeing you succeed
-							</p>
+		<!-- footer section start -->
+		<section id="footer">
+			<div class="group-parent6">
+				<div class="rectangle-container">
+					<div class="group-child13">
+					</div>
+					<div class="frame-parent13">
+						<div class="frame-parent14">
+							<div class="wanna-go-next-level-in-english-parent">
+								<b class="interactive-learning" id="wanna-go" style="font-size: 1.5vw">Wanna Go Next
+									Level In English?</b>
+								<div class="lets-talk-parent">
+									<b class="lets-talk">LET’S TALK</b>
+									<div class="frame-parent15">
+										<a href="{{ $personalInfo->facebook_link }}"
+											style="text-decoration: none; color: inherit; display: inline-block;">
+											<div class="vector-smart-object-parent">
+												<img class="vector-smart-object" src="assets/images/facebook.webp"
+													alt="">
+
+												<div class="facebook">Facebook</div>
+											</div>
+										</a>
+										<a href="{{ $personalInfo->instagram_link }}"
+											style="text-decoration: none; color: inherit; display: inline-block;">
+											<div class="vector-smart-object-parent">
+												<img class="frame-child7" src="assets/images/instagram.webp" alt="">
+
+												<div class="facebook">Instagram</div>
+											</div>
+										</a>
+										<a href="{{ $personalInfo->x_link }}"
+											style="text-decoration: none; color: inherit; display: inline-block;">
+											<div class="vector-smart-object-parent">
+												<img class="group-icon3" src="assets/images/x.png" alt="">
+
+												<div class="facebook">X</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<a href="https://wa.me/88{{ $personalInfo->whatsapp_number }}"
+								style="text-decoration: none; color: inherit; display: inline-block;">
+								<div class="component-22">
+									<img class="group-icon2" src="assets/images/msg-us.webp" alt="">
+								</div>
+							</a>
+						</div>
+						<div class="group-parent8">
+							<div class="contact-info-parent">
+								<b class="contact-info">Contact info</b>
+								<div class="email-address-englishcouncils">Email Address:
+									englishcouncilsavar83@gmail.com<br>Mobile Number: 01618-600044</div>
+							</div>
+							<div class="image-113-parent">
+								<img class="image-113-icon" src="assets/images/logo.webp" alt="">
+
+								<div class="unlock-your-english-potential-wrapper">
+									<div class="unlock-your-english">Unlock your English potential with our expert-led
+										IELTS courses at English Council. Contact us today to learn more and start your
+										journey!</div>
+								</div>
+							</div>
+							<div class="office-address-parent">
+								<b class="interactive-learning">Office Address</b>
+								<div class="th-floor-rs">4th floor, R.S Tower (Near Rana Plaza), Savar , Dhaka,
+									Bangladesh</div>
+							</div>
+							<div class="line-parent">
+								<div class="line-div"></div>
+
+								<div class="full-access-to-practice-tests-parent">
+									<div class="copyright-wrapper">
+										<div class="copyright">
+											<img class="iconscopyright-line" src="assets/images/copyright-icon.svg"
+												alt="copyright">
+											<div class="copyright-text">
+												Copyright 2025 . Englishcouncil.com . All Right Reserved.
+												Developed by <a href="https://tarunsoft.com/" target="_blank">Tarun
+													Soft</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="footer-links">
+										<a href="#">About Us</a>
+										<a href="#">Contact Us</a>
+										<a href="#">Privacy & Policy</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<img class="group-child14" src="assets/images/footer-section-background-icon.webp" alt="">
 
 			</div>
-		</div>
-	</section>
-	<!-- about section end -->
-
-	<!-- blogs section start -->
-	<section id="blog" class="py-4 md:mt-10 md:px-16 bg-white px-4">
-		<div class="max-w-[1200px] mx-auto">
-			
-			<div class="mb-16 flex flex-col items-center md:items-start text-center md:text-left reveal-on-scroll" data-delay="0.4s" data-dir="left">
-				<div class="text-[#4b5563] font-medium text-sm md:text-xs tracking-widest mb-2">Our Programs</div>
-				<h2 class="text-4xl md:text-2xl font-bold font-tropiline leading-tight text-black">
-					Master the IELTS with Our Expert Courses
-				</h2>
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal-grid-items">
-				
-				<article class="group cursor-pointer stagger-item" 
-					onclick="openBlogModal(
-						'How to Score Band 8.0 in Speaking Without Panic', 
-						'Preparation', 
-						'March 15, 2026', 
-						'Scoring a Band 8.0 requires more than just good grammar; it requires confidence and natural flow. <br><br> First, focus on your intonation. Examiners look for a rhythm that sounds like a native speaker, not a rehearsed script. Second, use complex sentence structures naturally. Instead of simple answers, try to expand using connectors like \'furthermore\' or \'in contrast\'. <br><br> Finally, don\'t fear the silence. A small pause to think is better than using filler words like \'um\' or \'ah\'.', 
-						'assets/images/slider-image-1.webp'
-					)">
-					<div class="relative rounded-[20px] overflow-hidden mb-5 shadow-sm group-hover:shadow-xl transition-all duration-500">
-						<div class="h-44 overflow-hidden relative">
-							<img src="assets/images/slider-image-1.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-							<span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-gray-100">Preparation</span>
-						</div>
-					</div>
-					<div class="px-2">
-						<div class="flex items-center gap-3 mb-3">
-							<span class="text-[11px] font-bold text-[#f24f5f] uppercase tracking-tighter">March 15, 2026</span>
-							<span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-							<span class="text-[11px] text-gray-400 font-medium">5 Min Read</span>
-						</div>
-						<h3 class="text-xl font-bold font-tropiline mb-3 group-hover:text-[#f24f5f] transition-colors leading-snug">How to Score Band 8.0 in Speaking Without Panic</h3>
-						<p class="text-gray-500 text-xs font-['Lato'] leading-relaxed line-clamp-2 mb-4">Mastering the art of natural conversation is the key. Learn the 3 phrases that impress every examiner...</p>
-						<button class="text-black font-bold text-[11px] uppercase tracking-widest border-b border-black/10 group-hover:border-[#f24f5f] pb-1 transition-all">Read Article +</button>
-					</div>
-				</article>
-
-				<article class="group cursor-pointer stagger-item" 
-					onclick="openBlogModal(
-						'Avoid These 5 Common Mistakes in Writing Task 2', 
-						'Writing', 
-						'March 12, 2026', 
-						'Writing Task 2 is often the most difficult part of the IELTS. Here are the 5 mistakes to avoid: <br><br> 1. Not answering all parts of the prompt. <br> 2. Overusing complex vocabulary incorrectly. <br> 3. Lack of clear paragraphing. <br> 4. Poor time management. <br> 5. Not checking for repetitive errors. <br><br> Focus on clarity and coherence to ensure your message gets across to the examiner effectively.', 
-						'assets/images/slider-image-4.webp'
-					)">
-					<div class="relative rounded-[20px] overflow-hidden mb-5 shadow-sm group-hover:shadow-xl transition-all duration-500">
-						<div class="h-44 overflow-hidden relative">
-							<img src="assets/images/slider-image-4.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-							<span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-gray-100">Writing</span>
-						</div>
-					</div>
-					<div class="px-2">
-						<div class="flex items-center gap-3 mb-3">
-							<span class="text-[11px] font-bold text-[#f24f5f] uppercase tracking-tighter">March 12, 2026</span>
-							<span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-							<span class="text-[11px] text-gray-400 font-medium">8 Min Read</span>
-						</div>
-						<h3 class="text-xl font-bold font-tropiline mb-3 group-hover:text-[#f24f5f] transition-colors leading-snug">Avoid These 5 Common Mistakes in Writing Task 2</h3>
-						<p class="text-gray-500 text-xs font-['Lato'] leading-relaxed line-clamp-2 mb-4">Most students fail not because of vocabulary, but because of structure. We break down the perfect essay...</p>
-						<button class="text-black font-bold text-[11px] uppercase tracking-widest border-b border-black/10 group-hover:border-[#f24f5f] pb-1 transition-all">Read Article +</button>
-					</div>
-				</article>
-
-				<article class="group cursor-pointer stagger-item" 
-					onclick="openBlogModal(
-						'The Skimming Secret: Read Faster, Understand More', 
-						'Reading', 
-						'March 08, 2026', 
-						'Time is your biggest enemy in the IELTS Reading section. Skimming is the skill of reading a text quickly to get the general idea. <br><br> To skim effectively, read the title, the first paragraph, and the first sentence of every subsequent paragraph. This gives you a mental map of the information. <br><br> Combine this with scanning—looking for keywords like dates, names, and capital letters—to find specific answers in seconds.', 
-						'assets/images/slider-image-3.webp'
-					)">
-					<div class="relative rounded-[20px] overflow-hidden mb-5 shadow-sm group-hover:shadow-xl transition-all duration-500">
-						<div class="h-44 overflow-hidden relative">
-							<img src="assets/images/slider-image-3.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-							<span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-gray-100">Reading</span>
-						</div>
-					</div>
-					<div class="px-2">
-						<div class="flex items-center gap-3 mb-3">
-							<span class="text-[11px] font-bold text-[#f24f5f] uppercase tracking-tighter">March 08, 2026</span>
-							<span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-							<span class="text-[11px] text-gray-400 font-medium">4 Min Read</span>
-						</div>
-						<h3 class="text-xl font-bold font-tropiline mb-3 group-hover:text-[#f24f5f] transition-colors leading-snug">The Skimming Secret: Read Faster, Understand More</h3>
-						<p class="text-gray-500 text-xs font-['Lato'] leading-relaxed line-clamp-2 mb-4">You don't have time to read every word. Learn how to hunt for answers like a pro in the Reading section.</p>
-						<button class="text-black font-bold text-[11px] uppercase tracking-widest border-b border-black/10 group-hover:border-[#f24f5f] pb-1 transition-all">Read Article +</button>
-					</div>
-				</article>
-
-				
-
-			</div>
-		</div>
-	</section>
-
-	<div id="blogModal" class="fixed inset-0 z-[99999] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-		<div class="bg-white w-full max-w-2xl rounded-[30px] overflow-hidden shadow-2xl flex flex-col max-h-[85vh]">
-			<div class="relative h-56 flex-shrink-0">
-				<img id="blogModalImg" src="" class="w-full h-full object-cover">
-				<button onclick="closeBlogModal()" class="absolute top-4 right-4 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">✕</button>
-			</div>
-			
-			<div class="p-8 md:p-10 overflow-y-auto">
-				<div class="flex items-center gap-3 mb-4">
-					<span id="blogModalCat" class="bg-[#f24f5f]/10 text-[#f24f5f] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Category</span>
-					<span id="blogModalDate" class="text-gray-400 text-[11px] font-medium">Date</span>
-				</div>
-				<h3 id="blogModalTitle" class="text-3xl font-bold font-tropiline mb-6 text-black leading-tight">Title</h3>
-				<div id="blogModalContent" class="text-gray-600 font-['Lato'] text-sm leading-[1.8] space-y-4">
-					</div>
-			</div>
-
-	<div class="p-6 border-t border-gray-100 flex justify-end">
-				<button onclick="closeBlogModal()" 
-						class="px-8 py-3 bg-black text-white rounded-full font-bold text-[11px] uppercase tracking-[2px] hover:bg-[#f24f5f] transition-all duration-300 shadow-md active:scale-95">
-					Close Article
-				</button>
-			</div>
-		</div>
+		</section>
+		<!-- footer section end -->
 	</div>
 
-	<script>
-		function openBlogModal(title, category, date, content, imgSrc) {
-			document.getElementById('blogModalTitle').innerHTML = title;
-			document.getElementById('blogModalCat').innerHTML = category;
-			document.getElementById('blogModalDate').innerHTML = date;
-			document.getElementById('blogModalContent').innerHTML = content;
-			document.getElementById('blogModalImg').src = imgSrc;
-
-			document.getElementById('blogModal').classList.remove('hidden');
-			document.body.style.overflow = 'hidden'; // Stop scrolling background
-		}
-
-		function closeBlogModal() {
-			document.getElementById('blogModal').classList.add('hidden');
-			document.body.style.overflow = 'auto'; // Enable scrolling
-		}
-	</script>
-	<!-- blogs section end -->
-
-	<!-- testimonial section start -->
-	<section id="testimonial" class="relative py-16 px-6 md:px-16 overflow-hidden">
-		<div class="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-12 items-center text-center md:text-left">
-			<div class="testimonials-parent mb-12 flex flex-col items-center md:items-start text-center md:text-left reveal-on-scroll" data-delay="0.4s" data-dir="left">
-				<div class="text-[#4b5563] font-medium text-sm tracking-widest mb-2">Testimonials</div>
-				<h2 class="text-5xl md:text-2xl font-bold font-tropiline leading-tight">
-					What our students are saying
-				</h2>
+	<div id="mobile-page" class="mobile-homepage">
+		<!-- header section start -->
+		<section id="mobile-header">
+			<div class="mobile-walpaper">
+				<img class="mobile-icon" src="assets/images/header-section-background-image-mobile.webp" alt="">
 			</div>
 
-			<div class="flex flex-col items-center md:items-end gap-2 reveal-on-scroll" data-delay="0.4s" data-dir="right">
-				<div class="flex gap-1">
-					<img class="w-4 h-4" src="assets/images/red-star.svg" alt="star">
-					<img class="w-4 h-4" src="assets/images/red-star.svg" alt="star">
-					<img class="w-4 h-4" src="assets/images/red-star.svg" alt="star">
-					<img class="w-4 h-4" src="assets/images/red-star.svg" alt="star">
-					<img class="w-4 h-4" src="assets/images/red-star.svg" alt="star">
+			<div class="english-council-homepage-inner">
+				<div class="image-112-parent">
+					<img class="image-112-mobile-icon" src="assets/images/web-icon.webp" alt="">
+					<img class="frame-child" id="menu-open" src="assets/images/nav-icon.svg" alt="">
 				</div>
-				<p class="text-[12px] md:text-right text-slate-600 font-medium max-w-[180px]">
-					Average 4.9 Rating points
-				</p>
-			</div>
-		</div>
-	
-		<div class="testimonial-section-wrapper relative w-full max-w-4xl mx-auto px-2 md:px-0 overflow-hidden">
-			
-			<div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0%);">
-				
-				<div class="testimonial-item w-full shrink-0 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 p-4 md:p-0">
-					<div class="w-24 h-24 md:w-[250px] md:h-auto shrink-0">
-						<img class="w-full h-full rounded-full md:rounded-[10px] object-cover" src="assets/images/testimonial-img.webp" alt="Student">
+				<div class="mobile-sidebar" id="sidebar">
+					<div class="sidebar-header">
+						<div class="close-btn" id="menu-close">&times;</div>
 					</div>
+					<div class="sidebar-links">
+						<a href="#mobile-header" class="side-link">Home</a>
+						<a href="#about-us-mobile" class="side-link">About Us</a>
+						<a href="#footer-mobile" class="side-link">Contact Us</a>
+						<a href="#faq-mobile" class="side-link">FAQ</a>
+					</div>
+				</div>
 
-					<div class="flex flex-col items-center md:items-start gap-3 relative pt-2 md:pt-0 max-w-full md:max-w-[450px] text-center md:text-left">
-						<div class="space-y-1 md:space-y-2 order-1 md:order-2">
-							<b class="text-base md:text-base block text-slate-800">MD Masudur Rahman</b>
-							<span class="text-slate-500 text-[11px] md:text-[10px]">Aerotrip</span>
+				<div class="sidebar-overlay" id="overlay"></div>
+			</div>
+			<img class="english-council-homepage-child" alt="">
+			<div class="mobile-parent">
+				<div class="mobile-group">
+					<div class="mobile-container">
+						<div class="mobile-div">
+							<div class="mobile-achieve-your-parent">
+								<div class="mobile-achieve-your">ACHIEVE YOUR</div>
+								<div class="mobile-wrapper">
+									<div class="mobile-eye-ball-parent">
+										<div class="mobile-eye-ball">
+											<img class="mobile-eye-mobile-icon" src="assets/images/right-eye-icon.webp"
+												alt="">
+
+										</div>
+										<div class="mobile-eye-ball2">
+											<img class="mobile-eye-mobile-icon2" src="assets/images/left-eye-icon.webp"
+												alt="">
+
+										</div>
+									</div>
+								</div>
+								<div class="mobile-dream-ielts-score">DREAM IELTS SCORE</div>
+							</div>
+							<div class="mobile-at-leanncore-technologies">At Leanncore Technologies, we're committed to
+								providing innovative software solutions. Our certified engineers and custom platforms
+								guarantee your success.</div>
 						</div>
-						<img class="hidden md:block w-7 md:order-1" src="assets/images/quotation.webp" alt="quote">
-						<p class="text-slate-600 leading-relaxed text-[12px] md:text-xs order-3">
-							I am so grateful to English Council for helping me achieve my desired IELTS score. 
-							The instructors were knowledgeable and supportive.
-						</p>
-					</div>
-				</div>
+						<div class="mobile-button-parent">
+							<div class="mobile-button">
+								<div class="mobile-lets-get-started">Let’s Get Started</div>
+								<img class="mobile-button-child" src="assets/images/arrow-icon.webp" alt="">
 
-				<div class="testimonial-item w-full shrink-0 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 p-2 md:p-0">
-					<div class="w-24 h-24 md:w-[250px] md:h-auto shrink-0">
-						<img class="w-full h-full rounded-full md:rounded-[10px] object-cover" src="assets/images/testimonial-img.webp" alt="Student">
-					</div>
-
-					<div class="flex flex-col items-center md:items-start gap-3 relative pt-2 md:pt-0 max-w-full md:max-w-[450px] text-center md:text-left">
-						<div class="space-y-1 md:space-y-2 order-1 md:order-2">
-							<b class="text-base md:text-base block text-slate-800">Second Student Name</b>
-							<span class="text-slate-500 text-[11px] md:text-[10px]">Company Name</span>
-						</div>
-						<img class="hidden md:block w-7 md:order-1" src="assets/images/quotation.webp" alt="quote">
-						<p class="text-slate-600 leading-relaxed text-[12px] md:text-xs order-3">
-							This is the second testimonial. You will now see this slide in from the right!
-						</p>
-					</div>
-				</div>
-
-				<div class="testimonial-item w-full shrink-0 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 p-2 md:p-0">
-					<div class="w-24 h-24 md:w-[250px] md:h-auto shrink-0">
-						<img class="w-full h-full rounded-full md:rounded-[10px] object-cover" src="assets/images/testimonial-img.webp" alt="Student">
-					</div>
-
-					<div class="flex flex-col items-center md:items-start gap-3 relative pt-2 md:pt-0 max-w-full md:max-w-[450px] text-center md:text-left">
-						<div class="space-y-1 md:space-y-2 order-1 md:order-2">
-							<b class="text-base md:text-base block text-slate-800">Second Student Name</b>
-							<span class="text-slate-500 text-[11px] md:text-[10px]">Company Name</span>
-						</div>
-						<img class="hidden md:block w-7 md:order-1" src="assets/images/quotation.webp" alt="quote">
-						<p class="text-slate-600 leading-relaxed text-[12px] md:text-xs order-3">
-							This is the second testimonial. You will now see this slide in from the right!
-						</p>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="flex justify-end items-center gap-6 mt-8 md:mt-2 w-full">
-				<img id="prev-btn" class="w-6 h-6 md:w-4 md:h-4 cursor-pointer hover:scale-110 transition-transform" src="assets/images/left-arrow.svg" alt="Previous">
-				<img id="next-btn" class="w-6 h-6 md:w-4 md:h-4 cursor-pointer hover:scale-110 transition-transform" src="assets/images/right-arrow.svg" alt="Next">
-			</div>
-		</div>
-	
-		<img class="hidden md:block absolute right-16 top-[50%] -translate-y-1/2 -z-10 w-2/5 pointer-events-none"
-     src="assets/images/testimonial-section-background-icon.webp" alt="">
-	</section>
-	<!-- testimonial section end -->
-
-	<!-- faq section start -->
-	<section id="faq" class="bg-white w-full px-10 md:px-16 py-10 md:mb-10 overflow-hidden relative z-20">
-		<div class="max-w-[1400px] mx-auto flex flex-col gap-10 lg:gap-14">
-
-			<div class="w-full flex flex-col gap-2 items-center md:items-start text-center md:text-left reveal-on-scroll" data-delay="0.4s" data-dir="left">
-				<p class="text-[#4b5563] font-medium text-sm md:text-xs tracking-widest">FAQ</p>
-				<h2 class="text-5xl md:text-2xl font-bold font-tropiline leading-tight tracking-tight">
-					Some Answer That You Have In Mind
-				</h2>
-			</div>
-
-			<!-- Grid -->
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
-
-				<!-- Left Column -->
-				<div class="flex flex-col gap-4 md:gap-6">
-					<!-- FAQ 1 (Expanded) -->
-					<div
-						class="faq-item font-tropiline bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-						<button class="faq-button w-full text-left px-6 py-6 flex items-start justify-between gap-4">
-							<span class="text-[#374151] font-bold text-[15px] md:text-[17px] leading-snug pr-4">Full
-								access to practice tests, lessons, and expert feedback.</span>
-							<span
-						 font-tropiline		class="faq-icon text-[#374151] shrink-0 text-3xl font-light leading-none transform transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0">
-							<div class="overflow-hidden">
-								<p class="text-[#6b7280] text-sm md:text-[15px] leading-relaxed px-6 pb-6 pt-0">
-									The demo gives you full access to all Standard plan features for 14 days, so you
-									can test the platform with your own workflows.</p>
+							</div>
+							<div class="mobile-button2">
+								<div class="mobile-learn-more">Learn More</div>
 							</div>
 						</div>
 					</div>
+					<div class="mobile-parent2">
+						<div class="mobile-parent3">
+							<div class="mobile-ellipse-parent">
+								<img class="mobile-frame-item" src="assets/images/avatar-1.webp" alt="">
 
-					<!-- FAQ 2 -->
-					<div
-						class="faq-item bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-						<button class="faq-button w-full text-left px-6 py-6 flex items-start justify-between gap-4">
-							<span class="text-[#374151] font-bold text-[15px] md:text-[17px] leading-snug pr-4">Full
-								access to practice tests, lessons, and expert feedback.</span>
-							<span
-								class="faq-icon text-[#374151] shrink-0 text-3xl font-light leading-none transform transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0">
-							<div class="overflow-hidden">
-								<p class="text-[#6b7280] text-sm md:text-[15px] leading-relaxed px-6 pb-6 pt-0">
-									The demo gives you full access to all Standard plan features for 14 days, so you
-									can test the platform with your own workflows.</p>
+								<img class="mobile-frame-inner" src="assets/images/avatar-2.webp" alt="">
+
+								<img class="mobile-frame-inner" src="assets/images/avatar-3.webp" alt="">
+
+								<img class="mobile-frame-inner" src="assets/images/avatar-4.webp" alt="">
+
+								<img class="mobile-frame-inner" src="assets/images/avatar-5.webp" alt="">
+
 							</div>
-						</div>
-					</div>
+							<img class="mobile-frame-mobile-icon" src="assets/images/white-star-icon.webp" alt="">
 
-					<!-- FAQ 3 -->
-					<div
-						class="faq-item font-tropiline bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-						<button class="faq-button w-full text-left px-6 py-6 flex items-start justify-between gap-4">
-							<span class="text-[#374151] font-bold text-[15px] md:text-[17px] leading-snug pr-4">Full
-								access to practice tests, lessons, and expert feedback.</span>
-							<span
-								class="faq-icon text-[#374151] shrink-0 text-3xl font-light leading-none transform transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0">
-							<div class="overflow-hidden">
-								<p class="text-[#6b7280] text-sm md:text-[15px] leading-relaxed px-6 pb-6 pt-0">
-									The demo gives you full access to all Standard plan features for 14 days, so you
-									can test the platform with your own workflows.</p>
+						</div>
+						<div class="mobile-container">
+							<div class="mobile-we-satisfied-1500-parent">
+								<div class="mobile-we-satisfied-1500">We Satisfied 1500+</div>
+								<div class="client-around-the">Client Around the World</div>
+							</div>
+							<div class="mobile-were-most-promising-coaching-parent">
+								<div class="mobile-were-most-promising">We’re Most Promising Coaching Centre In
+									Bangladesh</div>
+								<img class="mobile-cub-mobile-icon" src="assets/images/cube-icon.webp" alt="">
+
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="mobile-rectangle-parent">
+					<img class="mobile-rectangle-mobile-icon" src="assets/images/header-section-image-1.webp" alt="">
 
-				<!-- Right Column -->
-				<div class="flex flex-col gap-4 md:gap-6">
-					<!-- FAQ 4 -->
-					<div
-						class="faq-item font-tropiline bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-						<button class="faq-button w-full text-left px-6 py-6 flex items-start justify-between gap-4">
-							<span class="text-[#374151] font-bold text-[15px] md:text-[17px] leading-snug pr-4">Full
-								access to practice tests, lessons, and expert feedback.</span>
-							<span
-								class="faq-icon text-[#374151] shrink-0 text-3xl font-light leading-none transform transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0">
-							<div class="overflow-hidden">
-								<p class="text-[#6b7280] text-sm md:text-[15px] leading-relaxed px-6 pb-6 pt-0">
-									The demo gives you full access to all Standard plan features for 14 days, so you
-									can test the platform with your own workflows.</p>
+					<img class="mobile-rectangle-mobile-icon" src="assets/images/header-section-image-2.webp" alt="">
+
+				</div>
+			</div>
+		</section>
+		<!-- header section end -->
+
+		<!-- feature section start -->
+		<section id="mobile-feature">
+			<div class="unlock-your-full-container">
+				<span>Unlock your full </span>
+				<span class="potential-with-english">potential with English Council's</span>
+				<span class="comprehensive-ielts-program"> comprehensive IELTS program. Our expert instructors provide
+					personalized guidance and continuous support to help you achieve your desired band score. </span>
+				<span class="potential-with-english">Join us and embark on a journey</span>
+				<span> towards academic and professional </span>
+				<span class="potential-with-english">success.</span>
+			</div>
+			<div class="how-we-help-you-to-succeed-parent">
+				<div class="how-we-help">How We Help You TO Succeed</div>
+				<div class="group-parent">
+					<div class="group-container">
+						<img class="group-child" src="assets/images/feature-icon-1.webp" alt="">
+
+						<div class="interactive-learning-parent">
+							<b class="interactive-learning">Interactive Learning</b>
+							<div class="our-corporate-program">Our corporate program offers IELTS training to boost your
+								team's communication skills and global opportunities.</div>
+						</div>
+					</div>
+					<div class="group-container">
+						<img class="group-child" src="assets/images/feature-icon-2.webp" alt="">
+
+						<div class="interactive-learning-parent">
+							<b class="personalized-approach">Personalized Approach</b>
+							<div class="our-corporate-program2">Our corporate program offers IELTS training to boost
+								your team's communication skills and global opportunities.</div>
+						</div>
+					</div>
+					<div class="group-container">
+						<img class="group-child" src="assets/images/feature-icon-3.webp" alt="">
+
+						<div class="interactive-learning-parent">
+							<b class="interactive-learning">Practical Application</b>
+							<div class="our-corporate-program">Our corporate program offers IELTS training to boost your
+								team's communication skills and global opportunities.</div>
+						</div>
+					</div>
+					<div class="group-container">
+						<img class="group-child" src="assets/images/feature-icon-4.webp" alt="">
+
+						<div class="interactive-learning-parent">
+							<b class="interactive-learning">Continuous Feedback</b>
+							<div class="our-corporate-program">Our corporate program offers IELTS training to boost your
+								team's communication skills and global opportunities.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- feature section end -->
+
+		<!--course section start -->
+		<section id="course-mobile">
+			<div class="mobile-parent15">
+				<div class="mobile-parent16">
+					<div class="ellipse-container">
+						<div class="ellipse-div">
+						</div>
+						<div class="mobile-parent17">
+							<div class="image-160-parent">
+								<img class="image-160-mobile-icon" src="assets/images/slider-icon-1.webp" alt="">
+
+								<div class="unlock-your-english-potential-wrapper">
+									<div class="title-wrapper">
+										<b class="title"><span>SPO</span><span class="SecondPart">KEN</span></b>
+									</div>
+									<div class="our-corporate-program5">Our corporate program provides comprehensive
+										IELTS training designed to enhance your team's communication skills and open up
+										global opportunities.</div>
+								</div>
+							</div>
+							<div class="button3">
+								<div class="mobile-lets-get-started">Let’s Get Started</div>
+								<img class="mobile-button-child" src="assets/images/arrow-icon.webp" alt="">
+
 							</div>
 						</div>
 					</div>
+					<img class="course-thumbnail" src="assets/images/slider-image-1.webp" alt="">
 
-					<!-- FAQ 5 -->
-					<div
-						class="faq-item font-tropiline bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-						<button class="faq-button w-full text-left px-6 py-6 flex items-start justify-between gap-4">
-							<span class="text-[#374151] font-bold text-[15px] md:text-[17px] leading-snug pr-4">Full
-								access to practice tests, lessons, and expert feedback.</span>
-							<span
-								class="faq-icon text-[#374151] shrink-0 text-3xl font-light leading-none transform transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0">
-							<div class="overflow-hidden">
-								<p class="text-[#6b7280] text-sm md:text-[15px] leading-relaxed px-6 pb-6 pt-0">
-									The demo gives you full access to all Standard plan features for 14 days, so you
-									can test the platform with your own workflows.</p>
+				</div>
+				<div class="mobile-parent16">
+					<div class="mobile-ellipse-parent2">
+						<div class="frame-child17">
+						</div>
+						<div class="mobile-parent19">
+							<div class="image-160-parent">
+								<img class="image-160-mobile-icon" src="assets/images/slider-icon-2.webp" alt="">
+
+								<div class="reading-parent">
+									<div class="title-wrapper">
+										<b class="title"><span>REA</span><span class="SecondPart">DING</span></b>
+									</div>
+									<div class="our-corporate-program6">Our corporate program provides comprehensive
+										IELTS training designed to enhance your team's communication skills and open up
+										global opportunities.</div>
+								</div>
+							</div>
+							<div class="button3">
+								<div class="mobile-lets-get-started">Let’s Get Started</div>
+								<img class="mobile-button-child" src="assets/images/arrow-icon.webp" alt="">
+
 							</div>
 						</div>
 					</div>
+					<img class="course-thumbnail" src="assets/images/slider-image-2.webp" alt="">
 
-					<!-- FAQ 6 -->
-					<div
-						class="faq-item font-tropiline bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-						<button class="faq-button w-full text-left px-6 py-6 flex items-start justify-between gap-4">
-							<span class="text-[#374151] font-bold text-[15px] md:text-[17px] leading-snug pr-4">Full
-								access to practice tests, lessons, and expert feedback.</span>
-							<span
-								class="faq-icon text-[#374151] shrink-0 text-3xl font-light leading-none transform transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0">
-							<div class="overflow-hidden">
-								<p class="text-[#6b7280] text-sm md:text-[15px] leading-relaxed px-6 pb-6 pt-0">
-									The demo gives you full access to all Standard plan features for 14 days, so you
-									can test the platform with your own workflows.</p>
+				</div>
+				<div class="mobile-parent16">
+					<div class="mobile-ellipse-parent2">
+						<div class="frame-child18">
+						</div>
+						<div class="mobile-parent21">
+							<div class="image-161-parent">
+								<img class="image-160-mobile-icon" src="assets/images/slider-icon-3.webp" alt="">
+
+								<div class="writing-parent">
+									<div class="title-wrapper">
+										<b class="title"><span>WRI</span><span class="SecondPart">TING</span></b>
+									</div>
+									<div class="our-corporate-program7">Our corporate program provides comprehensive
+										IELTS training designed to enhance your team's communication skills and open up
+										global opportunities.</div>
+								</div>
+							</div>
+							<div class="button3">
+								<div class="mobile-lets-get-started">Let’s Get Started</div>
+								<img class="mobile-button-child" src="assets/images/arrow-icon.webp" alt="">
+
+							</div>
+						</div>
+					</div>
+					<img class="course-thumbnail" src="assets/images/slider-image-3.webp" alt="">
+
+				</div>
+				<div class="mobile-parent22">
+					<div class="mobile-ellipse-parent2">
+						<div class="frame-child19">
+						</div>
+						<div class="mobile-parent23">
+							<div class="mobile-container">
+								<img class="image-160-mobile-icon" src="assets/images/slider-icon-4.webp" alt="">
+
+								<div class="unlock-your-english-potential-wrapper">
+									<div class="title-wrapper">
+										<b class="title"><span>LISTE</span><span class="SecondPart">NING</span></b>
+									</div>
+									<div class="our-corporate-program8">Our corporate program provides comprehensive
+										IELTS training designed to enhance your team's communication skills and open up
+										global opportunities.</div>
+								</div>
+							</div>
+							<div class="button6">
+								<div class="mobile-lets-get-started">Let’s Get Started</div>
+								<img class="mobile-button-child" src="assets/images/arrow-icon.webp" alt="">
+
+							</div>
+						</div>
+					</div>
+					<img class="course-thumbnail" src="assets/images/slider-image-4.webp" alt="">
+
+				</div>
+				<div class="mobile-parent22">
+					<div class="mobile-ellipse-parent2">
+						<div class="frame-child20">
+						</div>
+						<div class="mobile-parent25">
+							<div class="mobile-container">
+								<img class="image-160-mobile-icon" src="assets/images/slider-icon-5.webp" alt="">
+
+								<div class="unlock-your-english-potential-wrapper">
+									<div class="title-wrapper">
+										<b class="title"><span>PHONE</span><span class="SecondPart">TICS</span></b>
+									</div>
+									<div class="our-corporate-program9">Our corporate program provides comprehensive
+										IELTS training designed to enhance your team's communication skills and open up
+										global opportunities.</div>
+								</div>
+							</div>
+							<div class="button6">
+								<div class="mobile-lets-get-started">Let’s Get Started</div>
+								<img class="mobile-button-child" src="assets/images/arrow-icon.webp" alt="">
+
+							</div>
+						</div>
+					</div>
+					<img class="course-thumbnail" src="assets/images/slider-image-5.webp" alt="">
+
+				</div>
+			</div>
+		</section>
+		<!--course section end -->
+
+		<!-- program section start -->
+		<section id="program-mobile">
+			<div class="mobile-parent5">
+				<div class="mobile-where-we-help-parent">
+					<div class="mobile-where-we-help">Where We Help</div>
+					<b class="mobile-helping-professionals">Helping Professionals</b>
+					<div class="mobile-parent6">
+						<div class="mobile-wrapper">
+							<img class="frame-child5" src="assets/images/avatar-1.webp" alt="">
+
+							<img class="frame-child6" src="assets/images/avatar-2.webp" alt="">
+
+							<img class="frame-child6" src="assets/images/avatar-3.webp" alt="">
+
+							<img class="frame-child6" src="assets/images/avatar-4.webp" alt="">
+
+							<img class="frame-child6" src="assets/images/avatar-5.webp" alt="">
+
+							<img class="frame-child6" src="assets/images/avatar-1.webp" alt="">
+
+							<img class="frame-child11" src="assets/images/avatar-2.webp" alt="">
+
+							<img class="frame-child11" src="assets/images/avatar-3.webp" alt="">
+
+						</div>
+						<b class="students-achieve">& Students Achieve</b>
+					</div>
+					<b class="mobile-helping-professionals">Their IELTS Dreams</b>
+					<div class="at-english-council">At English Council, we empower professionals and students to conquer
+						the IELTS. Our tailored courses and expert instructors ensure you achieve your desired score and
+						unlock global opportunities.</div>
+				</div>
+				<div class="a4-poster-9-parent">
+					<div class="a4-poster-9">
+						<img class="mask-group-mobile-icon" src="assets/images/dream-section-background-2.webp" alt="">
+
+						<div class="container">
+							<div class="content">
+								<div class="mobile-icon-wrapper">
+									<img src="assets/images/dream-icon-1.svg" alt="">
+								</div>
+								<div class="text-container">
+									<b class="interactive-learning">Corporate</b>
+									<div class="description">Our program delivers customized IELTS training, boosting
+										your team's communication skills and expanding global prospects.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="a4-poster-10">
+						<img class="mask-group-mobile-icon2" src="assets/images/dream-section-background-3.webp" alt="">
+
+						<div class="container2">
+							<div class="content2">
+								<div class="mobile-icon-wrapper">
+									<img src="assets/images/dream-icon-2.webp" alt="">
+								</div>
+								<div class="text-container2">
+									<b class="interactive-learning">Student</b>
+									<div class="description2">Our course provides focused IELTS training, improving
+										communication skills and unlocking global opportunities for students.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<img class="bonus-16-1" src="assets/images/dream-part-background.webp" alt="">
+
+					<div class="a4-poster-11">
+						<img class="mask-group-mobile-icon3" src="assets/images/dream-section-background-4.webp" alt="">
+
+						<div class="container">
+							<div class="content">
+								<div class="mobile-icon-wrapper">
+									<img src="assets/images/dream-icon-3.webp" alt="">
+								</div>
+
+								<div class="text-container">
+									<b class="interactive-learning">Government</b>
+									<div class="description">Our program delivers customized IELTS training, boosting
+										your team's communication skills and expanding global prospects.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="a4-poster-12">
+						<img class="mask-group-mobile-icon4" src="assets/images/dream-section-background-1.webp" alt="">
+
+						<div class="container4">
+							<div class="content">
+								<div class="mobile-icon-wrapper">
+									<img src="assets/images/dream-icon-4.webp" alt="">
+								</div>
+
+								<div class="text-container">
+									<b class="interactive-learning">Personalized</b>
+									<div class="description">Our program delivers customized IELTS training, boosting
+										your team's communication skills and expanding global prospects.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<img class="image-1-mobile-icon" src="assets/images/logo.webp" alt="">
+				</div>
+			</div>
+			<div class="mobile-parent7">
+				<div class="mobile-online-offline-live-class-parent">
+					<div class="mobile-online-offline">Online & OFFLINE LIVE CLASS</div>
+					<img class="mobile-frame-child13" src="assets/images/Rectangle-1.webp" alt="">
+
+				</div>
+				<div class="mobile-with-practical-project-parent">
+					<div class="mobile-with-practical-project">WITH PRACTICAL PROJECT</div>
+					<img class="mobile-frame-child14" src="assets/images/Rectangle-2.webp" alt="">
+
+				</div>
+				<div class="mobile-text-container">
+					<div class="mobile-with-practical-project">WITH PRACTICAL PROJECT</div>
+					<img class="mobile-frame-child14" src="assets/images/Rectangle-3.webp" alt="">
+
+				</div>
+			</div>
+		</section>
+		<!-- program section end -->
+
+		<!-- about us section start -->
+		<section id="about-us-mobile">
+			<div class="mobile-walpaper-parent">
+				<div class="mobile-walpaper2">
+					<img class="mobile-icon" src="assets/images/about-section-background-image-mobile.webp" alt="">
+
+				</div>
+				<div class="mobile-parent26">
+					<div class="mobile-parent27">
+						<div class="where-we-help-parent">
+							<div class="interactive-learning">Meet with</div>
+							<div class="md-masudur-rahman-parent">
+								<div class="md-masudur-rahman">MD Masudur Rahman</div>
+								<div class="with-over-a-decade-of-experien-wrapper">
+									<div class="with-over-a">With over a decade of experience, Mr. Rahman's passion lies
+										in guiding students towards IELTS success and unlocking their global potential.
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mobile-parent28">
+							<div class="mobile-parent29">
+								<div class="youth-program-wrapper">
+									<b class="youth-program">Youth Program</b>
+								</div>
+								<div class="youth-program-wrapper">
+									<b class="youth-program">Youth Program</b>
+								</div>
+							</div>
+							<div class="mobile-parent29">
+								<div class="youth-program-wrapper">
+									<b class="youth-program">Youth Program</b>
+								</div>
+								<div class="youth-program-wrapper">
+									<b class="youth-program">Youth Program</b>
+								</div>
+							</div>
+							<div class="mobile-parent29">
+								<div class="youth-program-wrapper">
+									<b class="youth-program">Youth Program</b>
+								</div>
+								<div class="youth-program-wrapper">
+									<b class="youth-program">Youth Program</b>
+								</div>
+							</div>
+							<div class="mobile-parent29">
+								<div class="youth-program-wrapper">
+									<b class="youth-program">Youth Program</b>
+								</div>
+								<div class="youth-program-wrapper">
+									<b class="youth-program">Youth Program</b>
+								</div>
+							</div>
+							<div class="mobile-parent29">
+								<div class="youth-program-wrapper">
+									<b class="youth-program">Youth Program</b>
+								</div>
+								<div class="youth-program-wrapper">
+									<b class="youth-program">Youth Program</b>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mobile-parent34">
+						<img class="group-child3" src="assets/images/about-section-image-background.webp" alt="">
+
+						<div class="an-expert-dedicated">An Expert Dedicated to Your Success</div>
+						<div class="jahan-is-committed">Jahan is committed to seeing you succeed</div>
+						<img class="image-169-mobile-icon" src="assets/images/about-section-image.webp" alt="">
+
+						<img class="mobile-icon2" src="assets/images/about-section-corner-icon.webp" alt="">
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- about us section end -->
+
+		<!-- testimonial section start -->
+
+		<!-- testimonial section end -->
+
+		<!-- faq section start -->
+		<section id="faq-mobile">
+			<div class="mobile-parent8">
+				<div class="mobile-faq-parent">
+					<div class="interactive-learning">FAQ</div>
+					<b class="mobile-some-answer-that">Some Answer That You Have In Mind</b>
+				</div>
+				<div class="mobile-parent9">
+					<div class="mobile-parent10">
+						<div class="full-access-to-practice-tests-parent">
+							<div class="full-access-to">Full access to practice tests, lessons, and expert feedback.
+							</div>
+							<img class="plus-large-svgrepocom-mobile-icon" src="assets/images/plus-icon.webp"
+								alt="toggle">
+						</div>
+						<div class="the-demo-gives">
+							The demo gives you full access to all Standard plan features for 14 days, so you can test
+							the platform with your own workflows.
+						</div>
+					</div>
+				</div>
+				<div class="mobile-parent9">
+					<div class="mobile-parent10">
+						<div class="full-access-to-practice-tests-parent">
+							<div class="full-access-to">Full access to practice tests, lessons, and expert feedback.
+							</div>
+							<img class="plus-large-svgrepocom-mobile-icon" src="assets/images/plus-icon.webp"
+								alt="toggle">
+						</div>
+						<div class="the-demo-gives">
+							The demo gives you full access to all Standard plan features for 14 days, so you can test
+							the platform with your own workflows.
+						</div>
+					</div>
+				</div>
+				<div class="mobile-parent9">
+					<div class="mobile-parent10">
+						<div class="full-access-to-practice-tests-parent">
+							<div class="full-access-to">Full access to practice tests, lessons, and expert feedback.
+							</div>
+							<img class="plus-large-svgrepocom-mobile-icon" src="assets/images/plus-icon.webp"
+								alt="toggle">
+						</div>
+						<div class="the-demo-gives">
+							The demo gives you full access to all Standard plan features for 14 days, so you can test
+							the platform with your own workflows.
+						</div>
+					</div>
+				</div>
+				<div class="mobile-parent9">
+					<div class="mobile-parent10">
+						<div class="full-access-to-practice-tests-parent">
+							<div class="full-access-to">Full access to practice tests, lessons, and expert feedback.
+							</div>
+							<img class="plus-large-svgrepocom-mobile-icon" src="assets/images/plus-icon.webp"
+								alt="toggle">
+						</div>
+						<div class="the-demo-gives">
+							The demo gives you full access to all Standard plan features for 14 days, so you can test
+							the platform with your own workflows.
+						</div>
+					</div>
+				</div>
+				<div class="mobile-parent9">
+					<div class="mobile-parent10">
+						<div class="full-access-to-practice-tests-parent">
+							<div class="full-access-to">Full access to practice tests, lessons, and expert feedback.
+							</div>
+							<img class="plus-large-svgrepocom-mobile-icon" src="assets/images/plus-icon.webp"
+								alt="toggle">
+						</div>
+						<div class="the-demo-gives">
+							The demo gives you full access to all Standard plan features for 14 days, so you can test
+							the platform with your own workflows.
+						</div>
+					</div>
+				</div>
+				<div class="mobile-parent9">
+					<div class="mobile-parent10">
+						<div class="full-access-to-practice-tests-parent">
+							<div class="full-access-to">Full access to practice tests, lessons, and expert feedback.
+							</div>
+							<img class="plus-large-svgrepocom-mobile-icon" src="assets/images/plus-icon.webp"
+								alt="toggle">
+						</div>
+						<div class="the-demo-gives">
+							The demo gives you full access to all Standard plan features for 14 days, so you can test
+							the platform with your own workflows.
+						</div>
+					</div>
+				</div>
+				<div class="mobile-parent9">
+					<div class="mobile-parent10">
+						<div class="full-access-to-practice-tests-parent">
+							<div class="full-access-to">Full access to practice tests, lessons, and expert feedback.
+							</div>
+							<img class="plus-large-svgrepocom-mobile-icon" src="assets/images/plus-icon.webp"
+								alt="toggle">
+						</div>
+						<div class="the-demo-gives">
+							The demo gives you full access to all Standard plan features for 14 days, so you can test
+							the platform with your own workflows.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- faq section end -->
+
+		<!-- footer section start -->
+		<section id="footer-mobile">
+			<div class="mobile-rectangle-group">
+				<div class="mobile-rectangle-div">
+				</div>
+				<div class="group-parent4">
+					<div class="contact-info-parent">
+						<b class="contact-info">Contact info</b>
+						<div class="email-address-englishcouncils">Email Address:
+							englishcouncilsavar83@gmail.com<br>Mobile Number: 01618-600044</div>
+					</div>
+					<div class="image-113-parent">
+						<img class="image-113-mobile-icon" src="assets/images/logo.webp" alt="">
+
+						<div class="unlock-your-english-potential-wrapper">
+							<div class="unlock-your-english">Unlock your English potential with our expert-led IELTS
+								courses at English Council. Contact us today to learn more and start your journey!</div>
+						</div>
+					</div>
+					<div class="office-address-parent">
+						<b class="interactive-learning">Office Address</b>
+						<div class="th-floor-rs">4th floor, R.S Tower (Near Rana Plaza), Savar , Dhaka, Bangladesh</div>
+					</div>
+				</div>
+
+
+
+				<div class="frame-wrapper8">
+					<div class="mobile-container">
+						<div class="mobile-rectangle-parent">
+							<b class="interactive-learning">Wanna Go Next Level In English?</b>
+							<b class="lets-talk">LET’S TALK</b>
+						</div>
+						<div class="component-2">
+
+							<img class="group-mobile-icon2" src="assets/images/msg-us.webp" alt="">
+
+
+
+						</div>
+						<div class="mobile-parent12">
+							<div class="vector-smart-object-parent">
+								<img class="vector-smart-object" src="assets/images/facebook.webp" alt="">
+
+								<div class="facebook">Facebook</div>
+							</div>
+							<div class="vector-smart-object-parent">
+								<img class="frame-child16" src="assets/images/instagram.webp" alt="">
+
+								<div class="facebook">Instagram</div>
+							</div>
+							<div class="vector-smart-object-parent">
+								<img class="group-mobile-icon3" src="assets/images/x.png" alt="">
+
+								<div class="facebook">X</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<img class="group-child2" src="assets/images/footer-section-background-mobile-icon.webp" alt="">
 
-			</div>
-		</div>
-	</section>
-	<!-- faq section end -->
+				<img class="mobile-iconscopyright-line" src="assets/images/copyright-icon.svg" alt="">
 
-	<!-- contact section start -->
-	<section id="contact" class="py-20 md:px-16 px-6">
-		<div class="max-w-[1200px] mx-auto">
-	
-			<div class="w-full flex flex-col gap-2 items-center md:items-start text-center md:text-left reveal-on-scroll" data-delay="0.4s" data-dir="left">
-				<p class="text-[#4b5563] font-medium text-sm md:text-xs tracking-widest">Contact Us</p>
-				<h2 class="text-5xl md:text-2xl font-bold font-tropiline leading-tight tracking-tight">
-					Connect With Our IELTS Experts
-				</h2>
-			</div>
-	
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-10">	
-				<div class="bg-white p-8 md:p-12 rounded-[40px] shadow-[0_30px_60px_rgba(0,0,0,0.08)] border border-gray-300">
-					<div class="mb-10">
-						<h3 class="text-3xl font-bold text-zinc-900 mb-2">Get in Touch</h3>
-						<p class="text-zinc-500 text-sm font-medium">Please fill out the form below and we will get back to you shortly.</p>
+				<div class="mobile-parent13">
+					<div class="mobile-parent14">
+						<div class="about-us-parent">
+							<div class="facebook">About Us</div>
+							<div class="facebook">Contact Us</div>
+							<div class="facebook">Privecy & Policy</div>
+						</div>
+						<div class="line-div">
+						</div>
 					</div>
-
-					<form action="#" method="POST" class="space-y-6">
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-							<div class="relative group">
-								<input type="text" id="student_name" required placeholder=" "
-									class="block w-full px-6 pt-7 pb-3 text-[15px] font-semibold text-zinc-900 bg-gray-50 border border-gray-300 rounded-2xl appearance-none focus:outline-none focus:ring-1 focus:ring-[#f24f5f] focus:border-[#f24f5f] peer transition-all duration-200">
-								<label for="student_name"
-									class="absolute text-[10px] font-black text-zinc-500 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-[#f24f5f] uppercase tracking-widest">
-									Student Name
-								</label>
-							</div>
-
-							<div class="relative group">
-								<input type="email" id="email" required placeholder=" "
-									class="block w-full px-6 pt-7 pb-3 text-[15px] font-semibold text-zinc-900 bg-gray-50 border border-gray-300 rounded-2xl appearance-none focus:outline-none focus:ring-1 focus:ring-[#f24f5f] focus:border-[#f24f5f] peer transition-all duration-200">
-								<label for="email"
-									class="absolute text-[10px] font-black text-zinc-500 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-[#f24f5f] uppercase tracking-widest">
-									Email Address
-								</label>
-							</div>
-						</div>
-
-						<div class="relative group">
-							<input type="tel" id="mobile_number" required placeholder=" "
-								class="block w-full px-6 pt-7 pb-3 text-[15px] font-semibold text-zinc-900 bg-gray-50 border border-gray-300 rounded-2xl appearance-none focus:outline-none focus:ring-1 focus:ring-[#f24f5f] focus:border-[#f24f5f] peer transition-all duration-200">
-							<label for="mobile_number"
-								class="absolute text-[10px] font-black text-zinc-500 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-[#f24f5f] uppercase tracking-widest">
-								Mobile Number
-							</label>
-						</div>
-
-						<div class="relative group">
-							<textarea id="message" rows="4" required placeholder=" "
-								class="block w-full px-6 pt-9 pb-3 text-[15px] font-semibold text-zinc-900 bg-gray-50 border border-gray-300 rounded-2xl appearance-none focus:outline-none focus:ring-1 focus:ring-[#f24f5f] focus:border-[#f24f5f] peer transition-all duration-200 resize-none"></textarea>
-							<label for="message"
-								class="absolute text-[10px] font-black text-zinc-500 duration-300 transform -translate-y-5 scale-75 top-6 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5 peer-focus:text-[#f24f5f] uppercase tracking-widest">
-								Your Message
-							</label>
-						</div>
-
-						<div class="pt-4">
-							<button type="submit"
-								class="w-full md:w-auto px-12 py-5 bg-zinc-900 text-white rounded-full font-bold text-[12px] uppercase tracking-[2px] hover:bg-[#f24f5f] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95">
-								Send Message &nbsp; →
-							</button>
-						</div>
-					</form>
-				</div>
-	
-				<div class="h-full min-h-[400px] flex flex-col gap-8">
-					<div class="flex-grow rounded-[30px] overflow-hidden shadow-sm border border-white p-2 bg-white">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093643!2d144.95373531531615!3d-37.81627977975124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1a32f9b1b0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1611568205214!5m2!1sen!2sus"
-							class="w-full h-full rounded-[22px] min-h-[300px]" style="border:0;" allowfullscreen=""
-							loading="lazy">
-						</iframe>
-					</div>
-	
-					<div class="grid grid-cols-2 gap-4">
-						<div class="bg-white p-6 rounded-[24px] border border-gray-100">
-							<div class="text-[#f24f5f] font-bold text-[10px] uppercase tracking-widest mb-1">Call Us</div>
-							<div class="text-black font-bold text-sm">+1 (234) 567-890</div>
-						</div>
-						<div class="bg-white p-6 rounded-[24px] border border-gray-100">
-							<div class="text-[#f24f5f] font-bold text-[10px] uppercase tracking-widest mb-1">Email Us</div>
-							<div class="text-black font-bold text-sm">hello@ieltsmaster.com</div>
+					<div class="frame-wrapper9">
+						<div class="copyright-2025-englishcounci-wrapper">
+							<div class="copyright-2025">Copyright 2025 . Englishcouncil.com All Right Reserved.</div>
 						</div>
 					</div>
 				</div>
-	
 			</div>
-		</div>
-	</section>
-	<!-- contact section end -->
-
-
-	<!-- footer section start -->
-	<footer id="footer" class="bg-black font-tropiline text-white py-12 px-2 md:py-4 md:px-14 overflow-hidden relative">    
-		<div class="max-w-7xl mx-auto relative z-10 px-2 md:px-0"> <div class="flex flex-col md:flex-row justify-between items-center md:items-start pb-12 relative md:mt-2">
-				
-				<div class="flex flex-col items-center md:items-start text-center md:text-left z-20 mb-64 md:mb-0">
-					<p class="text-[#FF3B3B] font-bold mb-2 tracking-wide text-sm md:text-xl reveal-on-scroll" data-delay="0.4s" data-dir="left">
-						Wanna Go Next Level In English?
-					</p>
-					
-					<div class="flex items-center gap-6 mb-6 reveal-on-scroll" data-delay="0.5s" data-dir="left">
-						<h2 class="text-6xl md:text-7xl font-bold tracking-tighter text-white">
-							LET’S TALK
-						</h2>
-						
-						<a href="https://wa.me/8801618600044" target="_blank" 
-							class="hidden md:block hover:scale-105 transition-transform">
-							<div class="animate-bounce-slow">
-								<img src="assets/images/msg-us.webp" 
-									alt="Message Us" 
-									style="animation-duration: 20s;"
-									class="w-20 h-20 animate-spin">
-							</div>
-						</a>
-					</div>
-
-					<a href="https://wa.me/8801618600044" target="_blank" class="md:hidden mb-8">
-						<img class="w-24 h-24" src="assets/images/msg-us.webp" alt="Message Us">
-					</a>
-
-					<div class="flex flex-wrap justify-center md:justify-start gap-3 reveal-on-scroll" data-delay="0.6s" data-dir="left">
-						<a href="#" class="flex items-center gap-2 bg-white text-black px-4 py-1.5 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors">
-							<i class="fa-brands fa-facebook text-base"></i> Facebook
-						</a>
-						<a href="#" class="flex items-center gap-2 bg-white text-black px-4 py-1.5 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors">
-							<i class="fa-brands fa-instagram text-base"></i> Instagram
-						</a>
-						<a href="#" class="flex items-center gap-2 bg-white text-black px-4 py-1.5 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors">
-							<i class="fa-brands fa-x-twitter text-base"></i> X
-						</a>
-					</div>
-				</div>
-
-				<img class="absolute -z-10 opacity-90 pointer-events-none 
-							left-[-175px] top-[300px] w-48 -scale-x-100  w-96 h-96
-							md:left-auto md:right-[-200px] md:top-[-40px] md:w-80 md:scale-x-100" 
-					src="assets/images/footer-section-background-icon.webp" alt="">
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-end mb-16 md:mb-4">
-				<div class="order-1 md:order-1 text-center md:text-left">
-					<h3 class="font-bold text-xl mb-4 text-white">Contact info</h3>
-					<p class="text-gray-400 text-sm leading-relaxed">
-						Email : hello@englishcouncil.com<br>
-						Mobile: 01618-600044
-					</p>
-				</div>
-
-				<div class="flex flex-col items-center order-2 md:order-2 text-center">
-					<img class="w-16 mb-4 hover:scale-105 transition-transform" src="assets/images/logo.webp" alt="English Council Logo">
-					<p class="text-gray-400 text-xs md:text-[10px] leading-relaxed max-w-xs">
-						Unlock your English potential with our expert-led IELTS courses at English Council. Contact us today to learn more and start your journey!
-					</p>
-				</div>
-
-				<div class="order-3 md:order-3 text-center md:text-right">
-					<h3 class="font-bold text-xl mb-4 text-white">Office Address</h3>
-					<p class="text-gray-400 text-sm leading-relaxed">
-						4th floor, R.S Tower (Near Rana Plaza),<br>
-						Savar, Dhaka, Bangladesh
-					</p>
-				</div>
-			</div>
-
-			<div class="flex font-inter flex-col md:flex-row justify-between items-center gap-6 pt-0 md:pt-4 md:border-t md:border-gray-800">
-				<div class="w-full md:w-auto flex justify-center md:justify-end gap-6 text-white text-[14px] md:text-sm order-1 md:order-2 pb-6 border-b border-gray-800 md:border-none md:pb-0">
-					<a href="#about" class="hover:text-rose-500 transition-colors">About Us</a>
-					<a href="#contact" class="hover:text-rose-500 transition-colors">Contact Us</a>
-					<a href="#blog" class="hover:text-rose-500 transition-colors">Blog Post</a>
-				</div>
-
-				<div class="flex items-center justify-center md:justify-start text-white text-sm md:text-sm order-2 md:order-1">
-					<p class="text-center md:text-left leading-relaxed">
-						<i class="fa-regular fa-copyright text-base"></i>
-						Copyright 2025 . Englishcouncil.com . All Right Reserved. 
-						<span class="block md:inline mt-1 md:mt-0">
-							Developed by <a href="https://tarunsoft.com/" target="_blank" class="text-[#FF3B3B] hover:underline font-medium">Tarun Soft</a>
-						</span>
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- footer section end -->
-
+		</section>
+		<!-- footer section end -->
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+	<script src="assets/js/script.js"></script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="assets/js/second-script.js"></script>
 
 </html>
-
